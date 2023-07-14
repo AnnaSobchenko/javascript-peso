@@ -1,0 +1,52 @@
+.preloaderSite {
+  background-color: var(--accent-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  &_img {
+    width: 200px;
+    height: 105.5px;
+    @media screen and (min-width: 768px) {
+      width: 400px;
+      height: 211px;
+    }
+  }
+
+  &_loader {
+    margin-top: 26px;
+    @media screen and (min-width: 768px) {
+      margin-top: 20px;
+    }
+    span {
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 15px;
+      animation: bouncingLoader 1.2s infinite alternate;
+    }
+    span:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    span:nth-child(3) {
+      margin-right: 0;
+      animation-delay: 0.8s;
+    }
+  }
+
+  @keyframes bouncingLoader {
+    from {
+      width: 10px;
+      height: 10px;
+      background: var(--accent-element-color);
+    }
+    to {
+      width: 8px;
+      height: 8px;
+      background: var(--opacity-font-3);
+    }
+  }
+}
