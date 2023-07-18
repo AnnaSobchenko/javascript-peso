@@ -1,5 +1,5 @@
 export const fallbackLng =
-  (typeof window !== "undefined" && localStorage.getItem("lng")) || "ua";
+  (typeof window !== "undefined" && localStorage.getItem("lng")) || "en";
 export const languages = ["ua", "en"];
 export const defaultNS = "translation";
 

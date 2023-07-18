@@ -1,5 +1,5 @@
 "use client";
-import PreloaderSite from "../components/shared/Preloader/PreloaderSite/PreloaderSite";
+import PreloaderSite from "../components/shared/PreloaderSite/PreloaderSite";
 
 const Loading = () => {
   return <PreloaderSite />;

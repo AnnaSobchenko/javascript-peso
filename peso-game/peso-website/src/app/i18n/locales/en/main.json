@@ -1,3 +1,7 @@
 {
-  "mainTitle": "Let's start website"
+  "mainTitle": "Let's start website",
+  "example": "example",
+  "headerContact": "Contact",
+  "headerPrivacy": "Privacy",
+  "headerDonate": "Donate to the project"
 }
