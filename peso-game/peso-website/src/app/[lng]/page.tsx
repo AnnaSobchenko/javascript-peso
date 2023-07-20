@@ -1,19 +1,17 @@
-import { useTranslation } from "@/app/i18n";
-// import ButtonMain from "@/components/UI/ButtonMain/ButtonMain";
+"use client";
+import { useState } from "react";
 import Header from "@/components/header/Header";
 
-export default async function Main({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
-  const { t } = await useTranslation(lng, "main");
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Header lng={lng} setActivePriv={false} setActiveLogIn={false} />
+export default function Main({ params: { lng } }: { params: { lng: string } }) {
+  const [activeModal, setActiveModal] = useState(false);
 
-      {/* <p>{t("example")}</p> */}
-      {/* <ButtonMain text={t("mainTitle")} /> */}
+  const handleToggleModal = () => {
+    setActiveModal((prev: boolean) => !prev);
+  };
+
+  return (
+    <main className="flex flex-col min-h-screen items-center justify-between overflow-scroll overflow-y-hidden">
+      <Header active={activeModal} lng={lng} onClick={handleToggleModal} />
     </main>
   );
 }

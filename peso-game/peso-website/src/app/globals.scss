@@ -69,6 +69,10 @@ label:hover {
   margin: 0;
   padding: 0;
 }
+main::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar {
+  background-color: transparent;
+}
 
 .layout {
   width: 320px;

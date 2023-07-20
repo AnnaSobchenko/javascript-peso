@@ -19,7 +19,7 @@ const LanguageSection: FC<LanguageSectionProps> = ({ lng }) => {
         href="/en"
         className={
           lng === "en"
-            ? "text-xs w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125 bg-accent-color "
+            ? "text-xs  w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125 bg-accent-color "
             : "text-xs bg-transparent w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125"
         }
         onClick={() => localStorage.setItem("lng", "en")}
