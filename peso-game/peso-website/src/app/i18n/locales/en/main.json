@@ -3,5 +3,6 @@
   "example": "Example",
   "headerContact": "Contact",
   "headerPrivacy": "Privacy",
-  "headerDonate": "Donate to the project"
+  "headerDonate": "Donate to the project",
+  "CountdownTimerTitle": "News preview"
 }
