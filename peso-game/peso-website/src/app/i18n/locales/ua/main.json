@@ -6,10 +6,10 @@
   "headerDonate": "Підтримати проект",
   "CountdownTimerTitleNews": "Огляд новин",
   "CountdownTimerDescribeNews": "На відео показано, як одна гільдія атакує іншу. Насолоджуйтесь грою прямо зараз.",
-  "CountdownTimerUntilUpdate": "Наступне оновлення через:",
+  "CountdownTimerUntilUpdate": "Наступне оновлення:",
   "CountdownTimerDays": "Днів",
   "CountdownTimerHours": "Годин",
   "CountdownTimerMinutes": "Хвилин",
   "CountdownTimerSeconds": "Секунд",
-  "CountdownTimerUpdateNews": "Перегляньте останні оновлення тут"
+  "CountdownTimerUpdateNews": "Останні оновлення тут"
 }
