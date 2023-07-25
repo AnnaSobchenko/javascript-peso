@@ -4,5 +4,12 @@
   "headerContact": "Контакти",
   "headerPrivacy": "Конфіденційність",
   "headerDonate": "Підтримати проект",
-  "CountdownTimerTitle": "News preview"
+  "CountdownTimerTitleNews": "Огляд новин",
+  "CountdownTimerDescribeNews": "На відео показано, як одна гільдія атакує іншу. Насолоджуйтесь грою прямо зараз.",
+  "CountdownTimerUntilUpdate": "Наступне оновлення через:",
+  "CountdownTimerDays": "Днів",
+  "CountdownTimerHours": "Годин",
+  "CountdownTimerMinutes": "Хвилин",
+  "CountdownTimerSeconds": "Секунд",
+  "CountdownTimerUpdateNews": "Перегляньте останні оновлення тут"
 }

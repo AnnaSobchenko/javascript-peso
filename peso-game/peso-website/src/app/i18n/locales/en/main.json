@@ -4,5 +4,12 @@
   "headerContact": "Contact",
   "headerPrivacy": "Privacy",
   "headerDonate": "Donate to the project",
-  "CountdownTimerTitle": "News preview"
+  "CountdownTimerTitleNews": "News preview",
+  "CountdownTimerDescribeNews": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
+  "CountdownTimerUntilUpdate": "Until the next update:",
+  "CountdownTimerDays": "Days",
+  "CountdownTimerHours": "Hours",
+  "CountdownTimerMinutes": "Minutes",
+  "CountdownTimerSeconds": "Seconds",
+  "CountdownTimerUpdateNews": "View the latest update here"
 }

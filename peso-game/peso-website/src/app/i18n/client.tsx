@@ -19,7 +19,7 @@ i18next
   )
   .init(getOptions());
 
-export function useTranslation(lng: string, ns: any, options: any) {
+export default function useTranslation(lng: string, ns: any, options?: any) {
   if (i18next.resolvedLanguage !== lng) i18next.changeLanguage(lng);
   return useTranslationOrg(ns, options);
 }
