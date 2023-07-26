@@ -1,6 +1,7 @@
 import { useTranslation } from "@/app/i18n";
 // import ButtonMain from "@/components/UI/ButtonMain/ButtonMain";
 import Header from "@/components/header/Header";
+import HomeHeroContent from "../../components/hero/Hero";
 
 export default async function Main({
   params: { lng },
@@ -14,6 +15,7 @@ export default async function Main({
 
       {/* <p>{t("example")}</p> */}
       {/* <ButtonMain text={t("mainTitle")} /> */}
+      <HomeHeroContent lng={lng}/>
     </main>
   );
 }
