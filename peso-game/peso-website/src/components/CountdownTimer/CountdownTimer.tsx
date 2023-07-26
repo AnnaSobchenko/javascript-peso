@@ -3,8 +3,15 @@ import s from "./CountdownTimer.module.scss";
 import React, { useEffect, useState } from "react";
 import ThreeVertDots from "../UI/ThreeVertDots/ThreeVertDots";
 import useTranslation from "@/app/i18n/client";
-import { Marcellus_SC, Alegreya_Sans_SC } from "next/font/google";
 import { FC } from "react";
+import { Marcellus_SC, Alegreya_Sans_SC } from "next/font/google";
+import localFont from "next/font/local";
+
+// Font files can be colocated inside of `app`
+const myFont = localFont({
+  src: "../../../public/MyFont-Regular.otf",
+  display: "swap",
+});
 
 const marcellusSC = Marcellus_SC({
   subsets: ["latin"],
@@ -50,10 +57,10 @@ interface CountdownTimerProps {
 }
 
 const initialState = {
-  days: "0",
-  hours: "0",
-  minutes: "0",
-  seconds: "0",
+  days: "00",
+  hours: "00",
+  minutes: "00",
+  seconds: "00",
 };
 
 export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
@@ -61,8 +68,9 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
     useState<CountdownTimerProps>(initialState);
   const { t } = useTranslation(lng, "main");
 
-  const textAccentFont =
-    lng === "en" ? `${marcellusSC.className}` : `${alegreyaSC.className}`;
+  const textAccentFont = myFont.className;
+  // lng === "en" ? `${marcellusSC.className}` : `${alegreyaSC.className}`;
+  // lng === "en" ? `${marcellusSC.className}` : `${myFont.className}`;
 
   const updateTimer = () => {
     setInterval(() => {
@@ -81,7 +89,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
   }, []);
 
   return (
-    <div className=" w-full relative">
+    <div className=" w-full overflow-hidden relative">
       <div className=" flex flex-col items-center pb-14 sm:pt-14 md:pt-16 lg:pt-32 ">
         <div
           className={`layout flex flex-col  text-center items-center sm:mb-4 md:mb-6 lg:mb-7  ${s.newupdate__first}`}
@@ -93,7 +101,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
             {t("CountdownTimerDescribeNews")}
           </p>
         </div>
-        <div className={s.bgshadow}>
+        <div className=" w-full shadow-inner-shadow sm:h-[300px] md:h-[368px] lg:h-[300px] bg-cover bg-countdown-timer-bg-desk">
           <div
             className={`layout flex flex-col items-center text-center sm:mb-16 sm:pt-24 md:mb-32 md:pt-28 lg:mb-32 lg:pt-32 ${s.newupdate__timer}`}
           >
@@ -118,7 +126,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
               {t("CountdownTimerDays")}
             </span>
           </div>
-          <div className=" flex items-center mb-4 mr-2 ml-1">
+          <div className=" flex items-center mb-6 mr-2 ml-2">
             <ThreeVertDots />
           </div>
           <div className="flex flex-col items-center">
@@ -132,7 +140,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
               {t("CountdownTimerHours")}
             </span>
           </div>
-          <div className=" flex items-center mb-4 mr-2 ml-1">
+          <div className=" flex items-center mb-6 mr-2 ml-2">
             <ThreeVertDots />
           </div>
           <div className="flex flex-col items-center">
@@ -146,7 +154,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
               {t("CountdownTimerMinutes")}
             </span>
           </div>
-          <div className=" flex items-center mb-4 mr-2 ml-1">
+          <div className=" flex items-center mb-6 mr-2 ml-2">
             <ThreeVertDots />
           </div>
           <div className="flex flex-col items-center">

@@ -40,9 +40,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "countdown-timer-bg-desk":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
+      },
+      boxShadow: {
+        "inner-shadow": "inset 0px -200px 250px var(--main-background)",
+        "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
       },
     },
   },

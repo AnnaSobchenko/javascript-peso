@@ -1,7 +1,6 @@
 "use client";
 import UpperHeader from "./UpperHeader/UpperHeader";
 // import NavBar from "./NavBar";
-import s from "./header.module.scss";
 import { useEffect } from "react";
 import IHeaderProps from "../../interfaces/Props.interface";
 
@@ -11,7 +10,7 @@ const Header = ({ active, lng, onClick }: IHeaderProps) => {
     Boolean(localStorage.getItem("lng")) || localStorage.setItem("lng", lng);
   }, [lng]);
   return (
-    <header className={s.header}>
+    <header className="bg-main-background">
       {/* <UpperHeader lng={lng} /> */}
       <UpperHeader active={active} lng={lng} onClick={onClick} />
       {/* <NavBar setActive={setActiveLogIn} /> */}
