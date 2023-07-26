@@ -11,9 +11,10 @@ export default function Main({ params: { lng } }: { params: { lng: string } }) {
   };
 
   return (
-    <main className="flex flex-col min-h-screen items-center justify-between overflow-scroll overflow-y-hidden">
+    <main className="flex flex-col min-h-screen items-center justify-between">
       <Header active={activeModal} lng={lng} onClick={handleToggleModal} />
       <CountdownTimer lng={lng} />
+      {/* <p className=" mt-[900px]">ghgbf</p> */}
     </main>
   );
 }

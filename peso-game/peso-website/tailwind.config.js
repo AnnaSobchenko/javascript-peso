@@ -17,7 +17,7 @@ module.exports = {
       "accent-background": "#0e0e0e",
       "second-background": "#191919",
       "shadow-second-background": "rgba(25, 25, 25, 0.9)",
-      "shadow-background": "rgb(26, 26, 26, 0.45)",
+      "shadow-background": "rgba(26, 26, 26, 0.45)",
 
       "main-font-color": "#fff",
       "second-font-color": "#0e0e0e",
@@ -40,8 +40,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        "countdown-timer-bg-mob":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
         "countdown-timer-bg-desk":
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
+        "countdown-timer-bg-tab":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-tab-2x.jpg);",
       },
       boxShadow: {
         "inner-shadow": "inset 0px -200px 250px var(--main-background)",

@@ -83,21 +83,21 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
   }, []);
 
   return (
-    <div className=" w-full  overflow-hidden relative">
-      <div className=" flex flex-col items-center pb-14 sm:pt-14 md:pt-16 lg:pt-32 ">
+    <div className=" w-full relative">
+      <div className=" flex flex-col items-center pb-14 pt-14 md:pt-16 lg:pt-32 ">
         <div
-          className={`layout flex flex-col  text-center items-center sm:mb-4 md:mb-6 lg:mb-7  ${s.newupdate__first}`}
+          className={`layout flex flex-col  text-center items-center mb-4 md:mb-6 lg:mb-7  ${s.newupdate__first}`}
         >
-          <h2 className={`${textAccentFont} mb-1  md:mb-2 md:text-2xl`}>
+          <h2 className={`${textAccentFont} mb-1  md:mb-2 md:text-2xl `}>
             {t("CountdownTimerTitleNews")}
           </h2>
           <p className=" flex text-center  justify-center text-opacity-font-2 text-sm md:text-base lg:text-lg md:w-[400px] lg:w-full">
             {t("CountdownTimerDescribeNews")}
           </p>
         </div>
-        <div className=" w-full shadow-inner-shadow sm:h-[300px] md:h-[368px] lg:h-[300px] bg-cover bg-countdown-timer-bg-desk">
+        <div className=" w-full shadow-inner-shadow sm:h-[300px] md:h-[368px] lg:h-[300px] bg-cover bg-countdown-timer-bg-mob md:bg-countdown-timer-bg-tab lg:bg-countdown-timer-bg-desk ">
           <div
-            className={`layout flex flex-col items-center text-center sm:mb-16 sm:pt-24 md:mb-32 md:pt-28 lg:mb-32 lg:pt-32 ${s.newupdate__timer}`}
+            className={`layout flex flex-col items-center text-center pt-24 md:pt-28 lg:pt-[110px]`}
           >
             <h3
               className={`${textAccentFont} mb-1  md:mb-2 sm:text-3xl md:text-5xl lg:text-7xl`}
@@ -107,7 +107,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
           </div>
         </div>
         <div
-          className={`layout flex items-center justify-center sm:mt-[-63px] sm:mb-16 md:mt-[-52px] md:mb-28 lg:mt-[-46px] lg:mb-32 `}
+          className={`layout flex items-center justify-center mt-[-63px] mb-16 md:mt-[-52px] md:mb-28 lg:mt-[-46px] lg:mb-32 `}
         >
           <div className="flex flex-col items-center">
             <span
@@ -163,7 +163,10 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             </span>
           </div>
         </div>
-        <a href="#" className={`layout ${textAccentFont} ${s.newupdate__link}`}>
+        <a
+          href="#"
+          className={`layout ${textAccentFont} flex justify-center text-lg underline md:text-2xl`}
+        >
           {t("CountdownTimerUpdateNews")}
         </a>
       </div>

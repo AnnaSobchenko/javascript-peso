@@ -1,65 +1,65 @@
-.new {
-  width: 100%;
-  position: relative;
-}
-.bgshadow {
-  width: 100%;
-  height: 300px;
-  box-shadow: var(--inner-shadow);
+// .new {
+//   width: 100%;
+//   position: relative;
+// }
+// .bgshadow {
+// width: 100%;
+// height: 300px;
+// box-shadow: var(--inner-shadow);
 
-  background-size: cover;
-  background-image: linear-gradient(
-      var(--shadow-background),
-      var(--shadow-background)
-    ),
-    url(../../assets/img/home/bg-mob-1x.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        var(--shadow-background),
-        var(--shadow-background)
-      ),
-      url(../../assets/img/home/bg-mob-2x.jpg);
-  }
+// background-size: cover;
+// background-image: linear-gradient(
+//     var(--shadow-background),
+//     var(--shadow-background)
+//   ),
+//   url(../../assets/img/home/bg-mob-1x.jpg);
+// background-repeat: no-repeat;
+// background-position: center;
+// @media (min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   background-image: linear-gradient(
+//       var(--shadow-background),
+//       var(--shadow-background)
+//     ),
+//     url(../../assets/img/home/bg-mob-2x.jpg);
+// }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    height: 368px;
-    background-image: linear-gradient(
-        var(--shadow-background),
-        var(--shadow-background)
-      ),
-      url(../../assets/img/home/bg-tab-1x.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          var(--shadow-background),
-          var(--shadow-background)
-        ),
-        url(../../assets/img/home/bg-tab-2x.jpg);
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    height: 300px;
-    background-image: linear-gradient(
-        var(--shadow-background),
-        var(--shadow-background)
-      ),
-      url(../../assets/img/home/bg-desk-1x.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          var(--shadow-background),
-          var(--shadow-background)
-        ),
-        url(../../assets/img/home/bg-desk-2x.jpg);
-    }
-  }
-}
+// @media screen and (min-width: 768px) and (max-width: 1199px) {
+//   height: 368px;
+//   background-image: linear-gradient(
+//       var(--shadow-background),
+//       var(--shadow-background)
+//     ),
+//     url(../../assets/img/home/bg-tab-1x.jpg);
+//   @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: linear-gradient(
+//         var(--shadow-background),
+//         var(--shadow-background)
+//       ),
+//       url(../../assets/img/home/bg-tab-2x.jpg);
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   height: 300px;
+//   background-image: linear-gradient(
+//       var(--shadow-background),
+//       var(--shadow-background)
+//     ),
+//     url(../../assets/img/home/bg-desk-1x.jpg);
+//   @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: linear-gradient(
+//         var(--shadow-background),
+//         var(--shadow-background)
+//       ),
+//       url(../../assets/img/home/bg-desk-2x.jpg);
+//   }
+// }
+// }
 
 .newupdate {
   //   padding-top: 55px;
@@ -190,27 +190,27 @@
     //   }
     // }
 
-    &__threedot {
-      justify-content: center;
-      height: 48px;
-      @media screen and (min-width: 768px) {
-        height: 96px;
-      }
-    }
+    // &__threedot {
+    //   justify-content: center;
+    //   height: 48px;
+    //   @media screen and (min-width: 768px) {
+    //     height: 96px;
+    //   }
+    // }
   }
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    // font-family: var(--accent-font);
-    text-decoration: underline;
-    @media screen and (min-width: 768px) {
-      font-size: 24 px;
-    }
-  }
+  // &__link {
+  //   display: flex;
+  //   justify-content: center;
+  //   font-size: 18px;
+  //   // font-family: var(--accent-font);
+  //   text-decoration: underline;
+  //   @media screen and (min-width: 768px) {
+  //     font-size: 24 px;
+  //   }
+  // }
 }
 
-.newupdate__text {
-  color: var(--opacity-font-2);
-}
+// .newupdate__text {
+//   color: var(--opacity-font-2);
+// }
