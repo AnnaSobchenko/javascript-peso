@@ -2,7 +2,7 @@
 import UpperHeader from "./UpperHeader/UpperHeader";
 // import NavBar from "./NavBar";
 import { useEffect } from "react";
-import IHeaderProps from "../../interfaces/Props.interface";
+import { IHeaderProps } from "../../interfaces/Props.interface";
 
 const Header = ({ active, lng, onClick }: IHeaderProps) => {
   // const Header = ({ lng }: IHeaderProps) => {

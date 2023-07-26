@@ -6,6 +6,10 @@ import useTranslation from "@/app/i18n/client";
 import { FC } from "react";
 import { Marcellus_SC, Alegreya_Sans_SC } from "next/font/google";
 import localFont from "next/font/local";
+import {
+  CountdownTimerProps,
+  LanguageFCComponentsProps,
+} from "@/interfaces/Props.interface";
 
 // Font files can be colocated inside of `app`
 const myFont = localFont({
@@ -45,16 +49,6 @@ const convertMs = (ms: number) => {
   ).padStart(2, "0");
   return { days, hours, minutes, seconds };
 };
-interface CountdownTimerComponentProps {
-  lng: string;
-}
-
-interface CountdownTimerProps {
-  days: string;
-  hours: string;
-  minutes: string;
-  seconds: string;
-}
 
 const initialState = {
   days: "00",
@@ -63,7 +57,7 @@ const initialState = {
   seconds: "00",
 };
 
-export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
+export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
   const [difference, setDifference] =
     useState<CountdownTimerProps>(initialState);
   const { t } = useTranslation(lng, "main");
@@ -89,7 +83,7 @@ export const CountdownTimer: FC<CountdownTimerComponentProps> = ({ lng }) => {
   }, []);
 
   return (
-    <div className=" w-full overflow-hidden relative">
+    <div className=" w-full  overflow-hidden relative">
       <div className=" flex flex-col items-center pb-14 sm:pt-14 md:pt-16 lg:pt-32 ">
         <div
           className={`layout flex flex-col  text-center items-center sm:mb-4 md:mb-6 lg:mb-7  ${s.newupdate__first}`}

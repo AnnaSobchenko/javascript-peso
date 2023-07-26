@@ -1,6 +1,7 @@
+import { FC } from "react";
 import Link from "next/link";
 import { Marcellus_SC } from "next/font/google";
-import { FC } from "react";
+import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 
 const marcellusSC = Marcellus_SC({
   subsets: ["latin"],
@@ -8,11 +9,7 @@ const marcellusSC = Marcellus_SC({
   display: "swap",
 });
 
-interface LanguageSectionProps {
-  lng: string;
-}
-
-const LanguageSection: FC<LanguageSectionProps> = ({ lng }) => {
+const LanguageSection: FC<LanguageFCComponentsProps> = ({ lng }) => {
   return (
     <div className={`flex items-center ${marcellusSC.className}`}>
       <Link

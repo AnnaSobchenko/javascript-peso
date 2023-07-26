@@ -1,17 +1,12 @@
-import { useTranslation } from "@/app/i18n";
-import Link from "next/link";
-import LanguageSection from "../LanguageSection/LanguageSection";
 import { FC } from "react";
+import Link from "next/link";
+import { useTranslation } from "@/app/i18n";
+import LanguageSection from "../LanguageSection/LanguageSection";
 import Modal from "../../shared/Modal/Modal";
 import PrivatPolic from "../../PrivPolLic/PrivPolLic";
+import { IHeaderProps } from "@/interfaces/Props.interface";
 
-interface UpperHeaderProps {
-  active: boolean;
-  lng: string;
-  onClick: () => void;
-}
-
-const UpperHeader: FC<UpperHeaderProps> = async ({ active, lng, onClick }) => {
+const UpperHeader: FC<IHeaderProps> = async ({ active, lng, onClick }) => {
   // const UpperHeader: FC<UpperHeaderProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng, "main");
   return (

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Header from "@/components/header/Header";
+import Header from "@/components/Header/Header";
 import { CountdownTimer } from "@/components/CountdownTimer/CountdownTimer";
 
 export default function Main({ params: { lng } }: { params: { lng: string } }) {
