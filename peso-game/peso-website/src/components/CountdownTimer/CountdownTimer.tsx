@@ -1,10 +1,8 @@
 "use client";
-import s from "./CountdownTimer.module.scss";
 import React, { useEffect, useState } from "react";
 import ThreeVertDots from "../UI/ThreeVertDots/ThreeVertDots";
 import useTranslation from "@/app/i18n/client";
 import { FC } from "react";
-import { Marcellus_SC, Alegreya_Sans_SC } from "next/font/google";
 import localFont from "next/font/local";
 import {
   CountdownTimerProps,
@@ -14,17 +12,6 @@ import {
 // Font files can be colocated inside of `app`
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
-  display: "swap",
-});
-
-const marcellusSC = Marcellus_SC({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-});
-const alegreyaSC = Alegreya_Sans_SC({
-  subsets: ["latin"],
-  weight: ["400"],
   display: "swap",
 });
 
@@ -62,10 +49,6 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
     useState<CountdownTimerProps>(initialState);
   const { t } = useTranslation(lng, "main");
 
-  const textAccentFont = myFont.className;
-  // lng === "en" ? `${marcellusSC.className}` : `${alegreyaSC.className}`;
-  // lng === "en" ? `${marcellusSC.className}` : `${myFont.className}`;
-
   const updateTimer = () => {
     setInterval(() => {
       const { days, hours, minutes, seconds } = convertMs(
@@ -86,9 +69,9 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
     <div className=" w-full relative">
       <div className=" flex flex-col items-center pb-14 pt-14 md:pt-16 lg:pt-32 ">
         <div
-          className={`layout flex flex-col  text-center items-center mb-4 md:mb-6 lg:mb-7  ${s.newupdate__first}`}
+          className={`layout flex flex-col  text-center items-center mb-4 md:mb-6 lg:mb-7 `}
         >
-          <h2 className={`${textAccentFont} mb-1  md:mb-2 md:text-2xl `}>
+          <h2 className={`${myFont.className} mb-1  md:mb-2 md:text-2xl `}>
             {t("CountdownTimerTitleNews")}
           </h2>
           <p className=" flex text-center  justify-center text-opacity-font-2 text-sm md:text-base lg:text-lg md:w-[400px] lg:w-full">
@@ -100,7 +83,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             className={`layout flex flex-col items-center text-center pt-24 md:pt-28 lg:pt-[110px]`}
           >
             <h3
-              className={`${textAccentFont} mb-1  md:mb-2 sm:text-3xl md:text-5xl lg:text-7xl`}
+              className={` ${myFont.className} mb-1  md:mb-2 sm:text-3xl md:text-5xl lg:text-7xl`}
             >
               {t("CountdownTimerUntilUpdate")}
             </h3>
@@ -116,7 +99,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             >
               {difference.days}
             </span>
-            <span className={` ${textAccentFont} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
               {t("CountdownTimerDays")}
             </span>
           </div>
@@ -130,7 +113,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             >
               {difference.hours}
             </span>
-            <span className={` ${textAccentFont} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
               {t("CountdownTimerHours")}
             </span>
           </div>
@@ -144,7 +127,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             >
               {difference.minutes}
             </span>
-            <span className={` ${textAccentFont} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
               {t("CountdownTimerMinutes")}
             </span>
           </div>
@@ -158,14 +141,14 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             >
               {difference.seconds}
             </span>
-            <span className={` ${textAccentFont} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
               {t("CountdownTimerSeconds")}
             </span>
           </div>
         </div>
         <a
           href="#"
-          className={`layout ${textAccentFont} flex justify-center text-lg underline md:text-2xl`}
+          className={`layout ${myFont.className} flex justify-center text-lg underline md:text-2xl`}
         >
           {t("CountdownTimerUpdateNews")}
         </a>
