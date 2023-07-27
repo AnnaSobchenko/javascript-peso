@@ -2,11 +2,11 @@ import { FC } from "react";
 import Link from "next/link";
 import { useTranslation } from "@/app/i18n";
 import LanguageSection from "../LanguageSection/LanguageSection";
-import Modal from "../../shared/Modal/Modal";
-import PrivatPolic from "../../PrivPolLic/PrivPolLic";
-import { IHeaderProps } from "@/interfaces/Props.interface";
+import Modal from "../shared/Modal/Modal";
+import PrivatPolic from "../PrivPolLic/PrivPolLic";
+import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 
-const UpperHeader: FC<IHeaderProps> = async ({ active, lng, onClick }) => {
+const UpperHeader: FC<LanguageFCComponentsProps> = async ({ lng }) => {
   // const UpperHeader: FC<UpperHeaderProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng, "main");
   return (
@@ -16,13 +16,12 @@ const UpperHeader: FC<IHeaderProps> = async ({ active, lng, onClick }) => {
           <div className="flex items-center sm:justify-between sm:w-full md:justify-normal md:w-auto">
             <LanguageSection lng={lng} />
             <div className=" flex justify-between ml-6">
-              <button
-                type="button"
-                onClick={onClick}
+              <Link
+                href=""
                 className="sm:hidden md:inline-block text-xs md:text-sm bg-transparent pt-4 pb-4 hover:scale-125 mr-6"
               >
                 {t("headerPrivacy")}
-              </button>
+              </Link>
               <Link
                 href=""
                 className=" text-xs md:text-sm bg-transparent pt-4 pb-4 hover:scale-125"
@@ -39,9 +38,6 @@ const UpperHeader: FC<IHeaderProps> = async ({ active, lng, onClick }) => {
           </Link>
         </div>
       </div>
-      <Modal active={active}>
-        <PrivatPolic onClick={onClick} />
-      </Modal>
     </div>
   );
 };

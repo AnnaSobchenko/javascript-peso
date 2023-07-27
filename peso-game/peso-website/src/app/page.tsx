@@ -12,9 +12,5 @@ export default function Home() {
     }, 0);
   }, [router]);
 
-  return (
-    <>
-      <PreloaderSite />
-    </>
-  );
+  return <></>;
 }

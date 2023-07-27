@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import "./globals.scss";
 import { languages } from "./i18n/settings";
 import { Roboto_Condensed } from "next/font/google";
@@ -27,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang={lng} dir="ltr">
-      <body className={robotoCondensed.className}>{children}</body>
+      <body className={robotoCondensed.className}>
+        {/* <Header lng={lng} /> */}
+        {children}
+      </body>
     </html>
   );
 }

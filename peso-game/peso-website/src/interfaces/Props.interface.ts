@@ -1,9 +1,3 @@
-export interface IHeaderProps {
-  active: boolean;
-  lng: string;
-  onClick: () => void;
-}
-
 export interface LanguageFCComponentsProps {
   lng: string;
 }
