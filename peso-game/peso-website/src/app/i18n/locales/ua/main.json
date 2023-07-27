@@ -1,7 +1,15 @@
 {
   "mainTitle": "Починаємо створювати сайт",
-  "example": "приклад",
+  "example": "Приклад",
   "headerContact": "Контакти",
   "headerPrivacy": "Конфіденційність",
-  "headerDonate": "Підтримати проект"
+  "headerDonate": "Підтримати проект",
+  "CountdownTimerTitleNews": "Огляд новин",
+  "CountdownTimerDescribeNews": "На відео показано, як одна гільдія атакує іншу. Насолоджуйтесь грою прямо зараз.",
+  "CountdownTimerUntilUpdate": "Наступне оновлення:",
+  "CountdownTimerDays": "Днів",
+  "CountdownTimerHours": "Годин",
+  "CountdownTimerMinutes": "Хвилин",
+  "CountdownTimerSeconds": "Секунд",
+  "CountdownTimerUpdateNews": "Останні оновлення тут"
 }

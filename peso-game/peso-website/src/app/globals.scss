@@ -7,7 +7,7 @@
   --accent-background: #0e0e0e;
   --second-background: #191919;
   --shadow-second-background: rgba(25, 25, 25, 0.9);
-  --shadow-background: rgb(26, 26, 26, 0.45);
+  --shadow-background: rgba(26, 26, 26, 0.45);
 
   --main-font-color: #fff;
   --second-font-color: #0e0e0e;
@@ -27,20 +27,14 @@
   --filter-shadow: drop-shadow(0px 25px 40px var(--accent-background));
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --foreground-rgb: 255, 255, 105;
-//     --background-start-rgb: 0, 0, 1;
-//     --background-end-rgb: 1, 0, 0;
-//   }
-// }
-
+html,
 body {
   background: var(--main-background);
   color: var(--main-font-color);
   cursor: url("../assets/icon/cursor.png"), auto;
   padding: 0;
   margin: 0;
+  width: calc(100vw - 20px);
   overflow-x: hidden;
 }
 
@@ -69,6 +63,10 @@ label:hover {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+main::-webkit-scrollbar-thumb,
+main::-webkit-scrollbar {
+  background-color: transparent;
 }
 
 .layout {

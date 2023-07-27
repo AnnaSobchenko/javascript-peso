@@ -18,10 +18,6 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-interface Lng {
-  lng: string;
-}
-
 export default function RootLayout({
   children,
   params: { lng },

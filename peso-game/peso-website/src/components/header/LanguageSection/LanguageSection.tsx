@@ -1,6 +1,7 @@
+import { FC } from "react";
 import Link from "next/link";
 import { Marcellus_SC } from "next/font/google";
-import { FC } from "react";
+import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 
 const marcellusSC = Marcellus_SC({
   subsets: ["latin"],
@@ -8,18 +9,14 @@ const marcellusSC = Marcellus_SC({
   display: "swap",
 });
 
-interface LanguageSectionProps {
-  lng: string;
-}
-
-const LanguageSection: FC<LanguageSectionProps> = ({ lng }) => {
+const LanguageSection: FC<LanguageFCComponentsProps> = ({ lng }) => {
   return (
     <div className={`flex items-center ${marcellusSC.className}`}>
       <Link
         href="/en"
         className={
           lng === "en"
-            ? "text-xs w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125 bg-accent-color "
+            ? "text-xs  w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125 bg-accent-color "
             : "text-xs bg-transparent w-3.5 h-3.5 rounded-full hover:scale-125 focus:scale-125"
         }
         onClick={() => localStorage.setItem("lng", "en")}

@@ -1,19 +1,20 @@
-import { useTranslation } from "@/app/i18n";
-// import ButtonMain from "@/components/UI/ButtonMain/ButtonMain";
-import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
-export default async function Main({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
-  const { t } = await useTranslation(lng, "main");
+"use client";
+import { useState } from "react";
+import Header from "@/components/Header/Header";
+import { CountdownTimer } from "@/components/CountdownTimer/CountdownTimer";
+
+export default function Main({ params: { lng } }: { params: { lng: string } }) {
+  const [activeModal, setActiveModal] = useState(false);
+
+  const handleToggleModal = () => {
+    setActiveModal((prev: boolean) => !prev);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Header lng={lng} setActivePriv={false} setActiveLogIn={false} />
-      <Footer lng={lng} />
-      {/* <p>{t("example")}</p> */}
-      {/* <ButtonMain text={t("mainTitle")} /> */}
+    <main className="flex flex-col min-h-screen items-center justify-between">
+      <Header active={activeModal} lng={lng} onClick={handleToggleModal} />
+      <CountdownTimer lng={lng} />
+      {/* <p className=" mt-[900px]">ghgbf</p> */}
     </main>
   );
 }
