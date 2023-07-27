@@ -11,5 +11,9 @@
   "CountdownTimerHours": "Hours",
   "CountdownTimerMinutes": "Minutes",
   "CountdownTimerSeconds": "Seconds",
-  "CountdownTimerUpdateNews": "View the latest update here"
+  "CountdownTimerUpdateNews": "View the latest update here",
+  "footerLicense":"License",
+  "footerPrivacy":"Privacy Policy",
+  "footerText":"The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast."
+
 }

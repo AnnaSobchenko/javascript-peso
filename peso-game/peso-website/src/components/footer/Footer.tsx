@@ -1,10 +1,12 @@
+import { useTranslation } from "@/app/i18n";
 import Logo from "../../assets/icon/logo.svg";
 import Image from "next/image";
 import { FC } from "react";
 interface FooterProps {
   lng: string;
 }
-const Footer: FC<FooterProps> = ({ lng }) => {
+const Footer: FC<FooterProps> = async  ({ lng }) => {
+   const { t } = await useTranslation(lng, "main");
   // const openLisence = () => {
   //   setActivePriv((prev) => !prev);
   //   setLicense(true);
@@ -43,22 +45,22 @@ const Footer: FC<FooterProps> = ({ lng }) => {
               <use href="/sprite.svg#bitcoin"></use>
               </svg>
           </div>
-          <p className="sm:mt-6 sm:text-sm md:text-base lg:text-lg  ">@ The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.</p>
+          <p className="sm:mt-6 sm:text-sm md:text-base lg:text-lg  ">@  {t("footerText")}</p>
           <div className="flex items-center sm:flex-col  md:flex-row md:justify-between  mt-12">
             <div className="sm:mb-6 md:mb-0">
-               <button type="button"  className="sm:text-sm md:text-base lg:text-lg">
-                License
+               <button type="button"  className="sm:text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">
+                 {t("footerLicense")}
               </button>
               <span className='text-[#D9D9D9] mr-2.5 ml-2.5'>|</span>
-              <button type="button" className="sm:text-sm md:text-base lg:text-lg">
-                Privacy Policy
+              <button type="button" className="sm:text-sm md:text-base lg:text-lg transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">
+                 {t("footerPrivacy")}
               </button>
             </div>
             <div className="flex">
-            <svg className="w-10 h-10 mr-2.5">
+            <svg className="w-10 h-10 mr-2.5 transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">
               <use href="/sprite.svg#facebook"></use>
               </svg>
-               <svg className="w-10 h-10 fill-[#fff]">
+               <svg className="w-10 h-10 fill-[#fff] transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">
               <use href="/sprite.svg#reddit"></use>
             </svg>
             </div>
