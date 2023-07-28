@@ -34,7 +34,11 @@ body {
   cursor: url("../assets/icon/cursor.png"), auto;
   padding: 0;
   margin: 0;
-  width: calc(100vw - 20px);
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    width: calc(100vw - 20px);
+  }
+  
   overflow-x: hidden;
 }
 
