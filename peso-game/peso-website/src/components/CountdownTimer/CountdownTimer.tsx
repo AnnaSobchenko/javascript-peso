@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ThreeVertDots from "../UI/ThreeVertDots/ThreeVertDots";
-import useTranslation from "@/app/i18n/client";
+import { useTranslation } from "@/app/i18n/client";
 import { FC } from "react";
 import localFont from "next/font/local";
 import {
@@ -78,12 +78,12 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
             {t("CountdownTimerDescribeNews")}
           </p>
         </div>
-        <div className=" w-full shadow-inner-shadow sm:h-[300px] md:h-[368px] lg:h-[300px] bg-cover bg-countdown-timer-bg-mob md:bg-countdown-timer-bg-tab lg:bg-countdown-timer-bg-desk ">
+        <div className=" w-screen shadow-inner-shadow  h-[300px] md:h-[368px] lg:h-[300px] bg-cover bg-countdown-timer-bg-mob md:bg-countdown-timer-bg-tab lg:bg-countdown-timer-bg-desk ">
           <div
             className={`layout flex flex-col items-center text-center pt-24 md:pt-28 lg:pt-[110px]`}
           >
             <h3
-              className={` ${myFont.className} mb-1  md:mb-2 sm:text-3xl md:text-5xl lg:text-7xl`}
+              className={` ${myFont.className} mb-1  md:mb-2  text-3xl md:text-5xl lg:text-7xl`}
             >
               {t("CountdownTimerUntilUpdate")}
             </h3>
@@ -94,12 +94,12 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
         >
           <div className="flex flex-col items-center">
             <span
-              className={`sm:text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
+              className={` text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
               data-days
             >
               {difference.days}
             </span>
-            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className}  text-sm md:text-lg `}>
               {t("CountdownTimerDays")}
             </span>
           </div>
@@ -108,12 +108,12 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
           </div>
           <div className="flex flex-col items-center">
             <span
-              className={`sm:text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
+              className={` text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
               data-hours
             >
               {difference.hours}
             </span>
-            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className}  text-sm md:text-lg `}>
               {t("CountdownTimerHours")}
             </span>
           </div>
@@ -122,12 +122,12 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
           </div>
           <div className="flex flex-col items-center">
             <span
-              className={`sm:text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
+              className={` text-5xl md:text-8xl text-opacity-font-4 flex mb-1 `}
               data-minutes
             >
               {difference.minutes}
             </span>
-            <span className={` ${myFont.className} sm:text-sm md:text-lg `}>
+            <span className={` ${myFont.className}  text-sm md:text-lg `}>
               {t("CountdownTimerMinutes")}
             </span>
           </div>

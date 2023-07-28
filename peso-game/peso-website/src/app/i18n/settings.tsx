@@ -1,9 +1,10 @@
 export const fallbackLng =
   (typeof window !== "undefined" && localStorage.getItem("lng")) || "en";
-export const languages = ["ua", "en"];
+export const languages = ["en", "ua"];
 export const defaultNS = "translation";
 
 export function getOptions(lng = fallbackLng, ns = defaultNS) {
+  // console.log("lng getOptions:>> ", lng, new Date());
   return {
     // debug: true,
     supportedLngs: languages,

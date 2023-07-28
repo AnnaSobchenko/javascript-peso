@@ -6,18 +6,15 @@ import { LanguageFCComponentsProps } from "../../interfaces/Props.interface";
 import NavSection from "../NavSection/NavSection";
 
 const Header: FC<LanguageFCComponentsProps> = ({ lng }) => {
-  console.log("Header lng :>> ", lng);
   // const Header = ({ lng }: IHeaderProps) => {
   useEffect(() => {
     Boolean(localStorage.getItem("lng")) || localStorage.setItem("lng", lng);
-  }, [lng]);
+  }, []);
   return (
-    <header className="bg-main-background">
-      {/* <UpperHeader lng={lng} /> */}
+    <div className="bg-main-background">
       <UpperHeader lng={lng} />
-      {/* <NavBar setActive={setActiveLogIn} /> */}
       <NavSection lng={lng} />
-    </header>
+    </div>
   );
 };
 

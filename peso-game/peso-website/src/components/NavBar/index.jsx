@@ -15,17 +15,38 @@ const NavBar = ({ setActive }) => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1199 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   return (
-    <>
-      <div className={`layout default ${s.nav_header}`}>
-        <div className={s.nav_container}>
-          <div className={s.image}>
-            <Image src={Logo} alt="Logo" height={isMobile ? 44 : 68} />
+    <nav className={`layout default ${s.nav_header}`}>
+      <div className={s.nav_container}>
+        <div className={s.image}>
+          <Image src={Logo} alt="Logo" height={isMobile ? 44 : 68} />
+        </div>
+        {isMobile && <TfiMenu size="25" />}
+        {isTablet && (
+          <div className={s.flex_container}>
+            <div className={s.flex_container_login}>
+              <Link href="" className={s.link}>
+                <span className={s.text}>Log In</span>
+                <span>
+                  <ThreeDots
+                    ulClassName={s.ulThreeDots}
+                    liClassName={s.liThreeDots}
+                  />
+                </span>
+              </Link>
+            </div>
+            <ButtonMain text="Menu" />
           </div>
-          {isMobile && <TfiMenu size="25" />}
-          {isTablet && (
+        )}
+        {isDesktopOrLaptop && (
+          <>
+            <NavSection />
             <div className={s.flex_container}>
               <div className={s.flex_container_login}>
-                <Link href="" className={s.link}>
+                <button
+                  type="button"
+                  onClick={() => setActive((prev) => !prev)}
+                  className={s.link}
+                >
                   <span className={s.text}>Log In</span>
                   <span>
                     <ThreeDots
@@ -33,37 +54,14 @@ const NavBar = ({ setActive }) => {
                       liClassName={s.liThreeDots}
                     />
                   </span>
-                </Link>
+                </button>
               </div>
-              <ButtonMain text="Menu" />
+              <ButtonMain text="Play Now" />
             </div>
-          )}
-          {isDesktopOrLaptop && (
-            <>
-              <NavSection />
-              <div className={s.flex_container}>
-                <div className={s.flex_container_login}>
-                  <button
-                    type="button"
-                    onClick={() => setActive((prev) => !prev)}
-                    className={s.link}
-                  >
-                    <span className={s.text}>Log In</span>
-                    <span>
-                      <ThreeDots
-                        ulClassName={s.ulThreeDots}
-                        liClassName={s.liThreeDots}
-                      />
-                    </span>
-                  </button>
-                </div>
-                <ButtonMain text="Play Now" />
-              </div>
-            </>
-          )}
-        </div>
+          </>
+        )}
       </div>
-    </>
+    </nav>
   );
 };
 
