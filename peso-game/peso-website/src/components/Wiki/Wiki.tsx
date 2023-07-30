@@ -49,7 +49,7 @@ export const Wiki: FC<LanguageFCComponentsProps> = async ({ lng }) => {
   } = options;
   return (
     <div className="bg-accent-background w-screen flex justify-center">
-      <div className="mx-[20px] sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
+      <div className="layout mx-[20px] sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
         <div className="ml-auto mr-auto lg:flex flex-row-reverse mt-[50px]">
           <div>
             <div className="h-[171px] md:h-[402px] bg-main-background mb-[25px] md:mb-[50px] lg:w-[500px] lg:h-[400px] relative">

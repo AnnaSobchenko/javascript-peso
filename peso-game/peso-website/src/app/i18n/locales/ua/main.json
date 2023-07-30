@@ -25,6 +25,15 @@
   "wikiWeapons": "Макс. радіус дії зброї:",
   "wikiAbility": "Найвища здатність:",
   "wikiSight": "Макс. дальність видимості:",
-  "wikiReadMore": "Докладніше на сторінці Wiki"
+  "wikiReadMore": "Докладніше на сторінці Wiki",
+  "feedBackHeader": "Форма зворотного зв'язку",
+  "feedBackText": "На відео показано, як одна гільдія атакує іншу. Насолоджуйтесь грою прямо зараз.",
+  "feedBackFormHeader": "Напишіть нам",
+  "feedBackFormName": "Ваше ім'я та нікнейм...",
+  "feedBackFormEmail": "Ваша електронна адреса...",
+  "feedBackFormMessage": "Ваше повідомлення та запитання...",
+  "feedBackBtn": "Відправити повідомлення",
+  "feedBackError": "Обов'язкове поле",
+  "feedBackErrorEmail": "Невірний формат електронної пошти"
 
 }
