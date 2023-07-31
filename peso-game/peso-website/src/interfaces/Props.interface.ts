@@ -13,3 +13,9 @@ export interface CountdownTimerProps {
   minutes: string;
   seconds: string;
 }
+export interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
