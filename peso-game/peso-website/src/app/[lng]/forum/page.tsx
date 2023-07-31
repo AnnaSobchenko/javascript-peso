@@ -7,7 +7,7 @@ export default function Forum({
 }) {
   const { t } = useTranslation(lng, "forum");
   return (
-    <h3 className=" layout text-accent-color text-4xl pt-20">
+    <h3 className=" layout text-accent-color text-4xl pt-20 pb-20">
       {t("forumTitle")}
       &#128676;
     </h3>

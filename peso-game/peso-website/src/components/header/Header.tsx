@@ -1,9 +1,8 @@
 "use client";
 import UpperHeader from "../UpperHeader/UpperHeader";
-// import NavBar from "./NavBar";
 import { FC, useEffect } from "react";
 import { LanguageFCComponentsProps } from "../../interfaces/Props.interface";
-import NavSection from "../NavSection/NavSection";
+import NavBar from "../NavBar/NavBar";
 
 const Header: FC<LanguageFCComponentsProps> = ({ lng }) => {
   // const Header = ({ lng }: IHeaderProps) => {
@@ -13,7 +12,7 @@ const Header: FC<LanguageFCComponentsProps> = ({ lng }) => {
   return (
     <div className="bg-main-background">
       <UpperHeader lng={lng} />
-      <NavSection lng={lng} />
+      <NavBar lng={lng} />
     </div>
   );
 };

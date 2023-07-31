@@ -8,7 +8,7 @@ import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 const NavSection: FC<LanguageFCComponentsProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng, "main");
   return (
-    <ul className="layout flex">
+    <ul className="flex">
       <li className=" flex flex-col justify-center items-center h-[130px] hover:bg-accent-background focus:bg-accent-background group ">
         <Link
           href={`/${lng}`}
