@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useTranslation } from "@/app/i18n";
+import { useTranslation } from "@/app/i18n/client";
 import logoWiki from "../../assets/icon/Logo.svg";
 import iconDegree from "../../assets/icon/360-degrees.svg";
 
@@ -34,8 +34,8 @@ const options = {
   cannons: "6.un",
 };
 
-export const Wiki: FC<LanguageFCComponentsProps> = async ({ lng }) => {
-  const { t } = await useTranslation(lng, "main");
+export const Wiki: FC<LanguageFCComponentsProps> = ({ lng }) => {
+  const { t } = useTranslation(lng, "main");
   const textAccentFont = myFont.className;
   const {
     points,

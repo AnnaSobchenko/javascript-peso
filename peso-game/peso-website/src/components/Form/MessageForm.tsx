@@ -8,7 +8,7 @@ import {
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 import localFont from "next/font/local";
-import useTranslation from "@/app/i18n/client";
+import { useTranslation } from "@/app/i18n/client";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
