@@ -1,22 +1,15 @@
 "use client";
+import React, { FC } from "react";
+import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 import Image from "next/image";
-import { useTranslation } from "@/app/i18n/client";
-import logoWiki from "../../assets/icon/Logo.svg";
+import logoWiki from "../../assets/icon/logoWiki.svg";
 import iconDegree from "../../assets/icon/360-degrees.svg";
+import ShipImg from "./ShipImg";
 
 import { Canvas } from "@react-three/fiber";
-import ShipImg from "./ShipImg";
 import { OrbitControls } from "@react-three/drei";
-import { FC } from "react";
-import { Marcellus_SC } from "next/font/google";
+import { useTranslation } from "@/app/i18n/client";
 import localFont from "next/font/local";
-import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
-
-const marcellusSC = Marcellus_SC({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-});
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
