@@ -1,16 +1,20 @@
 "use client";
-import { useState } from "react";
+import { useState, FC } from "react";
 import { ErrorMessage, Formik, FormikValues, FormikHelpers } from "formik";
 import localFont from "next/font/local";
 import Link from "next/link";
 
 import { RegisterValidationSchema } from "@/components/utils/validation/registervalid";
-import CustomErrorMessage from "../UI/CustomError/CustomError";
+// import CustomErrorMessage from "../UI/CustomError/CustomError";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
+import useTranslation from "@/app/i18n/client";
 
 interface FormValues {
   email: string;
   password: string;
+}
+interface SignInProps {
+  lng: string;
 }
 
 // // Define an interface for the form submission function
@@ -21,8 +25,10 @@ const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
   display: "swap",
 });
-const SignInForm = () => {
+const SignInForm: FC<SignInProps> = ({ lng }) => {
+  const { t } = useTranslation(lng, "signin");
   const [showPassword, setShowPassword] = useState(false);
+  console.log("showPassword", showPassword);
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -40,7 +46,8 @@ const SignInForm = () => {
             values: FormValues,
             { resetForm }: FormikHelpers<FormValues>
           ) => {
-            await resetForm();
+            console.log("values", values);
+            // await resetForm();
           }}
         >
           {({
@@ -53,7 +60,7 @@ const SignInForm = () => {
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
               <form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">
-                <h2 className={`${myFont.className} text-3xl`}>Sing In Form</h2>
+                <h2 className={`${myFont.className} text-3xl`}>Sign in</h2>
                 <input
                   type="email"
                   name="email"
@@ -132,6 +139,7 @@ const SignInForm = () => {
                   </Link>
                 </div>
               </form>
+
               <AuthBtn />
             </div>
           )}
