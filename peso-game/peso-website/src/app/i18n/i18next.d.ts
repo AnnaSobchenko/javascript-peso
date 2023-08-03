@@ -2,6 +2,8 @@
 import "i18next";
 // import all namespaces (for the default language, only)
 import main from "locales/en/main.json";
+// import forum from "locales/en/forum.json";
+// import news from "locales/en/news.json";
 
 declare module "i18next" {
   // Extend CustomTypeOptions

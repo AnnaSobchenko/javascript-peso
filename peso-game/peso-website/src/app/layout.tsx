@@ -1,6 +1,6 @@
 import Header from "@/components/header/Header";
 import "./globals.scss";
-import { languages } from "./i18n/settings";
+import { fallbackLng, languages } from "./i18n/settings";
 import { Roboto_Condensed } from "next/font/google";
 
 const robotoCondensed = Roboto_Condensed({
@@ -21,16 +21,12 @@ export async function generateStaticParams() {
 
 export default function RootLayout({
   children,
-  params: { lng },
 }: {
   children: React.ReactNode;
-  params: { lng: string };
 }) {
   return (
-    <html lang={lng} dir="ltr">
-      <body className={robotoCondensed.className}>
-        
-        {children}</body>
+    <html lang={fallbackLng} dir="ltr">
+      <body className={robotoCondensed.className}>{children}</body>
     </html>
   );
 }

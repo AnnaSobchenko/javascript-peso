@@ -1,20 +1,19 @@
 "use client";
-import UpperHeader from "./UpperHeader/UpperHeader";
-// import NavBar from "./NavBar";
-import { useEffect } from "react";
-import { IHeaderProps } from "../../interfaces/Props.interface";
+import UpperHeader from "../UpperHeader/UpperHeader";
+import { FC, useEffect } from "react";
+import { LanguageFCComponentsProps } from "../../interfaces/Props.interface";
+import NavBar from "../NavBar/NavBar";
 
-const Header = ({ active, lng, onClick }: IHeaderProps) => {
+const Header: FC<LanguageFCComponentsProps> = ({ lng }) => {
   // const Header = ({ lng }: IHeaderProps) => {
   useEffect(() => {
     Boolean(localStorage.getItem("lng")) || localStorage.setItem("lng", lng);
-  }, [lng]);
+  }, []);
   return (
-    <header className="bg-main-background">
-      {/* <UpperHeader lng={lng} /> */}
-      <UpperHeader active={active} lng={lng} onClick={onClick} />
-      {/* <NavBar setActive={setActiveLogIn} /> */}
-    </header>
+    <div className="bg-main-background">
+      <UpperHeader lng={lng} />
+      <NavBar lng={lng} />
+    </div>
   );
 };
 
