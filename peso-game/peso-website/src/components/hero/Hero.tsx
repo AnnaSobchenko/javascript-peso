@@ -1,13 +1,14 @@
-"use client";
-import * as s from "./hero.module.scss";
+// import * as s from "./hero.module.scss";
+import  s from "./hero.module.scss"
 import React from "react";
 import Image from "next/image";
 import Logo from "./img/desktop/logo-1x.png";
 import Sea from "./img/desktop/sea.png";
 import Slider from "./slider/Slider";
+import Coverflow from "./slider/Coverflow";
 import { useTranslation } from "@/app/i18n";
 import { FC } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 interface HomeHeroContentProps {
   lng: string;
@@ -16,57 +17,65 @@ interface HomeHeroContentProps {
 
 const HomeHeroContent: FC<HomeHeroContentProps> = async({ lng }) => {
   const { t } = await useTranslation(lng, "main");
-  return <div className={s.container}>
+  return <div className="relative">  
   <div className={s.backgroundImageTop}>
-        <div className={s.description}>
+         <div className="flex flex-col items-center text-center m-auto w-[240px] md:w-[400px]">
         <Image
                   src={Logo}
                   width={352}
                   height={232}
                   alt="Logo"
-                  className={s.description__logo}/>
-            <p className={s.description__text}> {t("heroDescription")}</p>
+                  className="w-[136.48px] h-90px mb-[15px] md:w-[352px] md:h-[232px] md:mb-[25px]"/>
+            <p className="font-normal text-[14px] leading-[1.4rem] text-white text-opacity-50 md:text-[16px] md:leading-[1.3rem] lg:text-[18px] lg:leading-[1.15rem]"> {t("heroDescription")}</p>
               </div>
-              <div className={s.slider}>
-        <h2 className={s.slider__title}>{t("heroGameProcess")}</h2>
-        <p className={s.slider__text}>{t("heroVideoDescription")}</p>
+              <div className="relative w-[280px] text-center m-auto mt-[125px] mb-[15px] md:w-[400px] md:mt-[227px] md:mb-[25px] lg:w-[590px] lg:mt-[257px] lg:mb-[25px]">
+        <h2 className="text-[18px] mb-[5px] md:text-[24px] md:mb-[10px]">{t("heroGameProcess")}</h2>
+        <p className="font-normal text-[14px] leading-[1.3rem] text-white text-opacity-50 md:text-[16px] lg:text-[18px]">{t("heroVideoDescription")}</p>
         </div>
-     
-      <Slider/>
-   
+     <Slider/>
         </div>
-     <div className={s.backgroundImageBottom}>
-        <div className={s.feature}>
-        <ul className={s.featureList}>
-          <li className={s.featureCard}>
-          <Image
-                  src={Sea}
-                  width={75}
-                  height={75}
-                  alt="Sea"
-                  className={s.featureCard__icon}/>
-            <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
-            <p className={s.featureCard__text}>{t("heroText")}</p>
+   <div className={s.backgroundImageBottom}>
+      <div className={s.feature}>
+      <ul className={s.featureList}>
+        <li className={s.featureCard}>
+        <Image
+                src={Sea}
+                width={75}
+                height={75}
+                alt="Sea"
+                className={s.featureCard__icon}/>
+                 <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
+                 <p className="text-[14px] leading-[1.4rem] md:text-[16px] md:leading-[1.35rem] lg:text-[18px] lg:leading-[1.35rem]">{t("heroText")}</p>
           </li>
           <li className={s.featureCard}>
-          <Image
-                  src={Sea}
-                  width={75}
-                  height={75}
-                  alt="Sea"
-                  className={s.featureCard__icon}/>
-            <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
-            <p className={s.featureCard__text}>{t("heroText")}</p>
+        <Image
+                src={Sea}
+                width={75}
+                height={75}
+                alt="Sea"
+                className={s.featureCard__icon}/>
+                 <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
+                 <p className="text-[14px] leading-[1.4rem] md:text-[16px] md:leading-[1.35rem] lg:text-[18px] lg:leading-[1.35rem]">{t("heroText")}</p>
           </li>
           <li className={s.featureCard}>
-          <Image
-                  src={Sea}
-                  width={75}
-                  height={75}
-                  alt="Sea"
-                  className={s.featureCard__icon}/>
-            <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
-            <p className={s.featureCard__text}>{t("heroText")}</p>
+        <Image
+                src={Sea}
+                width={75}
+                height={75}
+                alt="Sea"
+                className={s.featureCard__icon}/>
+                 <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
+                 <p className="text-[14px] leading-[1.4rem] md:text-[16px] md:leading-[1.35rem] lg:text-[18px] lg:leading-[1.35rem]">{t("heroText")}</p>
+          </li>
+          <li className={s.featureCard}>
+        <Image
+                src={Sea}
+                width={75}
+                height={75}
+                alt="Sea"
+                className={s.featureCard__icon}/>
+                 <h2 className={s.featureCard__title}> {t("heroTitle")}</h2>
+                 <p className="text-[14px] leading-[1.4rem] md:text-[16px] md:leading-[1.35rem] lg:text-[18px] lg:leading-[1.35rem]">{t("heroText")}</p>
           </li>
          </ul>
         </div> 

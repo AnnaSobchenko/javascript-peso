@@ -12,10 +12,9 @@ export default async function Main({
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Header lng={lng} setActivePriv={false} setActiveLogIn={false} />
-
+      <HomeHeroContent lng={lng}/>
       {/* <p>{t("example")}</p> */}
       {/* <ButtonMain text={t("mainTitle")} /> */}
-      <HomeHeroContent lng={lng}/>
-    </main>
+      </main>
   );
 }

@@ -12,14 +12,14 @@
       background-position: center;
       background-repeat: no-repeat;
       background: linear-gradient(rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.55)),
-      url(./img/modile/hero-bg-mob-1-1x.jpg);
+      url(./img/mobile/hero-bg-mob-1-1x.jpg);
       box-shadow: inset 0px -200px 250px #1A1A1A;
 
        @media (min-device-pixel-ratio: 2),
        (min-resolution: 192dpi),
        (min-resolution: 2dppx) {
           background: linear-gradient(rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.55)),
-          url(./img/modile/hero-bg-mob-1-2x.jpg);
+          url(./img/mobile/hero-bg-mob-1-2x.jpg);
           box-shadow: inset 0px -200px 250px #1A1A1A;
           background-size: cover;
           background-position: center;
@@ -76,7 +76,7 @@
       height: 664.38px;
       padding-top: 130.66px;
       background: linear-gradient(rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.55)),
-      url(./img/modile/hero-bg-mob-1x.jpg),
+      url(./img/mobile/hero-bg-mob-1x.jpg),
       rgba(26, 26, 26, 0.55);
          box-shadow: inset 0px 200px 250px #1A1A1A;
          background-size: cover;
@@ -87,7 +87,7 @@
          (min-resolution: 192dpi),
          (min-resolution: 2dppx) {
           background: linear-gradient(rgba(26, 26, 26, 0.55), rgba(26, 26, 26, 0.55)), 
-               url(./img/modile/hero-bg-mob-2x.jpg) 
+               url(./img/mobile/hero-bg-mob-2x.jpg) 
                rgba(26, 26, 26, 0.55);
                  box-shadow: inset 0px 200px 250px #1A1A1A;     
                  background-size: cover;
@@ -278,6 +278,8 @@
    
 .featureCard {
   width: 280px;
+   padding-right: 10px;
+   padding-left: 10px;
 
   &__icon {
     display: none
@@ -300,6 +302,7 @@
     width: 500px;
     margin-left: 0;
     margin-right: 0;
+    padding: 0;
 
     &__title {
       font-size: 36px;
@@ -314,6 +317,7 @@
 @media screen and (min-width: 1200px) {
    .featureCard {
     margin-bottom: 0;
+    padding: 0;
 
     &__icon {
       display: flex;

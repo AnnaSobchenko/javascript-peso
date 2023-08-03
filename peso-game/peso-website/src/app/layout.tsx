@@ -30,8 +30,11 @@ export default function RootLayout({
   params: { lng: string };
 }) {
   return (
-    <html lang={lng} dir="ltr">
+    <html lang={lng} dir="ltr"
+    >
       <body className={robotoCondensed.className}>{children}</body>
+      {/* suppressHydrationWarning={true} */}
     </html>
   );
 }
+

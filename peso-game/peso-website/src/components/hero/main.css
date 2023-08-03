@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .swiper-pagination {
+        @apply w-[10px] h-[10px] bg-white rounded-full mt-[-55px] ml-0 mr-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 #{!important};
+    }
+}
+
+   
