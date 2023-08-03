@@ -1,20 +1,19 @@
-import { useTranslation } from "@/app/i18n";
-// import ButtonMain from "@/components/UI/ButtonMain/ButtonMain";
-import Header from "@/components/header/Header";
 import HomeHeroContent from "../../components/hero/Hero";
+import { CountdownTimer } from "@/components/CountdownTimer/CountdownTimer";
+import BorderScreen from "@/components/UI/BorderScreen/BorderScreen";
+import { Wiki } from "@/components/Wiki/Wiki";
+import { MessageForm } from "@/components/MessageForm/MessageForm";
 
-export default async function Main({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
-  const { t } = await useTranslation(lng, "main");
+export default function Main({ params: { lng } }: { params: { lng: string } }) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Header lng={lng} setActivePriv={false} setActiveLogIn={false} />
-      <HomeHeroContent lng={lng}/>
-      {/* <p>{t("example")}</p> */}
-      {/* <ButtonMain text={t("mainTitle")} /> */}
-      </main>
+           <HomeHeroContent lng={lng}/>
+          <Wiki lng={lng} />
+      <CountdownTimer lng={lng} />
+      <MessageForm lng={lng} />
+      <div className="hidden lg:inline-block fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+        <BorderScreen />
+      </div>
+    </main>
   );
 }

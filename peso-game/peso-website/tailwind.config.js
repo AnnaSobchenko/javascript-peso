@@ -17,7 +17,7 @@ module.exports = {
       "accent-background": "#0e0e0e",
       "second-background": "#191919",
       "shadow-second-background": "rgba(25, 25, 25, 0.9)",
-      "shadow-background": "rgb(26, 26, 26, 0.45)",
+      "shadow-background": "rgba(26, 26, 26, 0.45)",
       "shadow-background-hero": "rgba(26, 26, 26, 0.55)",
 
       "main-font-color": "#fff",
@@ -41,9 +41,20 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "border-main-top": "url(../assets/img/border/border-top.png)",
+        "border-main-left": "url(../assets/img/border/border-left.png)",
+        "border-main-right": "url(../assets/img/border/border-right.png)",
+        "border-main-bottom": "url(../assets/img/border/border-bottom.png)",
+        "countdown-timer-bg-mob":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
+        "countdown-timer-bg-desk":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
+        "countdown-timer-bg-tab":
+          "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-tab-2x.jpg);",
+      },
+      boxShadow: {
+        "inner-shadow": "inset 0px -200px 250px var(--main-background)",
+        "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
       },
     },
   },
