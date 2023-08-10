@@ -34,6 +34,7 @@ module.exports = {
       "main-element-color": "#060606",
       "accent-element-color": "#fff",
     },
+
     screens: {
       sm: "320px",
       md: "768px",
@@ -73,14 +74,13 @@ module.exports = {
     theme: {
       extend: {
         backgroundImage: {
-          "mobile-header": "url('./components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
-          "tablet-header": "url('./components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
-          "desktop-header": "url('./components/hero/img/desktop/hero-bg-desk-1-1x.jpg')"
+          "mobile-header": "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
+          "tablet-header": "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
+          "desktop-header": "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
         }
       },
     },
-    // Інші налаштування Tailwind CSS
-  };
+};
  
   
   

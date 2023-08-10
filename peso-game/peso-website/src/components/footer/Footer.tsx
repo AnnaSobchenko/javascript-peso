@@ -1,5 +1,5 @@
 import { useTranslation } from "@/app/i18n";
-import Logo from "../../assets/icon/logo.svg";
+import Logo from "../../assets/icon/logoWiki.svg";
 import Image from "next/image";
 import { FC } from "react";
 import localFont from "next/font/local";
