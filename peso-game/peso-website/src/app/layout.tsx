@@ -26,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang={fallbackLng} dir="ltr">
       <body className={robotoCondensed.className}>{children}</body>
+      {/* suppressHydrationWarning={true} */}
     </html>
   );
 }
+

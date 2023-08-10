@@ -18,6 +18,7 @@ module.exports = {
       "second-background": "#191919",
       "shadow-second-background": "rgba(25, 25, 25, 0.9)",
       "shadow-background": "rgba(26, 26, 26, 0.45)",
+      "shadow-background-hero": "rgba(26, 26, 26, 0.55)",
 
       "main-font-color": "#fff",
       "second-font-color": "#0e0e0e",
@@ -33,6 +34,7 @@ module.exports = {
       "main-element-color": "#060606",
       "accent-element-color": "#fff",
     },
+
     screens: {
       sm: "320px",
       md: "768px",
@@ -58,4 +60,27 @@ module.exports = {
     },
   },
   plugins: [],
+
+ 
+    theme: {
+      extend: {
+         boxShadow: {
+           // Додаткові тіні, які можна використовувати в класах
+           'inset-lg': '0 25px 30px 10px rgba(14,14,14,1)',
+         },
+       },
+     },
+
+    theme: {
+      extend: {
+        backgroundImage: {
+          "mobile-header": "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
+          "tablet-header": "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
+          "desktop-header": "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
+        }
+      },
+    },
 };
+ 
+  
+  
