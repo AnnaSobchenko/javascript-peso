@@ -52,10 +52,17 @@ module.exports = {
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
         "countdown-timer-bg-tab":
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-tab-2x.jpg);",
+        "mobile-header":
+          "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
+        "tablet-header":
+          "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
+        "desktop-header":
+          "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
       },
       boxShadow: {
         "inner-shadow": "inset 0px -200px 250px var(--main-background)",
         "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
+        "inset-lg": "0 25px 30px 10px rgba(14,14,14,1)",
       },
       spacing: {
         13: "3.25rem",
@@ -65,28 +72,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
-
- 
-    theme: {
-      extend: {
-         boxShadow: {
-           // Додаткові тіні, які можна використовувати в класах
-           'inset-lg': '0 25px 30px 10px rgba(14,14,14,1)',
-         },
-       },
-     },
-
-    theme: {
-      extend: {
-        backgroundImage: {
-          "mobile-header": "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
-          "tablet-header": "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
-          "desktop-header": "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
-        }
-      },
-    },
 };
- 
-  
-  
