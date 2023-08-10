@@ -55,6 +55,12 @@ module.exports = {
         "inner-shadow": "inset 0px -200px 250px var(--main-background)",
         "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
       },
+      spacing: {
+        13: "3.25rem",
+        15: "3.75rem",
+        128: "32rem",
+        144: "36rem",
+      },
     },
   },
   plugins: [],
