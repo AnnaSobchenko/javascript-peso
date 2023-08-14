@@ -53,14 +53,14 @@ const Footer: FC<FooterProps> = async ({ lng }) => {
             <div className="mb-6 md:mb-0">
               <button
                 type="button"
-                className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
+                className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:text-error-color  duration-200`}
               >
                 {t("footerLicense")}
               </button>
               <span className="text-[#D9D9D9] mr-2.5 ml-2.5">|</span>
               <button
                 type="button"
-                className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
+                className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:text-error-color  duration-200`}
               >
                 {t("footerPrivacy")}
               </button>

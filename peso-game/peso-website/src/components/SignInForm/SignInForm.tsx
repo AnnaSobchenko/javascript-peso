@@ -4,7 +4,7 @@ import { ErrorMessage, Formik, FormikValues, FormikHelpers } from "formik";
 import localFont from "next/font/local";
 import Link from "next/link";
 
-import { RegisterValidationSchema } from "@/components/utils/validation/registervalid";
+import { SignInValidationSchema } from "@/components/utils/validation/registervalid";
 // import CustomErrorMessage from "../UI/CustomError/CustomError";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
 import { useTranslation } from "@/app/i18n/client";
@@ -41,7 +41,7 @@ const SignInForm: FC<SignInProps> = ({ lng }) => {
             email: "",
             password: "",
           }}
-          validationSchema={RegisterValidationSchema}
+          validationSchema={SignInValidationSchema}
           onSubmit={async (
             values: FormValues,
             { resetForm }: FormikHelpers<FormValues>
@@ -132,10 +132,10 @@ const SignInForm: FC<SignInProps> = ({ lng }) => {
                     Doesn't have an account?
                   </p>
                   <Link
-                    href="#"
+                    href={`/${lng}/signup`}
                     className="ml-2 lg:hover:text-error-color  duration-200"
                   >
-                    Sign Up{" "}
+                    Sign Up
                   </Link>
                 </div>
               </form>

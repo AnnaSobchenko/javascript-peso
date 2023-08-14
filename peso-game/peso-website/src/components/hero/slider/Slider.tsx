@@ -32,18 +32,15 @@ const Slider: FC = () => {
         }}
         breakpoints={{
           320: {
-            width: 320,
             slidesPerView: 1,
           },
           768: {
-            width: 768,
             slidesPerView: 2.01,
             pagination: {
               enabled: false,
             },
           },
           1200: {
-            width: 1200,
             slidesPerView: 2.01,
             pagination: {
               enabled: false,
@@ -53,7 +50,7 @@ const Slider: FC = () => {
         slidesPerView={2.01}
         modules={[EffectCoverflow, Pagination]}
         centeredSlides
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 7000 }}
       >
         <SwiperSlide className=" z-10 shadow-[0_25px_30px_10px_rgba(14,14,14,1)] md:h-[269px] md:w-[478px] lg:h-[425px] lg:w-[756px]">
           <img
