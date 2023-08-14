@@ -18,6 +18,7 @@ module.exports = {
       "second-background": "#191919",
       "shadow-second-background": "rgba(25, 25, 25, 0.9)",
       "shadow-background": "rgba(26, 26, 26, 0.45)",
+      "shadow-background-hero": "rgba(26, 26, 26, 0.55)",
 
       "main-font-color": "#fff",
       "second-font-color": "#0e0e0e",
@@ -33,6 +34,7 @@ module.exports = {
       "main-element-color": "#060606",
       "accent-element-color": "#fff",
     },
+
     screens: {
       sm: "320px",
       md: "768px",
@@ -50,12 +52,24 @@ module.exports = {
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-desk-2x.jpg);",
         "countdown-timer-bg-tab":
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(../assets/img/home/bg-tab-2x.jpg);",
+        "mobile-header":
+          "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
+        "tablet-header":
+          "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
+        "desktop-header":
+          "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
       },
       boxShadow: {
         "inner-shadow": "inset 0px -200px 250px var(--main-background)",
         "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
+        "inset-lg": "0 25px 30px 10px rgba(14,14,14,1)",
+      },
+      spacing: {
+        13: "3.25rem",
+        15: "3.75rem",
+        128: "32rem",
+        144: "36rem",
       },
     },
   },
-  plugins: [],
 };
