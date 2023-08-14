@@ -7,7 +7,7 @@ import Link from "next/link";
 import { RegisterValidationSchema } from "@/components/utils/validation/registervalid";
 // import CustomErrorMessage from "../UI/CustomError/CustomError";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
-import useTranslation from "@/app/i18n/client";
+import { useTranslation } from "@/app/i18n/client";
 
 interface FormValues {
   email: string;
@@ -60,7 +60,7 @@ const SignInForm: FC<SignInProps> = ({ lng }) => {
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
               <form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">
-                <h2 className={`${myFont.className} text-3xl`}>Sign in</h2>
+                <h2 className={`${myFont.className} text-3xl`}>{t("title")}</h2>
                 <input
                   type="email"
                   name="email"
