@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import ThreeHorizDots from "../UI/ThreeHorizDots/ThreeHorizDots";
 import { FC } from "react";

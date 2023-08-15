@@ -14,6 +14,7 @@ export const metadata = {
   description:
     "The name peso was given to the 8-real silver coin introduced in 1497, minted at 83⁄8 pesos to a Castilian mark. It was minted in large quantities after the discovery of silver in Mexico.",
 };
+
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
@@ -25,9 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang={fallbackLng} dir="ltr">
+      <head />
       <body className={robotoCondensed.className}>{children}</body>
       {/* suppressHydrationWarning={true} */}
     </html>
   );
 }
-
