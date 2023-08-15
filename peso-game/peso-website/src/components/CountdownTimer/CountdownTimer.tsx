@@ -156,3 +156,18 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
     </div>
   );
 };
+
+// let counterUpdate = { days, hours, minutes, seconds };
+// setTimeout(function updateTimer() {
+//   const counterTimer = () => {
+//     ({ days, hours, minutes, seconds } = convertMs(
+//       Date.parse("Aug 24, 2023") - Date.parse(String(new Date()))
+//     ));
+
+//     counterUpdate = { days, hours, minutes, seconds };
+//     console.log("counterUpdate func:>> ", counterUpdate);
+//     return counterUpdate;
+//   };
+//   counterTimer();
+//   setTimeout(updateTimer, 1000);
+// }, 1000);

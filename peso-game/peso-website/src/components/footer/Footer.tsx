@@ -1,5 +1,5 @@
 import { useTranslation } from "@/app/i18n";
-import logoWiki from "../../assets/icon/logoWiki.svg";
+import Logo from "../../assets/icon/logoWiki.svg";
 import Image from "next/image";
 import { FC } from "react";
 import localFont from "next/font/local";
@@ -27,7 +27,7 @@ const Footer: FC<FooterProps> = async ({ lng }) => {
       <div className="layout">
         <div className="pt-16 pb-6 md:pl-9 md:pr-9">
           <div className="h-16 w-24 md:h-20 md:w-32 lg:w-40 lg:h-28">
-            <Image src={logoWiki} alt="Logo" width={160} height={106} />
+            <Image src={Logo} alt="Logo" width={160} height={106} />
           </div>
           <div className="hidden mt-6 md:flex md:items-center">
             <svg className="md:w-16 md:h-10 md:mr-2.5 lg:w-24 lg:h-16 lg:mr-5">
