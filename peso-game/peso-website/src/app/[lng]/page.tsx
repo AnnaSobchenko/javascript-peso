@@ -7,11 +7,11 @@ import { MessageForm } from "@/components/MessageForm/MessageForm";
 export default function Main({ params: { lng } }: { params: { lng: string } }) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-           <HomeHeroContent lng={lng}/>
-          <Wiki lng={lng} />
+      <HomeHeroContent lng={lng} />
+      <Wiki lng={lng} />
       <CountdownTimer lng={lng} />
       <MessageForm lng={lng} />
-      <div className="hidden lg:inline-block fixed top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+      <div className="hidden lg:inline-block fixed top-0 left-0 w-full h-full opacity-50 pointer-events-none z-50">
         <BorderScreen />
       </div>
     </main>

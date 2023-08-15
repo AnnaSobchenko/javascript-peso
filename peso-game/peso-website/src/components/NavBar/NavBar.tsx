@@ -14,7 +14,6 @@ const NavBar: FC<LanguageFCComponentsProps> = ({ lng }) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
   const { t } = useTranslation(lng, "main");
-  console.log("pathName NavBar:>> ", pathName);
 
   return (
     <nav className={`layout bg-main-background `}>
@@ -39,10 +38,23 @@ const NavBar: FC<LanguageFCComponentsProps> = ({ lng }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="block md:hidden relative h-5 w-6 cursor-pointer z-10 "
         >
-          <span className="block md:hidden absolute before:absolute after:absolute w-6 h-[20px] left-0 top-0 before:left-0 before:top-0 after:bottom-0 after:left-0 bg-transparent before:bg-accent-element-color after:bg-accent-element-color  before:w-6 before:h-[10%] after:w-6 after:h-[10%]">
-            <span className=" w-6 h-[10%] block absolute left-0 top-[45%] bg-accent-element-color"></span>
+          <span
+            className={
+              isOpen
+                ? "block md:hidden absolute after:rotate-[-315deg] before:rotate-[315deg]  before:absolute after:absolute w-6 h-[20px] left-0 top-0 before:left-0 transition-all after:transition-all before:transition-all before:top-[45%] after:bottom-[45%] after:left-0 bg-transparent before:bg-accent-element-color after:bg-accent-element-color  before:w-6 before:h-[10%] after:w-6 after:h-[10%]"
+                : "block md:hidden absolute before:absolute after:absolute w-6 h-[20px] left-0 top-0 before:left-0 before:top-0 after:bottom-0 after:left-0 bg-transparent before:bg-accent-element-color after:bg-accent-element-color  before:w-6 before:h-[10%] after:w-6 after:h-[10%]"
+            }
+          >
+            <span
+              className={
+                isOpen
+                  ? " hidden"
+                  : " w-6 h-[10%] block absolute  left-0 top-[45%] bg-accent-element-color"
+              }
+            ></span>
           </span>
         </button>
+
         <div
           className={
             isOpen

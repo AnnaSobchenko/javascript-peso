@@ -4,6 +4,9 @@ const nextConfig = {
     locales: ["en", "ua"],
     defaultLocale: "en",
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

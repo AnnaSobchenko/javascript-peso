@@ -9,7 +9,7 @@ SwiperCore.use([Pagination, EffectCoverflow, Autoplay, SwiperCore.Loop]);
 
 const Slider: FC = () => {
   return (
-    <div className="relative h-[227.57px] w-[280px] md:h-[399px] md:w-[768px] lg:h-[580px] lg:w-screen">
+    <div className="relative h-[227.57px] md:h-[399px]  lg:h-[580px] w-screen">
       <Swiper
         className="relative !pb-[65px]"
         loop={true}
@@ -32,18 +32,18 @@ const Slider: FC = () => {
         }}
         breakpoints={{
           320: {
-            width: 320,
+            // width: 320,
             slidesPerView: 1,
           },
           768: {
-            width: 768,
+            // width: 768,
             slidesPerView: 2.01,
             pagination: {
               enabled: false,
             },
           },
           1200: {
-            width: 1200,
+            // width: 1200,
             slidesPerView: 2.01,
             pagination: {
               enabled: false,
@@ -53,7 +53,7 @@ const Slider: FC = () => {
         slidesPerView={2.01}
         modules={[EffectCoverflow, Pagination]}
         centeredSlides
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 7000 }}
       >
         <SwiperSlide className=" z-10 shadow-[0_25px_30px_10px_rgba(14,14,14,1)] md:h-[269px] md:w-[478px] lg:h-[425px] lg:w-[756px]">
           <img
@@ -65,12 +65,6 @@ const Slider: FC = () => {
           <img
             className="h-full w-full"
             src="https://assets.vg247.com/current//2018/12/atlas_reveal_screen_5.jpg"
-          />
-        </SwiperSlide>
-        <SwiperSlide className=" z-10 shadow-[0_25px_30px_10px_rgba(14,14,14,1)] md:h-[269px] md:w-[478px] lg:h-[425px] lg:w-[756px]">
-          <img
-            className="h-full w-full"
-            src="https://www.mercurynews.com/wp-content/uploads/2022/07/SB_Screenshot3_Comeback_300622_9AM_CEST.jpg?w=1024"
           />
         </SwiperSlide>
         <SwiperSlide className=" z-10 shadow-[0_25px_30px_10px_rgba(14,14,14,1)] md:h-[269px] md:w-[478px] lg:h-[425px] lg:w-[756px]">
