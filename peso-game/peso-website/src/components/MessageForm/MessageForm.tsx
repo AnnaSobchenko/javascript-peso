@@ -51,9 +51,9 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
 
   return (
     <div className="bg-accent-background w-screen flex justify-center">
-      <div className="layout px-[30px] pt-[55px] pb-[30px] md:px-[55px] md:pt-[70px] md:pb-[50px] lg:px-[75px] lg:pt-[120px] lg:pb-[75px]">
+      <div className="layout px-7 pt-14 pb-7 md:px-14 md:pt-16 md:pb-12 lg:px-20 lg:pt-30 lg:pb-20">
         <h2
-          className={`text-center mb-[5px] ${textAccentFont} font-normal text-lg md:text-2xl md:mb-[10px] lg:mb-[9px]`}
+          className={`text-center mb-1.5 ${textAccentFont} font-normal text-lg md:text-2xl md:mb-2.5 lg:mb-2.5`}
         >
           {t("feedBackHeader")}
         </h2>
@@ -62,7 +62,7 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
           {t("feedBackText")}
         </p>
         <p
-          className={`text-center mt-[65px] ${textAccentFont} font-normal text-3xl md:text-left md:mt-[76px] lg:mt-[69px]`}
+          className={`text-center mt-16 ${textAccentFont} font-normal text-3xl md:text-left md:mt-20 lg:mt-16`}
         >
           {t("feedBackFormHeader")}
         </p>
@@ -79,9 +79,9 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
                   id="name"
                   type="text"
                   placeholder={t("feedBackFormName")}
-                  className="outline-none w-full pb-[5px] mt-[52px] font-normal text-base text-opacity-font-2 bg-accent-background"
+                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
                 />
-                <div className="h-px bg-main-font-color w-full mb-[25px]"></div>
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="name"
                   component="div"
@@ -95,9 +95,9 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
                   id="email"
                   type="email"
                   placeholder={t("feedBackFormEmail")}
-                  className="outline-none w-full pb-[5px] mt-[52px] font-normal text-base text-opacity-font-2 bg-accent-background"
+                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
                 />
-                <div className="h-px bg-main-font-color w-full mb-[25px]"></div>
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="email"
                   component="div"
@@ -111,16 +111,16 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
                   id="message"
                   type="message"
                   placeholder={t("feedBackFormMessage")}
-                  className="outline-none w-full pb-[5px] mt-[52px] text-base text-opacity-font-2 bg-accent-background"
+                  className="outline-none w-full pb-1.5 mt-12 text-base text-opacity-font-2 bg-accent-background"
                 />
-                <div className="h-px bg-main-font-color w-full mb-[25px]"></div>
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="message"
                   component="div"
                   className="error absolute text-error-color"
                 />
               </div>
-              <div className="mt-[90px] flex justify-center items-center flex-col md:flex-row-reverse md:m-auto md:mt-[70px] lg:mt-[80px]">
+              <div className="mt-24 flex justify-center items-center flex-col md:flex-row-reverse md:m-auto md:mt-16 lg:mt-20">
                 <ReCAPTCHA
                   sitekey="6Lcc1WknAAAAAHxRlLXuD8WhkOXTlR31zYR1XU7m"
                   onChange={(value: any) => console.log("recaptcha", value)}
@@ -133,18 +133,18 @@ export const MessageForm: FC<LanguageFCComponentsProps> = ({ lng }) => {
 
                 <button
                   type="submit"
-                  className="mt-[25px] px-[8px] py-[4px] bg-accent-background border-accent-element-color md:mt-0"
+                  className="mt-6 px-2 py-1 bg-accent-background border-accent-element-color md:mt-0"
                 >
-                  <div className="flex justify-center px-[24px] py-[18px] bg-accent-color items-center">
+                  <div className="flex justify-center px-6 py-5 bg-accent-color items-center">
                     <p
-                      className={`${textAccentFont} font-normal text-2xl text-main-font-color mr-[10px]`}
+                      className={`${textAccentFont} font-normal text-2xl text-main-font-color mr-2.5`}
                     >
                       {t("feedBackBtn")}
                     </p>
                     <ul className="m-auto">
-                      <li className="w-[4px] h-[4px] rounded-full mb-[4px] bg-opacity-font-3 last:mb-0"></li>
-                      <li className="w-[4px] h-[4px] rounded-full mb-[4px] bg-opacity-font-3 last:mb-0"></li>
-                      <li className="w-[4px] h-[4px] rounded-full mb-[4px] bg-opacity-font-3 last:mb-0"></li>
+                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
+                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
+                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
                     </ul>
                   </div>
                 </button>

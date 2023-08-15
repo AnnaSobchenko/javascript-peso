@@ -14,30 +14,30 @@ export const License: FC<LanguageFCComponentsProps> = ({ lng }) => {
   const { t } = useTranslation(lng, "license");
 
   return (
-    <div className="w-full px-[25px] mt-[75px] mb-[200px]">
-      <h1 className={`mb-[50px] text-4xl ${textAccentFont}`}>
+    <div className="w-full px-6 mt-20 mb-48">
+      <h1 className={`mb-12 text-4xl ${textAccentFont}`}>
         {t("licenseTitlePolicy")}
       </h1>
       <ul className="">
-        <li className="flex mb-[10px] py-[16px] px-[45px] bg-accent-background items-center">
+        <li className="flex mb-2.5 py-4 px-11 bg-accent-background items-center">
           <div className=" mr-4">
             <ThreeVertDots />
           </div>
           <p className={`${textAccentFont} text-lg`}>{t("licenseFirst")}</p>
         </li>
-        <li className="flex mb-[10px] py-[16px] px-[45px] bg-accent-background items-center">
+        <li className="flex mb-2.5 py-4 px-11 bg-accent-background items-center">
           <div className=" mr-4">
             <ThreeVertDots />
           </div>
           <p className={`${textAccentFont} text-lg`}>{t("licenseSecond")}</p>
         </li>
-        <li className="flex mb-[10px] py-[16px] px-[45px] bg-accent-background items-center">
+        <li className="flex mb-2.5 py-4 px-11 bg-accent-background items-center">
           <div className=" mr-4">
             <ThreeVertDots />
           </div>
           <p className={`${textAccentFont} text-lg`}>{t("licenseThird")}</p>
         </li>
-        <li className="flex py-[16px] px-[45px] pb-[25px] bg-accent-background items-center">
+        <li className="flex py-4 px-11 pb-6 bg-accent-background items-center">
           <div className=" mr-4">
             <ThreeVertDots />
           </div>
@@ -45,7 +45,7 @@ export const License: FC<LanguageFCComponentsProps> = ({ lng }) => {
         </li>
       </ul>
 
-      <p className="px-[45px] pb-[60px] mb-[20px] bg-accent-background text-justify text-lg text-opacity-font-2">
+      <p className="px-11 pb-14 mb-5 bg-accent-background text-justify text-lg text-opacity-font-2">
         {t("licenseText")}
       </p>
     </div>
