@@ -34,7 +34,10 @@ export const WikiComponent: FC<LanguageShipComponentsProps> = ({ lng, id }) => {
     <div className="pt-20">
       <ul className="md:flex md:flex-wrap  gap-4 justify-center">
         {dataShip.map(({ id, img, name }) => (
-          <li key={id} className="text-center pb-8 last:pb-14 hover:scale-110 ">
+          <li
+            key={id}
+            className="text-center pb-8 last:pb-14 hover:scale-110 duration-1000"
+          >
             <Link href={`/${lng}/wiki/${id}`}>
               <h2 className={`mb-2.5 text-xl md:text-2xl ${textAccentFont}`}>
                 {t(`ship${id}.name`)}
