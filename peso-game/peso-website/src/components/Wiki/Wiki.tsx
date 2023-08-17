@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
 import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
-import Image from "next/image";
 import logoWiki from "../../assets/icon/logoWiki.svg";
 import iconDegree from "../../assets/icon/360-degrees.svg";
 import ShipImg from "./ShipImg";
@@ -10,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useTranslation } from "@/app/i18n/client";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",

@@ -24,3 +24,15 @@ export interface FormData {
   email: string;
   message: string;
 }
+
+export interface ShipList {
+  id: number;
+  name: string;
+  img: string;
+}
+
+export interface LanguageShipComponentsProps {
+  lng: string;
+  id: string;
+  
+}
