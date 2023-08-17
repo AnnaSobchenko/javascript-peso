@@ -1,7 +1,6 @@
 "use client";
 import React, { FC } from "react";
 import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
-import Image from "next/image";
 import logoWiki from "../../assets/icon/logoWiki.svg";
 import iconDegree from "../../assets/icon/360-degrees.svg";
 import ShipImg from "./ShipImg";
@@ -10,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useTranslation } from "@/app/i18n/client";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
@@ -42,10 +42,10 @@ export const Wiki: FC<LanguageFCComponentsProps> = ({ lng }) => {
   } = options;
   return (
     <div className="bg-accent-background w-screen flex justify-center">
-      <div className="layout mx-[20px] sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
-        <div className="ml-auto mr-auto lg:flex flex-row-reverse mt-[50px]">
+      <div className="layout mx-5 sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
+        <div className="ml-auto mr-auto lg:flex flex-row-reverse mt-12">
           <div>
-            <div className="h-[171px] md:h-[402px] bg-main-background mb-[25px] md:mb-[50px] lg:w-[500px] lg:h-[400px] relative">
+            <div className="h-[171px] md:h-[402px] bg-main-background mb-6 md:mb-12 lg:w-[500px] lg:h-[400px] relative">
               <Canvas camera={{ position: [20, 1, 1], fov: 25 }}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
@@ -61,7 +61,7 @@ export const Wiki: FC<LanguageFCComponentsProps> = ({ lng }) => {
                 width={65.52}
                 height={43}
                 alt="logo"
-                className="hidden lg:block lg:absolute bottom-[20px] right-[20px]"
+                className="hidden lg:block lg:absolute bottom-5 right-5"
               />
               <Image
                 src={iconDegree}
@@ -79,17 +79,17 @@ export const Wiki: FC<LanguageFCComponentsProps> = ({ lng }) => {
               width={65.52}
               height={43}
               alt="logo"
-              className="sm:hidden lg:block mb-[23px]"
+              className="sm:hidden lg:block mb-6"
             />
             <h2
-              className={`text-center font-marcellus-sc text-2xl mb-[25px] md:text-left md:mb-[15px] ${textAccentFont}`}
+              className={`text-center font-marcellus-sc text-2xl mb-6 md:text-left md:mb-[15px] ${textAccentFont}`}
             >
               {t("wikiHeader")}
             </h2>
-            <p className="text-sm text-opacity-font-2 text-sans text-justify mb-[50px] lg:text-lg">
+            <p className="text-sm text-opacity-font-2 text-sans text-justify mb-6 lg:text-lg">
               {t("wikiText")}
             </p>
-            <div className="h-px bg-main-font-color w-full mb-[25px]"></div>
+            <div className="h-px bg-main-font-color w-full mb-6"></div>
           </div>
         </div>
         <ul className="md:grid grid-cols-2 pb-20">
@@ -143,7 +143,7 @@ export const Wiki: FC<LanguageFCComponentsProps> = ({ lng }) => {
           </li>
         </ul>
         <h2
-          className={`underline text-lg text-center mb-[25px] md:text-right lg:text-2xl ${textAccentFont}`}
+          className={`underline text-lg text-center mb-6 md:text-right lg:text-2xl ${textAccentFont}`}
         >
           {t("wikiReadMore")}
         </h2>

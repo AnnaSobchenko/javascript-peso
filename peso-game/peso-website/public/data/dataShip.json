@@ -1,0 +1,97 @@
+[
+    {
+        "id": "1",
+        "name": "British ship: “Sloop”.",
+        "text": "Text 1",
+        "img": "https://live.staticflickr.com/65535/53120487663_4253fcbdcf.jpg",
+        "model": {
+            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+        },
+        "options": {
+            "points": "2500.hp",
+            "speed": "9.2.knots",
+            "armor": "2.am",
+            "cannons": "6.un",
+            "harpoons": "4.un",
+            "weapons": "200.m",
+            "sight": "350.m",
+            "ability": "none"
+        }
+    },
+    {
+        "id": "2",
+        "name": "The Black Pearl",
+         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "img": "https://live.staticflickr.com/65535/53120198934_e9282e8a3d_z.jpg",
+        "model": {
+            "url": "/assets/img/3dImg/viking/scene.gltf"
+        },
+        "options": {
+            "points": "2500.hp",
+            "speed": "9.2.knots",
+            "armor": "2.am",
+            "cannons": "6.un",
+            "harpoons": "4.un",
+            "weapons": "200.m",
+            "sight": "350.m",
+            "ability": "none"
+        }
+    },
+    {
+        "id": "3",
+        "name": "The Flying Dutchman",
+         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "img": "https://live.staticflickr.com/65535/53120404015_886921a400_z.jpg",
+        "model": {
+            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+        },
+        "options": {
+            "points": "2500.hp",
+            "speed": "9.2.knots",
+            "armor": "2.am",
+            "cannons": "6.un",
+            "harpoons": "4.un",
+            "weapons": "200.m",
+            "sight": "350.m",
+            "ability": "none"
+        }
+    },
+    {
+        "id": "4",
+        "name": "Jackdaw",
+         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "img": "https://live.staticflickr.com/65535/53120198939_d42934fd9d_z.jpg",
+         "model": {
+            "url": "/assets/img/3dImg/viking/scene.gltf"
+        },
+        "options": {
+            "points": "2500.hp",
+            "speed": "9.2.knots",
+            "armor": "2.am",
+            "cannons": "6.un",
+            "harpoons": "4.un",
+            "weapons": "200.m",
+            "sight": "350.m",
+            "ability": "none"
+        }
+    },
+    {
+        "id": "5",
+        "name": "The Wicked Wench",
+         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "img": "https://live.staticflickr.com/65535/53120487663_4253fcbdcf.jpg",
+        "model": {
+            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+        },
+        "options": {
+            "points": "2500.hp",
+            "speed": "9.2.knots",
+            "armor": "2.am",
+            "cannons": "6.un",
+            "harpoons": "4.un",
+            "weapons": "200.m",
+            "sight": "350.m",
+            "ability": "none"
+        }
+    }
+]
