@@ -1,6 +1,4 @@
-import { Suspense } from "react";
 import Header from "@/components/Header/Header";
-import Loader from "./loading";
 import Footer from "@/components/footer/Footer";
 
 export default function LanguageLayout({
@@ -14,7 +12,7 @@ export default function LanguageLayout({
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
       <Header lng={lng} />
-      <Suspense fallback={<Loader />}>{children}</Suspense>
+      {children}
       <Footer lng={lng} />
     </section>
   );

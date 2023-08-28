@@ -1,41 +1,48 @@
 "use client";
 
-import i18next from "i18next";
+import i18next, { FlatNamespace, KeyPrefix } from "i18next";
 import {
   initReactI18next,
   useTranslation as useTranslationOrg,
+  UseTranslationOptions,
+  UseTranslationResponse,
+  FallbackNs,
 } from "react-i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
-import { getOptions, languages } from "./settings";
+import { getOptions } from "./settings";
 import { useEffect, useState } from "react";
 
 const runsOnServerSide = typeof window === "undefined";
 //
 i18next
   .use(initReactI18next)
-  .use(LanguageDetector)
   .use(
     resourcesToBackend(
       (language: string, namespace: string) =>
         import(`./locales/${language}/${namespace}.json`)
     )
   )
-  .init({
-    ...getOptions(),
-    lng: undefined, // let detect the language on client side
-    detection: {
-      order: ["path", "htmlTag", "cookie", "navigator"],
-    },
-    preload: runsOnServerSide ? languages : [],
-  });
+  .init(getOptions());
 
-export function useTranslation(lng: string, ns: any, options?: any) {
+// export function useTranslation(lng: string, ns, options) {
+//   if (i18next.resolvedLanguage !== lng) i18next.changeLanguage(lng);
+//   return useTranslationOrg(ns, options);
+// }
+
+export function useTranslation<
+  Ns extends FlatNamespace,
+  KPrefix extends KeyPrefix<FallbackNs<Ns>> = undefined
+>(
+  lng: string,
+  ns?: Ns,
+  options?: UseTranslationOptions<KPrefix>
+): UseTranslationResponse<FallbackNs<Ns>, KPrefix> {
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
   if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
     i18n.changeLanguage(lng);
   } else {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -49,6 +56,4 @@ export function useTranslation(lng: string, ns: any, options?: any) {
     }, [lng, i18n]);
   }
   return ret;
-  // if (i18next.resolvedLanguage !== lng) i18next.changeLanguage(lng);
-  // return useTranslationOrg(ns, options);
 }

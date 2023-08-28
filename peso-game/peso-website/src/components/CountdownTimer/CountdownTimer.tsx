@@ -52,7 +52,7 @@ export const CountdownTimer: FC<LanguageFCComponentsProps> = ({ lng }) => {
   const updateTimer = () => {
     setInterval(() => {
       const { days, hours, minutes, seconds } = convertMs(
-        Date.parse("Aug 24, 2023") - Date.parse(String(new Date()))
+        Date.parse("Nov 24, 2023") - Date.parse(String(new Date()))
       );
 
       setDifference({ days, hours, minutes, seconds });

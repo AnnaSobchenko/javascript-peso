@@ -3,7 +3,10 @@ export const fallbackLng =
 export const languages = ["en", "ua"];
 export const defaultNS = "translation";
 
-export function getOptions(lng = fallbackLng, ns = defaultNS) {
+export function getOptions(
+  lng = fallbackLng,
+  ns: string | string[] = defaultNS
+) {
   // console.log("lng getOptions:>> ", lng, new Date());
   return {
     // debug: true,
