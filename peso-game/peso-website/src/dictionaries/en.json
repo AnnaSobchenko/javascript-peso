@@ -1,0 +1,80 @@
+{
+  "main": {
+    "mainTitle": "Let's start website",
+    "example": "Example",
+    "headerContact": "Contact",
+    "headerPrivacy": "Privacy",
+    "headerDonate": "Donate to the project",
+
+    "heroDescription": "The name peso was given to the 8-real silver coin introduced in 1497, minted at 83⁄8 pesos to a Castilian mark. It was minted in large quantities after the discovery of silver in Mexico.",
+    "heroGameProcess": "Game Process",
+    "heroVideoDescription": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
+    "heroTitle": "One Pirate Peso",
+    "heroText": "The name peso was given to the 8-real silver coin introduced in 1497, minted at 83⁄8 pesos to a Castilian mark. It was minted in large quantities after the discovery of silver in Mexico.",
+    "headerNavHome": "Home",
+    "headerNavFAQ": "FAQ",
+    "headerNavNew": "New",
+    "headerNavWiki": "Wiki",
+    "headerNavAbout": "About",
+    "headerLogIn": "Log In",
+    "headerPlayNow": "Play Now",
+    "headerMenu": "Menu",
+    "headerClose": "Close",
+    "CountdownTimerTitleNews": "News preview",
+    "CountdownTimerDescribeNews": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
+    "CountdownTimerUntilUpdate": "Until the next update:",
+    "CountdownTimerDays": "Days",
+    "CountdownTimerHours": "Hours",
+    "CountdownTimerMinutes": "Minutes",
+    "CountdownTimerSeconds": "Seconds",
+    "CountdownTimerUpdateNews": "View the latest update here",
+    "footerLicense": "License",
+    "footerPrivacy": "Privacy Policy",
+    "footerText": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.",
+    "wikiHeader": "British ship: “Sloop”.",
+    "wikiText": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+    "wikiPoints": "Hit Points:",
+    "wikiSpeed": "Base Speed:",
+    "wikiArmor": "Base Armor:",
+    "wikiCannons": "Max. Cannons:",
+    "wikiHarpoons": "Max. Harpoons:",
+    "wikiWeapons": "Max. Weapons range:",
+    "wikiAbility": "Ultimate Ability:",
+    "wikiSight": "Max. Range of Sight:",
+    "wikiReadMore": "Read more on the Wiki page",
+    "feedBackHeader": "FeedBack Form",
+    "feedBackText": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
+    "feedBackFormHeader": "Drop Us a Line",
+    "feedBackFormName": "Your name & nickname...",
+    "feedBackFormEmail": "Your email...",
+    "feedBackFormMessage": "Your message & question...",
+    "feedBackBtn": "Send Message",
+    "feedBackError": "Required",
+    "feedBackErrorEmail": "Invalid email format"
+  },
+  "news": {
+    "id1": {
+      "name": "New Expanded Content: “Adventures of the Boundless Seas”",
+      "text": "The developers of the pirate ship game have announced a major update that will add new islands, enemies, and treasures. Players will be able to uncover secrets and dive into an even more captivating pirate world."
+    },
+    "id2": {
+      "name": "E-Sports Tournament: “Pirate Clash”",
+      "text": "A special tournament for the game about pirate ships has become popular among casual players and professionals alike. Teams from around the world compete for the title of the best pirates and significant prizes."
+    },
+    "id3": {
+      "name": "Crossover with a Popular Franchise",
+      "text": "The game about pirate ships has announced a partnership with a popular adventure film franchise. Players will have the opportunity to control ships and characters from their favorite movie success."
+    },
+    "id4": {
+      "name": "Global Event “Rising Storm Winds“",
+      "text": "The game has introduced a massive global event where pirates from all over the world must join forces to combat the elements. Players must unite their efforts to save their ships and earn incredible rewards."
+    },
+    "id5": {
+      "name": "Updated “Pirate Alliance“ Mode",
+      "text": "A new mode has been added to the game where players can form alliances to survive together on pirate waters. Shared economy, tasks, and battles against other alliances have become key elements of this update."
+    }
+  },
+  "faq": {
+    "GameFAQ": "Game FAQ"
+  }
+}

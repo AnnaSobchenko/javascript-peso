@@ -1,27 +1,16 @@
-import { useTranslation } from "@/app/i18n";
-import Logo from "../../assets/icon/logoWiki.svg";
+import Logo from "public/assets/icon/logoWiki.svg";
 import Image from "next/image";
 import { FC } from "react";
 import localFont from "next/font/local";
-interface FooterProps {
-  lng: string;
-}
+import { getDictionary } from "@/app/[lang]/dictionaries";
+import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
   display: "swap",
 });
-const Footer: FC<FooterProps> = async ({ lng }) => {
-  const { t } = await useTranslation(lng, "main");
-  // const openLisence = () => {
-  //   setActivePriv((prev) => !prev);
-  //   setLicense(true);
-  // };
-  // const openPrivPol = () => {
-  //   setActivePriv((prev) => !prev);
-  //   setLicense(false);
-  // };
-
+const Footer: FC<LanguageFCComponentsProps> = async ({ lang }) => {
+  const { main } = await getDictionary(lang);
   return (
     <footer className="w-screen bg-accent-background">
       <div className="layout">
@@ -47,7 +36,7 @@ const Footer: FC<FooterProps> = async ({ lng }) => {
             </svg>
           </div>
           <p className="mt-6 text-sm md:text-base lg:text-lg  ">
-            @ {t("footerText")}
+            @ {main.footerText}
           </p>
           <div className="flex items-center sm:flex-col  md:flex-row md:justify-between  mt-12">
             <div className="mb-6 md:mb-0">
@@ -55,14 +44,14 @@ const Footer: FC<FooterProps> = async ({ lng }) => {
                 type="button"
                 className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
               >
-                {t("footerLicense")}
+                {main.footerLicense}
               </button>
               <span className="text-[#D9D9D9] mr-2.5 ml-2.5">|</span>
               <button
                 type="button"
                 className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
               >
-                {t("footerPrivacy")}
+                {main.footerPrivacy}
               </button>
             </div>
             <div className="flex">

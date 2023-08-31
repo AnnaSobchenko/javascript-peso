@@ -1,5 +1,5 @@
 import Image from "next/image";
-import imgPreloader from "../../../assets/img/home/preloader-site.png";
+import imgPreloader from "../../../../public/assets/img/home/preloader-site.png";
 
 const PreloaderSite = () => {
   return (

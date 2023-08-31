@@ -1,8 +1,31 @@
 export interface LanguageFCComponentsProps {
-  lng: string;
+  lang: string;
+}
+export interface TextFCComponentsProps {
+  textTr: {
+    [key: string]: any;
+  };
+}
+export interface NewsTextFCComponentsProps {
+  textTr: {
+    id: {
+      name: string;
+      text: string;
+    };
+  };
+}
+
+export interface LngTextFCComponentsProps {
+  lang: string;
+  textTr: {
+    [key: string]: any;
+  };
 }
 export interface NavBarFCComponentsProps {
-  lng: string;
+  lang: string;
+  textTr: {
+    [key: string]: any;
+  };
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -32,7 +55,11 @@ export interface ShipList {
 }
 
 export interface LanguageShipComponentsProps {
-  lng: string;
+  lang: string;
   id: string;
-  
+}
+
+export interface MainBtn {
+  text: string;
+  onClick: () => void;
 }
