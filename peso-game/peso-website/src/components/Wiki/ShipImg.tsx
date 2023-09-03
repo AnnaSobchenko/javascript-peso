@@ -1,5 +1,5 @@
 import React, { FC, useRef } from "react";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useLoader, useFrame } from "@react-three/fiber";
 
 interface ShipImgProps {
@@ -8,7 +8,6 @@ interface ShipImgProps {
 
 const ShipImg: FC<ShipImgProps> = ({ glbUrl }) => {
   const ship = useLoader(GLTFLoader, glbUrl);
-
   return (
     <>
       {ship.scene && (

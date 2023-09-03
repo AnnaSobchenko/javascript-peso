@@ -47,7 +47,7 @@ export const Wiki: FC<TextFCComponentsProps> = ({ textTr }) => {
               <Canvas camera={{ position: [20, 1, 1], fov: 25 }}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <ShipImg glbUrl="/assets/img/3dImg/fullQ/1kMesh.gltf" />
+                <ShipImg glbUrl="/assets/object/3dImg/fullQ/1kMesh.gltf" />
                 <OrbitControls
                   enableZoom={false}
                   maxPolarAngle={Math.PI / 2}
