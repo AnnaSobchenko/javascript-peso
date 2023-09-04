@@ -129,23 +129,6 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                 <div className="mr-6">
                   <ButtonMain text={textTr.feedBackBtn} onClick={() => {}} />
                 </div>
-                {/* <button
-                  type="submit"
-                  className="mt-6 px-2 py-1 bg-accent-background border-accent-element-color md:mt-0"
-                >
-                  <div className="flex justify-center px-6 py-5 bg-accent-color items-center">
-                    <p
-                      className={`${textAccentFont} font-normal text-2xl text-main-font-color mr-2.5`}
-                    >
-                      {textTr.feedBackBtn}
-                    </p>
-                    <ul className="m-auto">
-                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
-                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
-                      <li className="w-1 h-1 rounded-full mb-1 bg-opacity-font-3 last:mb-0"></li>
-                    </ul>
-                  </div>
-                </button> */}
               </div>
             </Form>
           )}
