@@ -1,5 +1,5 @@
 .forum__replyitem {
-  height: auto;
+  // height: auto;
 
   &_lineanswer {
     margin-left: 48px;
@@ -31,21 +31,21 @@
     height: 1px;
   }
 
-  &_line_horiz {
-    height: 0.5px;
-    border: 0.25px solid var(--accent-element-color);
-    width: 22.5px;
-    background-color: var(--accent-element-color);
-  }
+  // &_line_horiz {
+  //   height: 0.5px;
+  //   border: 0.25px solid var(--accent-element-color);
+  //   width: 22.5px;
+  //   background-color: var(--accent-element-color);
+  // }
 
   &_item {
     display: flex;
   }
 
-  &_infotitle {
-    display: flex;
-    align-items: flex-start;
-  }
+  // &_infotitle {
+  //   display: flex;
+  //   align-items: flex-start;
+  // }
 
   &_avatar {
     display: flex;
