@@ -1,6 +1,6 @@
 "use client";
 
-import { LanguageShipComponentsProps } from "@/interfaces/Props.interface";
+import { LanguageShipComponentsPropsId } from "@/interfaces/Props.interface";
 import { FC, useEffect, useState } from "react";
 import dataShip from "../../../public/data/dataShip.json";
 import localFont from "next/font/local";
@@ -9,14 +9,14 @@ import { OrbitControls } from "@react-three/drei";
 import logoWiki from "../../../public/assets/icon/logoWiki.svg";
 import iconDegree from "../../../public/assets/icon/360-degrees.svg";
 import Image from "next/image";
-import ShipImg from "../Wiki/ShipImg";
+import ShipImg from "../Home/Wiki/ShipImg";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
   display: "swap",
 });
 
-export const ShipCard: FC<LanguageShipComponentsProps> = ({
+export const ShipCard: FC<LanguageShipComponentsPropsId> = ({
   textTr,
   id,
   lang,
