@@ -12,7 +12,7 @@ export const LicensePlc: FC<TextFCComponentsProps> = ({ textTr }) => {
   const textAccentFont = myFont.className;
 
   return (
-    <div className="w-full px-6 mt-20 mb-48">
+    <div className="w-full px-6 mt-20 mb-48 layout">
       <h1 className={`mb-12 text-4xl ${textAccentFont}`}>
         {textTr.licenseTitlePolicy}
       </h1>
