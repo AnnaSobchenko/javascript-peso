@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
+    "@react-three/drei": "^9.80.9",
+    "@react-three/fiber": "^8.13.7",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "@types/three": "^0.155.1",
     "autoprefixer": "10.4.15",
     "negotiator": "^0.6.3",
     "next": "13.4.19",
@@ -21,6 +24,7 @@
     "react-dom": "18.2.0",
     "sass": "^1.66.1",
     "tailwindcss": "3.3.3",
+    "three": "^0.156.0",
     "typescript": "5.2.2",
     "uuid": "^9.0.0"
   }

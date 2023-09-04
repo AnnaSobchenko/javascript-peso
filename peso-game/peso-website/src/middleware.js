@@ -22,6 +22,7 @@ export function middleware(request) {
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
+  console.log("pathnameIsMissingLocale", pathnameIsMissingLocale);
 
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
@@ -38,7 +39,7 @@ export function middleware(request) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    "/((?!_next).*)",
+    "/((?!:path))",
     // Optional: only run on root (/) URL
     // '/'
   ],
