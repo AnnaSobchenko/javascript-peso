@@ -63,3 +63,12 @@ export interface MainBtn {
   text: string;
   onClick: () => void;
 }
+
+export interface LanguageShipComponentsProps {
+  lang: string;
+   textTr: {
+    [key: string]: any;
+  };
+  id: string;
+  
+}

@@ -1,11 +1,13 @@
 [
     {
         "id": "1",
-        "name": "British ship: “Sloop”.",
-        "text": "Text 1",
+        "nameEn": "British ship: ʼSloopʼ",
+        "nameUa": "Британський човен: ʼШлюпʼ",
+        "textEn": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "textUa": "Cереднє вітрило може бути оснащене топом або дробовим оснащенням. На шлюпі, оснащеному верхньою частиною щогли, штаг (на якому тримається переднє вітрило) кріпиться у верхній частині щогли. На шлюпі з дробовим оснащенням штаг кріпиться до щогли в точці нижче верху.",
         "img": "https://live.staticflickr.com/65535/53120487663_4253fcbdcf.jpg",
         "model": {
-            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+            "url": "/assets/object/3dImg/fullQ/1kMesh.gltf"
         },
         "options": {
             "points": "2500.hp",
@@ -20,11 +22,13 @@
     },
     {
         "id": "2",
-        "name": "The Black Pearl",
-         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "nameEn": "The Black Pearl",
+        "nameUa": "Чорна Перлина",
+        "textEn": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "textUa": "Cереднє вітрило може бути оснащене топом або дробовим оснащенням. На шлюпі, оснащеному верхньою частиною щогли, штаг (на якому тримається переднє вітрило) кріпиться у верхній частині щогли. На шлюпі з дробовим оснащенням штаг кріпиться до щогли в точці нижче верху.",
         "img": "https://live.staticflickr.com/65535/53120198934_e9282e8a3d_z.jpg",
         "model": {
-            "url": "/assets/img/3dImg/viking/scene.gltf"
+            "url": "/assets/object/3dImg/viking/scene.gltf"
         },
         "options": {
             "points": "2500.hp",
@@ -39,11 +43,13 @@
     },
     {
         "id": "3",
-        "name": "The Flying Dutchman",
-         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "nameEn": "The Flying Dutchman",
+        "nameUa": "Летючий Голандець",
+        "textEn": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "textUa": "Cереднє вітрило може бути оснащене топом або дробовим оснащенням. На шлюпі, оснащеному верхньою частиною щогли, штаг (на якому тримається переднє вітрило) кріпиться у верхній частині щогли. На шлюпі з дробовим оснащенням штаг кріпиться до щогли в точці нижче верху.",
         "img": "https://live.staticflickr.com/65535/53120404015_886921a400_z.jpg",
         "model": {
-            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+            "url": "/assets/object/3dImg/fullQ/1kMesh.gltf"
         },
         "options": {
             "points": "2500.hp",
@@ -58,11 +64,13 @@
     },
     {
         "id": "4",
-        "name": "Jackdaw",
-         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "nameEn": "Jackdaw",
+        "nameUa": "Галка",
+        "textEn": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "textUa": "Cереднє вітрило може бути оснащене топом або дробовим оснащенням. На шлюпі, оснащеному верхньою частиною щогли, штаг (на якому тримається переднє вітрило) кріпиться у верхній частині щогли. На шлюпі з дробовим оснащенням штаг кріпиться до щогли в точці нижче верху.",
         "img": "https://live.staticflickr.com/65535/53120198939_d42934fd9d_z.jpg",
          "model": {
-            "url": "/assets/img/3dImg/viking/scene.gltf"
+            "url": "/assets/object/3dImg/viking/scene.gltf"
         },
         "options": {
             "points": "2500.hp",
@@ -77,11 +85,13 @@
     },
     {
         "id": "5",
-        "name": "The Wicked Wench",
-         "text": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "nameEn": "The Wicked Wench",
+        "nameUa": "Зла дівчинка",
+        "textEn": "The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit, a spar that projects forward from the bow.",
+        "textUa": "Cереднє вітрило може бути оснащене топом або дробовим оснащенням. На шлюпі, оснащеному верхньою частиною щогли, штаг (на якому тримається переднє вітрило) кріпиться у верхній частині щогли. На шлюпі з дробовим оснащенням штаг кріпиться до щогли в точці нижче верху.",
         "img": "https://live.staticflickr.com/65535/53120487663_4253fcbdcf.jpg",
         "model": {
-            "url": "/assets/img/3dImg/fullQ/1kMesh.gltf"
+            "url": "/assets/object/3dImg/fullQ/1kMesh.gltf"
         },
         "options": {
             "points": "2500.hp",
