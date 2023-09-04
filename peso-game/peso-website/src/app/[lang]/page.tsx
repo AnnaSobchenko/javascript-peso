@@ -1,6 +1,6 @@
 import { CountdownTimer } from "@/components/Home/CountdownTimer/CountdownTimer";
 import { getDictionary } from "./dictionaries";
-import { Wiki } from "@/components/Wiki/Wiki";
+import { Wiki } from "@/components/Home/Wiki/Wiki";
 export default async function Home({
   params: { lang },
 }: {

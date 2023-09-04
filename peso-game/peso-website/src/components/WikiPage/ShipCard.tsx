@@ -9,7 +9,7 @@ import { OrbitControls } from "@react-three/drei";
 import logoWiki from "../../../public/assets/icon/logoWiki.svg";
 import iconDegree from "../../../public/assets/icon/360-degrees.svg";
 import Image from "next/image";
-import ShipImg from "../Wiki/ShipImg";
+import ShipImg from "../Home/Wiki/ShipImg";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",

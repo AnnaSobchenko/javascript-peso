@@ -1,8 +1,8 @@
 "use client";
 import React, { FC } from "react";
 import { TextFCComponentsProps } from "@/interfaces/Props.interface";
-import logoWiki from "../../../public/assets/icon/logoWiki.svg";
-import iconDegree from "../../../public/assets/icon/360-degrees.svg";
+import logoWiki from "../../../../public/assets/icon/logoWiki.svg";
+import iconDegree from "../../../../public/assets/icon/360-degrees.svg";
 import ShipImg from "./ShipImg";
 
 import { Canvas } from "@react-three/fiber";
@@ -11,7 +11,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 
 const myFont = localFont({
-  src: "../../../public/MyFont-Regular.otf",
+  src: "../../../../public/MyFont-Regular.otf",
   display: "swap",
 });
 
