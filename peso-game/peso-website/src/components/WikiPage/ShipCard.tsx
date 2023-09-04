@@ -1,6 +1,6 @@
 "use client";
 
-import { LanguageShipComponentsProps } from "@/interfaces/Props.interface";
+import { LanguageShipComponentsPropsId } from "@/interfaces/Props.interface";
 import { FC, useEffect, useState } from "react";
 import dataShip from "../../../public/data/dataShip.json";
 import localFont from "next/font/local";
@@ -16,7 +16,7 @@ const myFont = localFont({
   display: "swap",
 });
 
-export const ShipCard: FC<LanguageShipComponentsProps> = ({
+export const ShipCard: FC<LanguageShipComponentsPropsId> = ({
   textTr,
   id,
   lang,
