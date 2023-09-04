@@ -18,12 +18,13 @@ export const AboutComponent: FC<LanguageFCComponentsProps> = async ({
         {dataTeam.map(({ id, nameEn, nameUa, avatar, linkedin, github }) => (
           <li key={id} className="pb-8 last:pb-14">
             <div className="relative group">
-              <div className="group-hover:blur-sm transition-all">
+              <div className="group-hover:blur-sm transition-all relative">
                 <img
                   src={avatar}
                   alt="avatar"
-                  className="md:w-[300px] h-[330px] mb-4 hover:rotate-y-180"
+                  className="md:w-[300px] h-[330px] mb-4 hover:rotate-y-180 "
                 />
+                <div className=" bg-shadow-background group-hover:bg-shadow-background-hero z-10 w-full h-full absolute top-0 left-0"></div>
               </div>
               <h3
                 className={`text-center mb-5 text-xl md:text-2xl ${textAccentFont}`}
