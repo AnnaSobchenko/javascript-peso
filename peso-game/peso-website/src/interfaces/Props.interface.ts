@@ -64,7 +64,7 @@ export interface MainBtn {
   onClick: () => void;
 }
 
-export interface LanguageShipComponentsProps {
+export interface LanguageShipComponentsPropsId {
   lang: string;
    textTr: {
     [key: string]: any;
