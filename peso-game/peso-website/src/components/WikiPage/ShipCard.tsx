@@ -1,43 +1,48 @@
 "use client";
-import React, { FC } from "react";
-import { TextFCComponentsProps } from "@/interfaces/Props.interface";
-import logoWiki from "../../../public/assets/icon/logoWiki.svg";
-import iconDegree from "../../../public/assets/icon/360-degrees.svg";
-import ShipImg from "./ShipImg";
 
+import { LanguageShipComponentsProps } from "@/interfaces/Props.interface";
+import { FC, useEffect, useState } from "react";
+import dataShip from "../../../public/data/dataShip.json";
+import localFont from "next/font/local";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import localFont from "next/font/local";
+import logoWiki from "../../../public/assets/icon/logoWiki.svg";
+import iconDegree from "../../../public/assets/icon/360-degrees.svg";
 import Image from "next/image";
+import ShipImg from "../Wiki/ShipImg";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
   display: "swap",
 });
 
-const options = {
-  points: "2500.hp",
-  armor: "2.am",
-  harpoons: "4.un",
-  weapons: "200.m",
-  ultimate_ability: "none",
-  range_of_sight: "350.m",
-  speed: "9.2.knots",
-  cannons: "6.un",
-};
-
-export const Wiki: FC<TextFCComponentsProps> = ({ textTr }) => {
+export const ShipCard: FC<LanguageShipComponentsProps> = ({
+  textTr,
+  id,
+  lang,
+}) => {
   const textAccentFont = myFont.className;
-  const {
-    points,
-    armor,
-    harpoons,
-    weapons,
-    ultimate_ability,
-    range_of_sight,
-    speed,
-    cannons,
-  } = options;
+  //   const [shipInfo, setShipInfo] = useState<Ship[]>(dataShip);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("/data/dataShip.json");
+  //       const data = await response.json();
+  //       console.log("data", data);
+  //       setShipInfo(data.filter((elem: any) => elem.id === id));
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+  const ship = dataShip.filter((elem: any) => elem.id === id);
+  const oneShip = ship[0];
+  console.log("oneShip", oneShip);
+
   return (
     <div className="bg-accent-background w-screen flex justify-center">
       <div className="layout mx-5 sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
@@ -47,7 +52,7 @@ export const Wiki: FC<TextFCComponentsProps> = ({ textTr }) => {
               <Canvas camera={{ position: [20, 1, 1], fov: 25 }}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <ShipImg glbUrl={"/assets/object/3dImg/fullQ/1kMesh.gltf"} />
+                <ShipImg glbUrl={oneShip.model?.url} />
                 <OrbitControls
                   enableZoom={false}
                   maxPolarAngle={Math.PI / 2}
@@ -82,10 +87,10 @@ export const Wiki: FC<TextFCComponentsProps> = ({ textTr }) => {
             <h2
               className={`text-center font-marcellus-sc text-2xl mb-6 md:text-left md:mb-[15px] ${textAccentFont}`}
             >
-              {textTr.wikiHeader}
+              {lang === "en" ? oneShip.nameEn : oneShip.nameUa}
             </h2>
             <p className="text-sm text-opacity-font-2 text-sans text-justify mb-6 lg:text-lg">
-              {textTr.wikiText}
+              {lang === "en" ? oneShip.textEn : oneShip.textUa}
             </p>
             <div className="h-px bg-main-font-color w-full mb-6"></div>
           </div>
@@ -94,49 +99,49 @@ export const Wiki: FC<TextFCComponentsProps> = ({ textTr }) => {
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiPoints}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {points}
+              {oneShip.options.points}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiSpeed}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {speed}
+              {oneShip.options.speed}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiArmor}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {armor}
+              {oneShip.options.armor}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiCannons}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {cannons}
+              {oneShip.options.cannons}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiHarpoons}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {harpoons}
+              {oneShip.options.harpoons}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiWeapons}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {weapons}
+              {oneShip.options.weapons}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiAbility}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {ultimate_ability}
+              {oneShip.options.ability}
             </span>
           </li>
           <li className={`text-sm mb-2 lg:text-lg ${textAccentFont}`}>
             {textTr.wikiSight}
             <span className="ml-2 text-opacity-font-2 text-sm lg:text-lg">
-              {range_of_sight}
+              {oneShip.options.sight}
             </span>
           </li>
         </ul>
