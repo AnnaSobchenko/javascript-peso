@@ -20,6 +20,7 @@ const config: Config = {
       "shadow-second-background": "rgba(25, 25, 25, 0.9)",
       "shadow-background": "rgba(26, 26, 26, 0.45)",
       "shadow-background-hero": "rgba(26, 26, 26, 0.55)",
+      "shadow-background-about": "rgba(26, 26, 26, 0.15)",
 
       "main-font-color": "#fff",
       "second-font-color": "#0e0e0e",

@@ -27,7 +27,7 @@ export const AboutComponent: FC<LanguageFCComponentsProps> = async ({
                   height={330}
                   className="md:w-[300px] h-[330px] mb-4 hover:rotate-y-180 "
                 />
-                <div className=" bg-shadow-background group-hover:bg-shadow-background-hero z-10 w-full h-full absolute top-0 left-0"></div>
+                <div className=" bg-shadow-background-about group-hover:bg-shadow-background-hero z-10 w-full h-full absolute top-0 left-0"></div>
               </div>
               <h3
                 className={`text-center mb-5 text-xl md:text-2xl ${textAccentFont}`}

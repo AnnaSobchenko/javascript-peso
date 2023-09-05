@@ -31,7 +31,6 @@ const News: FC<LanguageFCComponentsProps> = async ({ lang }) => {
               />
               <p className="text-sm text-opacity-font-2 text-sans text-justify mb-6 lg:text-lg">
                 {lang === "en" ? textEn : textUa}
-                {id}
               </p>
             </div>
           </li>
