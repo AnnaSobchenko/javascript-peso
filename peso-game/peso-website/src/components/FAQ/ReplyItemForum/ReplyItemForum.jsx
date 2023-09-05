@@ -6,15 +6,15 @@ const uuid = require("uuid");
 
 const ReplyItemForum = ({ array }) => {
   return (
-    <ul className={s.forum__replyitem}>
+    <ul className=" h-auto">
       {array.map((el) => (
         <li key={uuid.v4()} className={s.forum__replyitem_item}>
           <div className={s.forum__replyitem_lineanswer}>
             <div className={s.forum__replyitem_lineanswer_first}></div>
           </div>
-          <div className={s.forum__replyitem_infotitle}>
-            <div className={s.forum__replyitem_avatar}>
-              <div className={s.forum__replyitem_line_horiz}></div>
+          <div className=" flex items-start">
+            <div className=" flex items-center">
+              <div className=" h-[0.5px] border-accent-element-color border-[0.25px] w-[22.5px] bg-accent-element-color  "></div>
               <Image
                 src={User}
                 width={45}

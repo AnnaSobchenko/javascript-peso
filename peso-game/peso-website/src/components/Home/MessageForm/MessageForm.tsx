@@ -46,7 +46,10 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
   };
 
   return (
-    <div className="bg-accent-background w-screen flex justify-center">
+    <div
+      id="form"
+      className="bg-accent-background w-screen flex justify-center"
+    >
       <div className="layout px-7 pt-14 pb-7 md:px-14 md:pt-16 md:pb-12 lg:px-20 lg:pt-30 lg:pb-20">
         <h2
           className={`text-center mb-1.5 ${textAccentFont} font-normal text-lg md:text-2xl md:mb-2.5 lg:mb-2.5`}

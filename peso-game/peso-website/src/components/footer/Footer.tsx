@@ -4,6 +4,7 @@ import { FC } from "react";
 import localFont from "next/font/local";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
+import Link from "next/link";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
@@ -40,19 +41,19 @@ const Footer: FC<LanguageFCComponentsProps> = async ({ lang }) => {
           </p>
           <div className="flex items-center sm:flex-col  md:flex-row md:justify-between  mt-12">
             <div className="mb-6 md:mb-0">
-              <button
-                type="button"
+              <Link
+                href={`/${lang}/license`}
                 className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
               >
                 {main.footerLicense}
-              </button>
+              </Link>
               <span className="text-[#D9D9D9] mr-2.5 ml-2.5">|</span>
-              <button
-                type="button"
+              <Link
+                href={`/${lang}/privacy`}
                 className={`${myFont.className} text-sm md:text-base transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200`}
               >
                 {main.footerPrivacy}
-              </button>
+              </Link>
             </div>
             <div className="flex">
               <svg className="w-10 h-10 mr-2.5 transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">

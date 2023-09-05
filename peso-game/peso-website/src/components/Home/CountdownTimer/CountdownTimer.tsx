@@ -4,9 +4,10 @@ import { FC } from "react";
 import localFont from "next/font/local";
 import {
   CountdownTimerProps,
-  TextFCComponentsProps,
+  LngTextFCComponentsProps,
 } from "@/interfaces/Props.interface";
 import ThreeVertDots from "@/components/UI/ThreeVertDots/ThreeVertDots";
+import Link from "next/link";
 
 // Font files can be colocated inside of `app`
 const myFont = localFont({
@@ -43,10 +44,12 @@ const initialState = {
   seconds: "00",
 };
 
-export const CountdownTimer: FC<TextFCComponentsProps> = ({ textTr }) => {
+export const CountdownTimer: FC<LngTextFCComponentsProps> = ({
+  lang,
+  textTr,
+}) => {
   const [difference, setDifference] =
     useState<CountdownTimerProps>(initialState);
-  // const { t } = useTranslation(lng, "main");
 
   const updateTimer = () => {
     setInterval(() => {
@@ -145,12 +148,12 @@ export const CountdownTimer: FC<TextFCComponentsProps> = ({ textTr }) => {
             </span>
           </div>
         </div>
-        <a
-          href="#"
+        <Link
+          href={`/${lang}/new`}
           className={`layout ${myFont.className} flex justify-center text-lg underline md:text-2xl`}
         >
           {textTr.CountdownTimerUpdateNews}
-        </a>
+        </Link>
       </div>
     </div>
   );

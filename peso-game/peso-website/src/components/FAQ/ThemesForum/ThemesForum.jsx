@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import s from "./ThemesForum.module.scss";
 import baseTheme from "../base.json";
 import ThreeDots from "../../UI/ThreeVertDots/ThreeVertDots";

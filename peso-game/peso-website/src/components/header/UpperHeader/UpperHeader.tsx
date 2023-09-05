@@ -18,7 +18,7 @@ const UpperHeader: FC<LngTextFCComponentsProps> = async ({ lang, textTr }) => {
                 {textTr.headerPrivacy}
               </Link>
               <Link
-                href=""
+                href={`/${lang}/#form`}
                 className=" text-xs md:text-sm bg-transparent pt-4 pb-4 hover:scale-125"
               >
                 {textTr.headerContact}

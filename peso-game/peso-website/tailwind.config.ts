@@ -66,6 +66,7 @@ const config: Config = {
         "inset-lg": "0 25px 30px 10px rgba(14,14,14,1)",
       },
       spacing: {
+        0.25: "0.25rem",
         13: "3.25rem",
         15: "3.75rem",
         128: "32rem",

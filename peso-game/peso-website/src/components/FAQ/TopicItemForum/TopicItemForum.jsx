@@ -11,14 +11,14 @@ const TopicItemForum = ({ array }) => {
       <ul>
         {array.map((el) => (
           <li
-            id={el._id}
+            // id={el._id}
             className={
               isOpen
                 ? `${s.forum__topic__item_open}`
                 : `${s.forum__topic__item}`
             }
             key={uuid.v4()}
-            onClick={(e) => console.log("e.target :>> ", e.currentTarget.id)}
+            // onClick={(e) => console.log("e.target :>> ", e.currentTarget.id)}
           >
             <details className={s.forum__topic_details}>
               <summary className={s.forum__topic_summary}>
