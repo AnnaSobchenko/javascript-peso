@@ -1,42 +1,42 @@
-[
-  {
+[{
     "id": "1",
     "nameEn": "Martin Liminovic",
     "nameUa": "Мартін Ліміновіч",
     "avatar": "https://live.staticflickr.com/65535/53150391773_ea75db8840_z.jpg",
     "linkedin": "https://www.linkedin.com/in/martin-liminovic-44046b21a/",
     "github": "https://github.com/MartinLilt"
-  },
-  {
+},
+{
     "id": "2",
     "nameEn": "Hanna Sobchenko",
     "nameUa": "Анна Собченко",
     "avatar": "https://live.staticflickr.com/65535/53149895646_6e46125f8a_z.jpg",
     "linkedin": "https://www.linkedin.com/in/hanna-sobchenko/",
     "github": "https://github.com/AnnaSobchenko"
-  },
-  {
+},
+{
     "id": "3",
     "nameEn": "Denys Fedash",
     "nameUa": "Денис Федаш",
     "avatar": "https://live.staticflickr.com/65535/53149895676_d578985d24_z.jpg",
     "linkedin": "https://www.linkedin.com/in/denis-fedash/",
     "github": "https://github.com/DenisFedash"
-  },
-  {
+},
+{
     "id": "4",
     "nameEn": "Tania Voronchuk",
     "nameUa": "Таня Ворончук",
     "avatar": "https://live.staticflickr.com/65535/53150176034_e82e2ef74b_z.jpg",
     "linkedin": "https://www.linkedin.com/in/tania-voronchuk/",
     "github": "https://github.com/tania-voronchuk"
-  },
-  {
+},
+{
     "id": "5",
-    "nameEn": "Vadim Zaets",
+    "nameen": "Vadim Zaets",
     "nameUa": "Вадим Заєць",
     "avatar": "https://live.staticflickr.com/65535/53150391778_7482e5cd6f_z.jpg",
     "linkedin": "https://www.linkedin.com/in/vadim-zaets-1a3494221/",
     "github": "https://github.com/VadimZaets"
-  }
+}
 ]
+

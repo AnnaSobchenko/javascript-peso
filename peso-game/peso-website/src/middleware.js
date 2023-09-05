@@ -23,11 +23,9 @@ export function middleware(request) {
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
   console.log("pathnameIsMissingLocale", pathnameIsMissingLocale);
-
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
-
     // e.g. incoming request is /products
     // The new URL is now /en-US/products
     return NextResponse.redirect(
@@ -40,6 +38,7 @@ export const config = {
   matcher: [
     // Skip all internal paths (_next)
     "/((?!_next))",
+    // "/:path",
 
     // Optional: only run on root (/) URL
     // '/'

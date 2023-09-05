@@ -1,7 +1,7 @@
 import { ShipCard } from "@/components/WikiPage/ShipCard";
 import { getDictionary } from "../../dictionaries";
 
-export default async function New({
+export default async function WikiPage({
   params: { lang, id },
 }: {
   params: { lang: string; id: string };

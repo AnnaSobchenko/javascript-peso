@@ -2,6 +2,7 @@ import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 import { FC } from "react";
 import localFont from "next/font/local";
 import dataNews from "../../../public/data/dataNews.json";
+import Image from "next/image";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
@@ -21,9 +22,11 @@ const News: FC<LanguageFCComponentsProps> = async ({ lang }) => {
               {lang === "en" ? nameEn : nameUa}
             </h2>
             <div className="md:flex gap-4 justify-center">
-              <img
+              <Image
                 src={img}
                 alt="logo-news"
+                width={450}
+                height={250}
                 className="md:w-[450px] md:h-[250px] sm:mb-4"
               />
               <p className="text-sm text-opacity-font-2 text-sans text-justify mb-6 lg:text-lg">
