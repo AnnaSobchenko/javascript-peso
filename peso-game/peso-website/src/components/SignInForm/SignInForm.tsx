@@ -8,6 +8,7 @@ import { SignInValidationSchema } from "@/components/utils/validation/registerva
 // import CustomErrorMessage from "../UI/CustomError/CustomError";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
 import { useTranslation } from "@/app/i18n/client";
+import AuthField from "../UI/AuthField/AuthField";
 
 interface FormValues {
   email: string;
@@ -56,29 +57,22 @@ const SignInForm: FC<SignInProps> = ({ lng }) => {
             handleChange,
             handleBlur,
             errors,
+            touched,
             // other Formik props
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
               <form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">
                 <h2 className={`${myFont.className} text-3xl`}>{t("title")}</h2>
-                <input
-                  type="email"
+                <AuthField
                   name="email"
                   placeholder="Your email.."
+                  value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
-                  className={`border-b-2 mt-12 ${
-                    errors.email
-                      ? "border-error-color"
-                      : "border-main-font-color"
-                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
+                  errors={errors.email}
+                  touched={touched.email}
                 />
-                <ErrorMessage
-                  component="div"
-                  name="email"
-                  className="mt-2 text-error-color"
-                />
+
                 <div className="relative ">
                   <input
                     type={showPassword ? "text" : "password"}
@@ -128,12 +122,12 @@ const SignInForm: FC<SignInProps> = ({ lng }) => {
                   </div>
                 </button>
                 <div className="flex mt-6">
-                  <p className="text-opacity-font-2">
+                  <p className="text-sm text-opacity-font-2 lg:text-lg">
                     Doesn't have an account?
                   </p>
                   <Link
                     href={`/${lng}/signup`}
-                    className="ml-2 lg:hover:text-error-color  duration-200"
+                    className="ml-2 lg:hover:text-error-color  duration-200 text-sm  lg:text-lg"
                   >
                     Sign Up
                   </Link>

@@ -8,6 +8,7 @@ interface AuthFieldsProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   errors?: string;
+  touched: boolean | string | undefined;
 }
 
 const AuthField: FC<AuthFieldsProps> = ({
@@ -17,6 +18,7 @@ const AuthField: FC<AuthFieldsProps> = ({
   onChange,
   onBlur,
   errors,
+  touched,
 }) => (
   <label htmlFor={name}>
     <input
@@ -27,7 +29,7 @@ const AuthField: FC<AuthFieldsProps> = ({
       onBlur={onBlur}
       value={value}
       className={`border-b-2 ${
-        errors ? "border-error-color" : "border-main-font-color"
+        errors && touched ? "border-error-color" : "border-main-font-color"
       } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
     />
     <ErrorMessage

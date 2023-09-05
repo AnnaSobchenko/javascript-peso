@@ -1,4 +1,10 @@
 {
-	"title":"Sing up"
-	
+	"title":"Sing up",
+	"name":"Your public name..",
+	"email":"Your email..",
+	"password":"Your password..",
+	"repeatPassword":"Repeat your password..",
+	"showPassword":"Show password",
+	"passText":"Create a strong password using a combination of letters, numbers and symbols",
+	"submitBtn":"Create My Account"
 }
