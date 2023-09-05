@@ -2,6 +2,7 @@ import { LanguageFCComponentsProps } from "@/interfaces/Props.interface";
 import { FC } from "react";
 import dataTeam from "../../../public/data/dataTeam.json";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
@@ -19,9 +20,11 @@ export const AboutComponent: FC<LanguageFCComponentsProps> = async ({
           <li key={id} className="pb-8 last:pb-14">
             <div className="relative group">
               <div className="group-hover:blur-sm transition-all relative">
-                <img
+                <Image
                   src={avatar}
                   alt="avatar"
+                  width={300}
+                  height={330}
                   className="md:w-[300px] h-[330px] mb-4 hover:rotate-y-180 "
                 />
                 <div className=" bg-shadow-background group-hover:bg-shadow-background-hero z-10 w-full h-full absolute top-0 left-0"></div>

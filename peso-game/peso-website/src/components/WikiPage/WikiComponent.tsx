@@ -3,6 +3,7 @@ import dataShip from "../../../public/data/dataShip.json";
 import { LanguageShipComponentsProps } from "@/interfaces/Props.interface";
 import { FC, useEffect, useState } from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const myFont = localFont({
   src: "../../../public/MyFont-Regular.otf",
@@ -43,9 +44,11 @@ export const WikiComponent: FC<LanguageShipComponentsProps> = ({
               <h2 className={`mb-2.5 text-xl md:text-2xl ${textAccentFont}`}>
                 {lang === "en" ? nameEn : nameUa}
               </h2>
-              <img
+              <Image
                 src={img}
                 alt={lang === "en" ? nameEn : nameUa}
+                width={280}
+                height={171}
                 className="w-[280px] h-[171px] md:w-[350px] md:h-[200px] md:m-2.5 lg:w-[500px] lg:h-[300px] m-auto"
               />
             </Link>

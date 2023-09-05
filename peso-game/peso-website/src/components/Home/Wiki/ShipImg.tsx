@@ -7,9 +7,8 @@ interface ShipImgProps {
 }
 
 const ShipImg: FC<ShipImgProps> = ({ glbUrl }) => {
-  console.log("glbUrl", glbUrl);
   const ship = useLoader(GLTFLoader, glbUrl);
-  console.log("ship1", ship);
+  console.log("ship", ship);
   return (
     <>
       {ship.scene && (
