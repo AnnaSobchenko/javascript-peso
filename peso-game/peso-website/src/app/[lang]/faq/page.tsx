@@ -7,7 +7,7 @@ const Forum = async ({ params: { lang } }: { params: { lang: string } }) => {
   return (
     <div>
       <HeroForum textTr={dict.faq} />
-      <ThemesForum />
+      <ThemesForum lang={lang} textTr={dict.faq} />
     </div>
   );
 };

@@ -75,9 +75,12 @@
     }
   },
   "faq": {
-    "GameFAQ": "Game FAQ"
+    "gameFAQ": "Game FAQ",
+    "faqDiscussions": "- Discussions:",
+    "faqMessages": "- Messages:",
+    "faqLastUpdate": "- Last Update:"
   },
-  "privacy":{
+  "privacy": {
     "privacyFirst": "@ The headsail can be masthead-rigged or fractional-rigged.",
     "privacySecond": "@ On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.",
     "privacyThird": "@ The headsail can be masthead-rigged or fractional-rigged.",

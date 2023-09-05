@@ -1,11 +1,13 @@
 [
   {
     "_id": "3ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-    "title": "Headquarters",
+    "titleEn": "Headquarters",
+    "titleUa": "Командування",
     "topicTheme": [
       {
         "_id": "3ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Announcements",
+        "subTitleEn": "Announcements",
+        "subTitleUa": "Оголошення",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -81,11 +83,13 @@
   },
   {
     "_id": "3ca7fa2c-527f-4d4c-9f06-5081d96d58bc",
-    "title": "Help",
+    "titleEn": "Help",
+    "titleUa": "Допомога",
     "topicTheme": [
       {
         "_id": "4ca7fa2c-627f-4d4c-9f06-5081d91158bc",
-        "subTitle": "FAQs",
+        "subTitleEn": "FAQs",
+        "subTitleUa": "ЧаПи",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -128,7 +132,8 @@
       },
       {
         "_id": "4ca7ka2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Questions & Bug Reports ",
+        "subTitleEn": "Questions & Bug Reports",
+        "subTitleUa": "Запитання та звіти про помилки",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -268,11 +273,13 @@
   },
   {
     "_id": "3ca7fa2c-427f-4d4c-9f06-5081d96d58bc",
-    "title": " Players & Game",
+    "titleEn": "Players & Game",
+    "titleUa": "Гравці & Гра",
     "topicTheme": [
       {
         "_id": "5ca7fa2c-627f-484c-9f06-508d196d58bc",
-        "subTitle": "Game Discussion & Feedback",
+        "subTitleEn": "Game Discussion & Feedback",
+        "subTitleUa": "Обговорення гри та відгуки",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -496,7 +503,8 @@
       },
       {
         "_id": "3ca7fa2c-611f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Guild & Arena Team Search",
+        "subTitleEn": "Guild & Arena Team Search",
+        "subTitleUa": "Пошук команди гільдії та арени",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -710,7 +718,8 @@
       },
       {
         "_id": "3ca7fa2c-611f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Update & Idea Pool",
+        "subTitleEn": "Update & Idea Pool",
+        "subTitleUa": "Оновлення та генератор ідей",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -826,7 +835,8 @@
       },
       {
         "_id": "5ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Who is Who - The Players",
+        "subTitleEn": "Who is Who - The Players",
+        "subTitleUa": "Хто є хто - Гравці",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -1050,7 +1060,8 @@
       },
       {
         "_id": "5ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Players' Corner",
+        "subTitleEn": "Players' Corner",
+        "subTitleUa": "Куточок гравців",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -1276,11 +1287,13 @@
   },
   {
     "_id": "3ca7fa2c-327f-4d4c-9f06-5081d96d58bc",
-    "title": "Archive",
+    "titleEn": "Archive",
+    "titleUa": "Архів",
     "topicTheme": [
       {
         "_id": "6ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "Headquarters Archive",
+        "subTitleEn": "Headquarters Archive",
+        "subTitleUa": "Архів Командування",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -1432,7 +1445,8 @@
       },
       {
         "_id": "6ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
-        "subTitle": "General Archive",
+        "subTitleEn": "General Archive",
+        "subTitleUa": "Головний Архів",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [

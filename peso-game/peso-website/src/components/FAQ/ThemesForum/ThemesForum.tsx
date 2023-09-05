@@ -3,10 +3,12 @@ import s from "./ThemesForum.module.scss";
 import baseTheme from "../base.json";
 import ThreeDots from "../../UI/ThreeVertDots/ThreeVertDots";
 import TopicItemForum from "../TopicItemForum/TopicItemForum";
+import { FC } from "react";
+import { LngTextFCComponentsProps } from "@/interfaces/Props.interface";
 const uuid = require("uuid");
 
-const ThemesForum = () => {
-  const count = (array) => {
+const ThemesForum: FC<LngTextFCComponentsProps> = ({ lang, textTr }) => {
+  const count = (array: string[]) => {
     let messages = 0;
 
     for (let i = 0; i < array.length; i = i + 1) {
@@ -29,7 +31,9 @@ const ThemesForum = () => {
           <li key={uuid.v4()} className={s.forum__themes__item}>
             <div className={s.forum__themes__main}>
               <div className={s.forum__themes__line}></div>
-              <h3 className={s.forum__themes__title}>{theme.title}</h3>
+              <h3 className={s.forum__themes__title}>
+                {lang == "en" ? theme.titleEn : theme.titleUa}
+              </h3>
             </div>
 
             <ul>
@@ -43,21 +47,22 @@ const ThemesForum = () => {
                         </div>
                         <div className={s.forum__themes__btn}>
                           <p className={s.forum__themes__btn_text}>
-                            {topic.subTitle}
+                            {lang == "en" ? topic.subTitleEn : topic.subTitleUa}
                           </p>
                           <div className={s.forum__themes__update}>
                             <div className={s.forum__themes_desk}>
                               <p className={s.forum__themes__update_text}>
-                                - Discussions: {topic.topicDiscussions.length}
+                                {textTr.faqDiscussions}
+                                {topic.topicDiscussions.length}
                                 &nbsp;
                               </p>
                               <p className={s.forum__themes__update_text}>
-                                - Messages: &nbsp;
+                                {textTr.faqMessages} &nbsp;
                                 {count(topic.topicDiscussions)}
                                 &nbsp;
                               </p>
                               <p className={s.forum__themes__update_text_tab}>
-                                - Last Update: {topic.lastDate}
+                                {textTr.faqLastUpdate} {topic.lastDate}
                               </p>
                             </div>
                           </div>
@@ -65,7 +70,7 @@ const ThemesForum = () => {
                       </div>
                       <div className={s.forum__themes_mob}>
                         <p className={s.forum__themes__update_text_mob}>
-                          - Last Update: {topic.lastDate}
+                          {textTr.faqLastUpdate} {topic.lastDate}
                         </p>
                       </div>
                     </summary>
