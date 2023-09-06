@@ -96,7 +96,26 @@
     "licenseText": "@ The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried)attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit , a spar that projects forward from the bow. The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.",
     "licenseTitleLicence": "License"
   },
-  "signin":{
-   "signinTitle":"Sign in"
+  "signIn":{
+   "signInTitle":"Sign in",
+   "signInEmail":"Your email..",
+   "signInPassword":"Your password..",
+   "signInSubmitBtn":"Sign in to My Account",
+   "signInTransition":"Doesn't have an account?",
+   "signInLink":"Sign Up",
+   "signInOr":"Or, register using your account:",
+   "signInGoogle":"Continue with Google",
+   "signInSteam":"Continue with Steam"
+  },
+  "signup":{
+    "title":"Sing up",
+	  "name":"Your public name..",
+	  "email":"Your email..",
+	  "password":"Your password..",
+	  "repeatPassword":"Repeat your password..",
+	  "showPassword":"Show password",
+	  "passText":"Create a strong password using a combination of letters, numbers and symbols",
+	  "submitBtn":"Create My Account"
+
   }
 }
