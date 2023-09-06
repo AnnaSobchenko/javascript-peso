@@ -15,7 +15,7 @@ const HeroForum = ({ textTr }) => {
           <Image className={s.forum__hero__svg} src={Logo} alt="Logo" />
         </div>
         <h2 className={`${myFont.className} ${s.forum__hero__title} `}>
-          {textTr.GameFAQ}
+          {textTr.gameFAQ}
         </h2>
       </div>
     </div>

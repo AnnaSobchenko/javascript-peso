@@ -41,7 +41,7 @@ export const ShipCard: FC<LanguageShipComponentsPropsId> = ({
 
   const ship = dataShip.filter((elem: any) => elem.id === id);
   const oneShip = ship[0];
-  console.log("oneShip", oneShip);
+  console.log("oneShip", oneShip.model?.url);
 
   return (
     <div className="bg-accent-background w-screen flex justify-center">
@@ -145,11 +145,6 @@ export const ShipCard: FC<LanguageShipComponentsPropsId> = ({
             </span>
           </li>
         </ul>
-        <h2
-          className={`underline text-lg text-center mb-6 md:text-right lg:text-2xl ${textAccentFont}`}
-        >
-          {textTr.wikiReadMore}
-        </h2>
       </div>
     </div>
   );

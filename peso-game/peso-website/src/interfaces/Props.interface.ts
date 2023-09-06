@@ -72,3 +72,26 @@ export interface LanguageShipComponentsPropsId {
   id: string;
   
 }
+
+export interface ShipData {
+ 
+  id: string;
+  nameEn: string;
+  nameUa: string;
+  textEn: string;
+  textUa: string;
+  img: string;
+  model: {
+    url: string;
+  };
+  options: {
+    points: string;
+    speed: string;
+    armor: string;
+    cannons: string;
+    harpoons: string;
+    weapons: string;
+    sight: string;
+    ability: string;
+  };
+}
