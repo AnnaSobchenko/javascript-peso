@@ -22,11 +22,5 @@ export const SignInValidationSchema = Yup.object().shape({
     .required("Email is required")
     .email("Please enter an email")
     .max(254, "Max 254"),
-  password: Yup.string()
-    .required("Password is required")
-    .min(8, "Password must be at least 8 characters")
-    .matches(
-      /^(?=.*[A-Z])(?=.*[@$!%*?&])(?=.*[0-9])[A-Za-z\d@$!%*?&]+$/,
-      "Password must contain at least one uppercase letter and one special character"
-    ),
+  password: Yup.string().required("Password is required"),
 });

@@ -10,7 +10,7 @@ interface InputFieldsProps {
   touched: boolean | string | undefined;
 }
 
-const SignInPassword: FC<InputFieldsProps> = ({
+const SignInPass: FC<InputFieldsProps> = ({
   placeholder,
   value,
   onChange,
@@ -61,4 +61,4 @@ const SignInPassword: FC<InputFieldsProps> = ({
   );
 };
 
-export default SignInPassword;
+export default SignInPass;

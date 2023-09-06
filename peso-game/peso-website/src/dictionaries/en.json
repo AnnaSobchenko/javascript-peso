@@ -107,15 +107,18 @@
    "signInGoogle":"Continue with Google",
    "signInSteam":"Continue with Steam"
   },
-  "signup":{
-    "title":"Sing up",
-	  "name":"Your public name..",
-	  "email":"Your email..",
-	  "password":"Your password..",
+  "signUp":{
+    "signUpTitle":"Sign up",
+	  "signUpName":"Your public name..",
+	  "signUpEmail":"Your email..",
+	  "signUpPassword":"Your password..",
 	  "repeatPassword":"Repeat your password..",
-	  "showPassword":"Show password",
-	  "passText":"Create a strong password using a combination of letters, numbers and symbols",
-	  "submitBtn":"Create My Account"
+	  "signUpShowPassword":"Show password",
+	  "signUpPassText":"Create a strong password using a combination of letters, numbers and symbols",
+	  "signUpSubmitBtn":"Create My Account",
+    "signInOr":"Or, register using your account:",
+    "signInGoogle":"Continue with Google",
+    "signInSteam":"Continue with Steam"
 
   }
 }

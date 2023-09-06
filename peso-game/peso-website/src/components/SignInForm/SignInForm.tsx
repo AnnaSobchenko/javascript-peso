@@ -6,8 +6,8 @@ import { Formik, FormikHelpers } from "formik";
 import localFont from "next/font/local";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
 import InputField from "../shared/InputField/InputField";
-import SignInPassword from "./SignInPassword";
 import { SignInValidationSchema } from "../utils/validation/registervalid";
+import SignInPass from "./SignInPass";
 
 interface FormValues {
   email: string;
@@ -66,7 +66,7 @@ const SignInForm: FC<SignInProps> = ({ textTr, lang }) => {
                     errors={errors.email}
                     touched={touched.email}
                   />
-                  <SignInPassword
+                  <SignInPass
                     placeholder={textTr.signInPassword}
                     value={values.password}
                     onChange={handleChange}
