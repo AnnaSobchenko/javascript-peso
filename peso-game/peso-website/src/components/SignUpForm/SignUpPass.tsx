@@ -28,7 +28,7 @@ const SignUpPass: FC<SignUpPassProps> = ({
   touched,
 }) => {
   return (
-    <label htmlFor="password">
+    <label htmlFor="password" className="relative">
       <input
         type={showPassword ? "text" : "password"}
         name="password"
@@ -45,9 +45,9 @@ const SignUpPass: FC<SignUpPassProps> = ({
       <ErrorMessage
         component="div"
         name="password"
-        className="mt-2 text-error-color"
+        className="mt-2 absolute text-error-color"
       />
-      <label className="hidden lg:flex lg:items-center mt-5 relative">
+      <label className="hidden lg:flex lg:items-center mt-10 relative">
         <input
           type="checkbox"
           checked={showPassword}

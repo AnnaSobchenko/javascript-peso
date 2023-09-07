@@ -25,7 +25,7 @@ const SignUpRepeatPass: FC<SignUpRepeatPassProps> = ({
   touched,
 }) => {
   return (
-    <label htmlFor="repeatPassword">
+    <label htmlFor="repeatPassword" className="relative">
       <input
         type={showPassword ? "text" : "password"}
         name="repeatPassword"
@@ -41,9 +41,9 @@ const SignUpRepeatPass: FC<SignUpRepeatPassProps> = ({
       <ErrorMessage
         component="div"
         name="repeatPassword"
-        className="mt-2 text-error-color"
+        className="mt-2 absolute text-error-color"
       />
-      <label className=" flex items-center mt-5 lg:hidden">
+      <label className=" flex items-center mt-10 lg:hidden">
         <input
           type="checkbox"
           checked={showPassword}

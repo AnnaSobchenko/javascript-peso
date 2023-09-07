@@ -20,7 +20,7 @@ const InputField: FC<InputFieldsProps> = ({
   errors,
   touched,
 }) => (
-  <label htmlFor={name}>
+  <label htmlFor={name} className="relative">
     <input
       type="text"
       name={name}
@@ -35,7 +35,7 @@ const InputField: FC<InputFieldsProps> = ({
     <ErrorMessage
       component="div"
       name={name}
-      className="mt-2 text-error-color"
+      className="mt-2 absolute text-error-color"
     />
   </label>
 );

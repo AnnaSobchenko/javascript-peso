@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import React, { FC, useRef, useEffect } from "react";
 import PreviewImage from "./PreviewImage";
 import localFont from "next/font/local";
 import { ErrorMessage } from "formik";
@@ -12,12 +12,16 @@ const myFont = localFont({
   display: "swap",
 });
 const UploadImage: FC<UploadImageProps> = ({ value, setFieldValue }) => {
-  const fileRef = useRef(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
   return (
     <div className="mt-12">
-      <p className="mb-6 text-xs text-opacity-font-2 md:text-lg">
-        Please, select your game avatar..
-      </p>
+      {!value ? (
+        <p className="mb-6 text-xs text-opacity-font-2 md:text-lg">
+          Please, select your game avatar..
+        </p>
+      ) : null}
+
       <div className="flex flex-col md:flex-row">
         <input
           ref={fileRef}
@@ -35,7 +39,7 @@ const UploadImage: FC<UploadImageProps> = ({ value, setFieldValue }) => {
         <button
           type="button"
           onClick={() => {
-            fileRef.current.click();
+            fileRef.current!.click();
           }}
           className="h-fit bg-transparent py-[20px] px-[30px]  border border-solid border-accent-element-color md:w-64 lg:hover:-translate-y-1 lg:hover:scale-110  duration-200"
         >
@@ -51,9 +55,12 @@ const UploadImage: FC<UploadImageProps> = ({ value, setFieldValue }) => {
               src="/Avatar.png"
               alt="preview"
               className="rounded-full  w-16 h-16"
+              onClick={() => {
+                fileRef.current!.click();
+              }}
             />
           )}
-          <svg className="w-10 h-10 fill-opacity-font-2 transition ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110  duration-200">
+          <svg className="w-10 h-10 fill-opacity-font-2">
             <use href="/sprite.svg#dots"></use>
           </svg>
         </div>

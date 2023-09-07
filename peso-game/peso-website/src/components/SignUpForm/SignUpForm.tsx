@@ -19,6 +19,13 @@ interface FormValues {
   name: string;
   file: File | null;
 }
+const initialValues: FormValues = {
+  email: "",
+  password: "",
+  repeatPassword: "",
+  name: "",
+  file: null,
+};
 interface SignUpForm {
   lang: string;
   textTr: {
@@ -50,13 +57,7 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
     <div className="layout">
       <div className="bg-accent-background">
         <Formik
-          initialValues={{
-            email: "",
-            password: "",
-            repeatPassword: "",
-            name: "",
-            file: null,
-          }}
+          initialValues={initialValues}
           validationSchema={RegisterValidationSchema}
           onSubmit={async (
             values: FormValues,
