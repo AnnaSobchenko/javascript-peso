@@ -116,9 +116,12 @@
 	  "signUpShowPassword":"Show password",
 	  "signUpPassText":"Create a strong password using a combination of letters, numbers and symbols",
 	  "signUpSubmitBtn":"Create My Account",
+    "signUpTransition":"Already have an account?",
+    "signUpLink":"Sign Up",
     "signInOr":"Or, register using your account:",
     "signInGoogle":"Continue with Google",
     "signInSteam":"Continue with Steam"
+
 
   }
 }

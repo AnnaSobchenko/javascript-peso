@@ -1,6 +1,6 @@
 "use client";
 import { useState, FC } from "react";
-import { ErrorMessage, Formik, FormikValues, FormikHelpers } from "formik";
+import { Formik, FormikHelpers } from "formik";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -8,12 +8,16 @@ import InputField from "../shared/InputField/InputField";
 import AuthBtn from "../UI/AuthBtn/AuthBtn";
 import SignUpPass from "./SignUpPass";
 import { RegisterValidationSchema } from "../utils/validation/registervalid";
+import SignUpRepeatPass from "./SignUpRepeatPass";
+
+import UploadImage from "./UploadImage";
 
 interface FormValues {
   email: string;
   password: string;
   repeatPassword: string;
   name: string;
+  file: File | null;
 }
 interface SignUpForm {
   lang: string;
@@ -51,6 +55,7 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
             password: "",
             repeatPassword: "",
             name: "",
+            file: null,
           }}
           validationSchema={RegisterValidationSchema}
           onSubmit={async (
@@ -58,7 +63,7 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
             { resetForm }: FormikHelpers<FormValues>
           ) => {
             console.log("values", values);
-            // await resetForm();
+            await resetForm();
           }}
         >
           {({
@@ -68,7 +73,7 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
             handleBlur,
             errors,
             touched,
-
+            setFieldValue,
             // other Formik props
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
@@ -107,44 +112,22 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
                     toggleShowPasswordText={toggleShowPasswordText}
                     toggleShowPassword={toggleShowPassword}
                   />
-
-                  <label htmlFor="repeatPassword">
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      name="repeatPassword"
-                      placeholder="repeatPassword"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      value={values.repeatPassword}
-                      className={`border-b-2  ${
-                        errors.repeatPassword && touched.repeatPassword
-                          ? "border-error-color"
-                          : "border-main-font-color"
-                      } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
-                    />
-
-                    <ErrorMessage
-                      component="div"
-                      name="repeatPassword"
-                      className="mt-2 text-error-color"
-                    />
-                    <label className=" flex items-center mt-5 lg:hidden">
-                      <input
-                        type="checkbox"
-                        checked={showPassword}
-                        onChange={toggleShowPassword}
-                      />
-                      <span className="ml-2">
-                        "{textTr.signUpShowPassword}"
-                      </span>
-                    </label>
-                    {showPasswordText && (
-                      <div className="text-accent-element-color mt-4 text-xs lg:hidden">
-                        {textTr.signUpPassText}
-                      </div>
-                    )}
-                  </label>
+                  <SignUpRepeatPass
+                    textTr={textTr}
+                    value={values.repeatPassword}
+                    errors={errors.repeatPassword}
+                    touched={touched.repeatPassword}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    showPassword={showPassword}
+                    toggleShowPassword={toggleShowPassword}
+                  />
                 </div>
+                <UploadImage
+                  value={values.file}
+                  setFieldValue={setFieldValue}
+                />
+
                 <button
                   type="submit"
                   className=" w-full h-fit bg-transparent pt-1 pb-1 pr-[5px] pl-[5px] mt-12 border border-solid border-accent-element-color lg:hover:-translate-y-1 lg:hover:scale-110  duration-200"
@@ -158,14 +141,14 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
                   </div>
                 </button>
                 <div className="flex mt-6">
-                  <p className=" text-sm text-opacity-font-2 lg:text-lg">
-                    Already have an account?
+                  <p className=" text-xs text-opacity-font-2 md:text-sm lg:text-lg">
+                    {textTr.signUpTransition}
                   </p>
                   <Link
-                    href={`/${lang}/signup`}
-                    className="ml-2 lg:hover:text-error-color  duration-200 text-sm  lg:text-lg"
+                    href={`/${lang}/signin`}
+                    className="ml-2 lg:hover:text-error-color  duration-200 text-xs md:text-sm lg:text-lg"
                   >
-                    Sign In
+                    {textTr.signUpLink}
                   </Link>
                 </div>
               </form>

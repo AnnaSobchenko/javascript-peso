@@ -1,41 +1,37 @@
 import React, { FC } from "react";
 import { ErrorMessage } from "formik";
 
-interface SignUpPassProps {
+interface SignUpRepeatPassProps {
   showPassword: boolean;
-  showPasswordText: boolean;
+
   value: string;
-  toggleShowPasswordText: () => void;
   toggleShowPassword: () => void;
-  onBlur: () => void;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   errors?: string;
   touched: boolean | string | undefined;
   textTr: {
     [key: string]: any;
   };
 }
-const SignUpPass: FC<SignUpPassProps> = ({
+const SignUpRepeatPass: FC<SignUpRepeatPassProps> = ({
   textTr,
   value,
   showPassword,
-  showPasswordText,
   onChange,
   onBlur,
-  toggleShowPasswordText,
   toggleShowPassword,
   errors,
   touched,
 }) => {
   return (
-    <label htmlFor="password">
+    <label htmlFor="repeatPassword">
       <input
         type={showPassword ? "text" : "password"}
-        name="password"
-        placeholder={textTr.signUpPassword}
+        name="repeatPassword"
+        placeholder={textTr.repeatPassword}
         onChange={onChange}
         onBlur={onBlur}
-        onFocus={toggleShowPasswordText}
         value={value}
         className={`border-b-2  ${
           errors && touched ? "border-error-color" : "border-main-font-color"
@@ -44,10 +40,10 @@ const SignUpPass: FC<SignUpPassProps> = ({
 
       <ErrorMessage
         component="div"
-        name="password"
+        name="repeatPassword"
         className="mt-2 text-error-color"
       />
-      <label className="hidden lg:flex lg:items-center mt-5 relative">
+      <label className=" flex items-center mt-5 lg:hidden">
         <input
           type="checkbox"
           checked={showPassword}
@@ -55,13 +51,8 @@ const SignUpPass: FC<SignUpPassProps> = ({
         />
         <span className="ml-2">{textTr.signUpShowPassword}</span>
       </label>
-      {showPasswordText && (
-        <div className={`p-1 ${showPasswordText ? "fade-in" : "fade-out"}`}>
-          <p className=" p-2  text-xs">{textTr.signUpPassText}</p>
-        </div>
-      )}
     </label>
   );
 };
 
-export default SignUpPass;
+export default SignUpRepeatPass;
