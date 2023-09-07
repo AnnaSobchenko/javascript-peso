@@ -78,7 +78,8 @@
     "gameFAQ": "Game FAQ",
     "faqDiscussions": "- Discussions:",
     "faqMessages": "- Messages:",
-    "faqLastUpdate": "- Last Update:"
+    "faqLastUpdate": "- Last Update:",
+    "faqTopicsForDiscussion": "- Topics for Discussion:"
   },
   "privacy": {
     "privacyFirst": "@ The headsail can be masthead-rigged or fractional-rigged.",

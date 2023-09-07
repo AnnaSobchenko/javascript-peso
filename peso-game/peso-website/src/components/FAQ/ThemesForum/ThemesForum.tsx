@@ -79,7 +79,10 @@ const ThemesForum: FC<LngTextFCComponentsProps> = ({ lang, textTr }) => {
                           </p>
                         </div>
                       </summary>
-                      <TopicItemForum array={topicDiscussions} />
+                      <TopicItemForum
+                        array={topicDiscussions}
+                        textTr={textTr}
+                      />
                     </details>
                   </li>
                 )

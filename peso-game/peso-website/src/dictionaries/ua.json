@@ -79,7 +79,8 @@
     "gameFAQ": "ЧаПи про Гру",
     "faqDiscussions": "- Обговорень:",
     "faqMessages": "- Повідомлень:",
-    "faqLastUpdate": "- Останнє оновлення:"
+    "faqLastUpdate": "- Останнє оновлення:",
+    "faqTopicsForDiscussion": "- Теми для Обговорень:"
   },
   "privacy": {
     "privacyFirst": "@ Переднє вітрило може бути з мачтовим або дробовим озброєнням.",
