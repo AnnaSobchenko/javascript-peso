@@ -25,6 +25,8 @@
 
   --inner-shadow: inset 0px -200px 250px var(--main-background);
   --filter-shadow: drop-shadow(0px 25px 40px var(--accent-background));
+  --form-control-color: #ff0000;
+    --form-control-disabled: #959495;
 }
 
 html,
@@ -105,6 +107,66 @@ main::-webkit-scrollbar {
 }
 
 
+
+
+
+
+// checkbox custom 
+
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid currentColor;
+  
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+// input[type="checkbox"]:focus {
+//   outline: max(2px, 0.15em) solid currentColor;
+//   outline-offset: max(2px, 0.15em);
+// }
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+//animation for smooth appearances of elements
 
 
 .fade-in {

@@ -39,7 +39,7 @@ const SignInPass: FC<InputFieldsProps> = ({
       <ErrorMessage
         component="div"
         name="password"
-        className="mt-2 text-error-color"
+        className="mt-2  absolute text-error-color text-xs md:text-sm lg:text-lg"
       />
 
       <button

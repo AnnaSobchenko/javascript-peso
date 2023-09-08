@@ -1,4 +1,4 @@
-import React, { FC, useRef, useEffect } from "react";
+import React, { FC, useRef } from "react";
 import PreviewImage from "./PreviewImage";
 import localFont from "next/font/local";
 import { ErrorMessage } from "formik";
@@ -60,6 +60,7 @@ const UploadImage: FC<UploadImageProps> = ({ value, setFieldValue }) => {
               }}
             />
           )}
+
           <svg className="w-10 h-10 fill-opacity-font-2">
             <use href="/sprite.svg#dots"></use>
           </svg>
@@ -68,7 +69,7 @@ const UploadImage: FC<UploadImageProps> = ({ value, setFieldValue }) => {
       <ErrorMessage
         component="div"
         name="file"
-        className="mt-2 text-error-color"
+        className="mt-2 text-error-color text-xs md:text-sm lg:text-lg"
       />
     </div>
   );

@@ -13,6 +13,10 @@ interface FormValues {
   email: string;
   password: string;
 }
+const initialValues: FormValues = {
+  email: "",
+  password: "",
+};
 interface SignInProps {
   lang: string;
   textTr: {
@@ -29,17 +33,14 @@ const SignInForm: FC<SignInProps> = ({ textTr, lang }) => {
     <div className="layout">
       <div className="bg-accent-background">
         <Formik
-          initialValues={{
-            email: "",
-            password: "",
-          }}
+          initialValues={initialValues}
           validationSchema={SignInValidationSchema}
           onSubmit={async (
             values: FormValues,
             { resetForm }: FormikHelpers<FormValues>
           ) => {
             console.log("values", values);
-            // await resetForm();
+            await resetForm();
           }}
         >
           {({
@@ -49,7 +50,6 @@ const SignInForm: FC<SignInProps> = ({ textTr, lang }) => {
             handleBlur,
             errors,
             touched,
-            // other Formik props
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
               <form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">

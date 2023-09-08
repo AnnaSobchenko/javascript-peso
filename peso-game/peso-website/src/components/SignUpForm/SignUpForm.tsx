@@ -1,6 +1,6 @@
 "use client";
 import { useState, FC } from "react";
-import { Formik, FormikHelpers } from "formik";
+import { Form, Formik, FormikHelpers } from "formik";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -11,6 +11,7 @@ import { RegisterValidationSchema } from "../utils/validation/registervalid";
 import SignUpRepeatPass from "./SignUpRepeatPass";
 
 import UploadImage from "./UploadImage";
+import PrivacyCheckbox from "./PrivacyCheckbox";
 
 interface FormValues {
   email: string;
@@ -18,6 +19,7 @@ interface FormValues {
   repeatPassword: string;
   name: string;
   file: File | null;
+  policy: boolean;
 }
 const initialValues: FormValues = {
   email: "",
@@ -25,6 +27,7 @@ const initialValues: FormValues = {
   repeatPassword: "",
   name: "",
   file: null,
+  policy: false,
 };
 interface SignUpForm {
   lang: string;
@@ -75,10 +78,9 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
             errors,
             touched,
             setFieldValue,
-            // other Formik props
           }) => (
             <div className="px-5 py-14 lg:flex lg:px-12 lg:py-12">
-              <form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">
+              <Form onSubmit={handleSubmit} className="lg:basis-3/5 lg:mr-16">
                 <h2 className={`${myFont.className} text-3xl`}>
                   {textTr.signUpTitle}
                 </h2>
@@ -128,6 +130,11 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
                   value={values.file}
                   setFieldValue={setFieldValue}
                 />
+                <PrivacyCheckbox
+                  value={values.policy}
+                  setFieldValue={setFieldValue}
+                  lang={lang}
+                />
 
                 <button
                   type="submit"
@@ -152,7 +159,7 @@ const SignUpForm: FC<SignUpForm> = ({ textTr, lang }) => {
                     {textTr.signUpLink}
                   </Link>
                 </div>
-              </form>
+              </Form>
               <AuthBtn textTr={textTr} />
             </div>
           )}

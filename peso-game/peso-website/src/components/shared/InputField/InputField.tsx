@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ErrorMessage } from "formik";
+import { ErrorMessage, Field } from "formik";
 
 interface InputFieldsProps {
   name: string;
@@ -21,7 +21,7 @@ const InputField: FC<InputFieldsProps> = ({
   touched,
 }) => (
   <label htmlFor={name} className="relative">
-    <input
+    <Field
       type="text"
       name={name}
       placeholder={placeholder}
@@ -35,7 +35,7 @@ const InputField: FC<InputFieldsProps> = ({
     <ErrorMessage
       component="div"
       name={name}
-      className="mt-2 absolute text-error-color"
+      className="mt-2 absolute text-error-color text-xs md:text-sm lg:text-lg"
     />
   </label>
 );

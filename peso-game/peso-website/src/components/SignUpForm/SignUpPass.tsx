@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ErrorMessage } from "formik";
+import { ErrorMessage, Field } from "formik";
 
 interface SignUpPassProps {
   showPassword: boolean;
@@ -29,7 +29,7 @@ const SignUpPass: FC<SignUpPassProps> = ({
 }) => {
   return (
     <label htmlFor="password" className="relative">
-      <input
+      <Field
         type={showPassword ? "text" : "password"}
         name="password"
         placeholder={textTr.signUpPassword}
@@ -48,7 +48,7 @@ const SignUpPass: FC<SignUpPassProps> = ({
         className="mt-2 absolute text-error-color"
       />
       <label className="hidden lg:flex lg:items-center mt-10 relative">
-        <input
+        <Field
           type="checkbox"
           checked={showPassword}
           onChange={toggleShowPassword}

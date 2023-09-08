@@ -1,6 +1,9 @@
 import * as Yup from "yup";
 
 const SUPPORTED_FORMATS = ["image/jpg", "image/jpeg", "image/png"];
+const checkboxValidation = (value) => {
+  return value ? "You must agree to the Privacy Policy" : undefined;
+};
 export const RegisterValidationSchema = Yup.object().shape({
   name: Yup.string()
     .required("Name is required")
@@ -24,6 +27,9 @@ export const RegisterValidationSchema = Yup.object().shape({
       "Please select an image format jpg, jpeg or png",
       (value) => !value || (value && SUPPORTED_FORMATS.includes(value?.type))
     ),
+  policy: Yup.boolean()
+    .oneOf([true], "You must agree to the Privacy Policy")
+    .required("You must agree to the Privacy Policy"),
 });
 export const SignInValidationSchema = Yup.object().shape({
   email: Yup.string()

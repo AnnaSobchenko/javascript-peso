@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ErrorMessage } from "formik";
+import { ErrorMessage, Field } from "formik";
 
 interface SignUpRepeatPassProps {
   showPassword: boolean;
@@ -26,7 +26,7 @@ const SignUpRepeatPass: FC<SignUpRepeatPassProps> = ({
 }) => {
   return (
     <label htmlFor="repeatPassword" className="relative">
-      <input
+      <Field
         type={showPassword ? "text" : "password"}
         name="repeatPassword"
         placeholder={textTr.repeatPassword}
@@ -41,10 +41,10 @@ const SignUpRepeatPass: FC<SignUpRepeatPassProps> = ({
       <ErrorMessage
         component="div"
         name="repeatPassword"
-        className="mt-2 absolute text-error-color"
+        className="mt-2 absolute text-error-color text-xs md:text-sm lg:text-lg"
       />
       <label className=" flex items-center mt-10 lg:hidden">
-        <input
+        <Field
           type="checkbox"
           checked={showPassword}
           onChange={toggleShowPassword}
