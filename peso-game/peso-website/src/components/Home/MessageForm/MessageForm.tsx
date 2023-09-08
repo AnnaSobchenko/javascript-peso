@@ -110,7 +110,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="message"
                   type="message"
                   placeholder={textTr.feedBackFormMessage}
-                  className="outline-none w-full pb-1.5 mt-12 text-base text-opacity-font-2 bg-accent-background"
+                  className=" outline-none w-full pb-1.5 mt-12 text-base text-opacity-font-2 bg-accent-background"
                 />
                 <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
