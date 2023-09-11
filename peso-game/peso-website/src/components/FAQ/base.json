@@ -7,7 +7,7 @@
       {
         "_id": "3ca7fa2c-627f-4d4c-9f06-5081d96d58bc",
         "subTitleEn": "Announcements",
-        "subTitleUa": "Анонси",
+        "subTitleUa": "Оголошення",
         "date": "26.11.2022",
         "lastDate": "26.11.2022",
         "topicDiscussions": [
@@ -99,7 +99,6 @@
             "user": "Moder",
             "nameUser": "John Mensony",
             "topicTitle": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam minima blanditiis, aut ipsam eaque eligendi veniam repudiandae iure mollitia quasi ex obcaecati, est placeat quod voluptatibus molestias possimus non officia!",
-            "topicText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores sint nostrum aspernatur quis iure?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores sint nostrum aspernatur quis iure?",
             "date": "26.11.2022",
             "lastDate": "26.11.2022",
             "topicAnswer": [
@@ -659,7 +658,6 @@
             "user": "Moder",
             "nameUser": "John Mensony",
             "topicTitle": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea molestias exercitationem illo nostrum alias veritatis eos quaerat ad, dolores repudiandae incidunt voluptate architecto porro ratione accusamus! Non ad odio repellendus.",
-            "topicText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea molestias exercitationem illo nostrum alias veritatis eos quaerat ad, dolores repudiandae incidunt voluptate architecto porro ratione accusamus! Non ad odio repellendus.",
             "date": "26.11.2022",
             "lastDate": "26.11.2022",
             "topicAnswer": [
@@ -695,7 +693,6 @@
             "user": "Moder",
             "nameUser": "John Mensony",
             "topicTitle": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea molestias exercitationem illo nostrum alias veritatis eos quaerat ad, dolores repudiandae incidunt voluptate architecto porro ratione accusamus! Non ad odio repellendus.",
-            "topicText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea molestias exercitationem illo nostrum alias veritatis eos quaerat ad, dolores repudiandae incidunt voluptate architecto porro ratione accusamus! Non ad odio repellendus.",
             "date": "26.11.2022",
             "lastDate": "26.11.2022",
             "topicAnswer": [
@@ -1554,7 +1551,6 @@
             "user": "Moder",
             "nameUser": "John Mensony",
             "topicTitle": "Announcements",
-            "topicText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea molestias exercitationem illo nostrum alias veritatis eos quaerat ad, dolores repudiandae incidunt voluptate architecto porro ratione accusamus! Non ad odio repellendus.",
             "date": "26.11.2022",
             "lastDate": "26.11.2022",
             "topicAnswer": [

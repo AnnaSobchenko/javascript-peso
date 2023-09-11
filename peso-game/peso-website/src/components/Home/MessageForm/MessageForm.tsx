@@ -29,17 +29,17 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
     const errors: Partial<FormData> = {};
 
     if (!values.name) {
-      errors.name = textTr.feedBackErrorTextNickname;
+      errors.name = textTr.feedBackError;
     }
 
     if (!values.email) {
-      errors.email = textTr.feedBackErrorTextEmail;
+      errors.email = textTr.feedBackError;
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
       errors.email = textTr.feedBackErrorEmail;
     }
 
     if (!values.message) {
-      errors.message = textTr.feedBackErrorTextMessage;
+      errors.message = textTr.feedBackError;
     }
 
     return errors;
@@ -70,7 +70,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
           onSubmit={handleSubmit}
           validate={validate}
         >
-          {({ errors, touched }) => (
+          {() => (
             <Form>
               <div className="relative">
                 <Field
@@ -78,17 +78,13 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="name"
                   type="text"
                   placeholder={textTr.feedBackFormName}
-                  className={`border-b-2 mt-12 ${
-                    errors.name && touched.name
-                      ? "border-error-color"
-                      : "border-main-font-color"
-                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
+                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
                 />
-
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="error absolute text-error-color"
                 />
               </div>
 
@@ -98,17 +94,13 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="email"
                   type="email"
                   placeholder={textTr.feedBackFormEmail}
-                  className={`border-b-2 mt-12 ${
-                    errors.email && touched.email
-                      ? "border-error-color"
-                      : "border-main-font-color"
-                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
+                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
                 />
-
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="error absolute text-error-color"
                 />
               </div>
 
@@ -118,16 +110,13 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="message"
                   type="message"
                   placeholder={textTr.feedBackFormMessage}
-                  className={`border-b-2 mt-12 ${
-                    errors.message && touched.message
-                      ? "border-error-color"
-                      : "border-main-font-color"
-                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
+                  className="outline-none w-full pb-1.5 mt-12 text-base text-opacity-font-2 bg-accent-background"
                 />
+                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="message"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="error absolute text-error-color"
                 />
               </div>
               <div className="mt-24 flex justify-center items-center flex-col md:flex-row-reverse md:m-auto md:mt-16 lg:mt-20">

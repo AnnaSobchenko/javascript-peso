@@ -54,15 +54,22 @@ const config: Config = {
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(public/assets/img/home/bg-desk-2x.jpg);",
         "countdown-timer-bg-tab":
           "linear-gradient(var(--shadow-background), var(--shadow-background)),url(public/assets/img/home/bg-tab-2x.jpg);",
-        "mobile-header":
-          "url('../components/hero/img/mobile/hero-bg-mob-1-1x.jpg')",
-        "tablet-header":
-          "url('../components/hero/img/tablet/hero-bg-tab-1-1x.jpg')",
-        "desktop-header":
-          "url('../components/hero/img/desktop/hero-bg-desk-1-1x.jpg')",
+          "mobile-hero-bg-top":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-mob-1-2x.jpg);",
+        "tablet-hero-bg-top":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-tab-1-2x.jpg);",
+        "desktop-hero-bg-top":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-desk.jpg);",
+        "mobile-hero-bg-bottom":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-mob-2x.jpg)", 
+        "tablet-hero-bg-bottom":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-tab-2x.jpg)", 
+        "desktop-hero-bg-bottom":
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-desk-2x.jpg",
       },
       boxShadow: {
         "inner-shadow": "inset 0px -200px 250px var(--main-background)",
+        "inner-shadow-hero": "inset 0px 200px 250px var(--main-background)",
         "filter-shadow": " drop-shadow(0px 25px 40px var(--accent-background))",
         "inset-lg": "0 25px 30px 10px rgba(14,14,14,1)",
       },
