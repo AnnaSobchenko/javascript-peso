@@ -88,7 +88,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
 
@@ -108,7 +108,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
 
@@ -127,7 +127,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                 <ErrorMessage
                   name="message"
                   component="div"
-                  className="mt-2 error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
               <div className="mt-24 flex justify-center items-center flex-col md:flex-row-reverse md:m-auto md:mt-16 lg:mt-20">
