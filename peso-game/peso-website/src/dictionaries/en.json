@@ -49,7 +49,9 @@
     "feedBackFormEmail": "Your email...",
     "feedBackFormMessage": "Your message & question...",
     "feedBackBtn": "Send Message",
-    "feedBackError": "Required",
+    "feedBackErrorTextNickname": "Nickname is required",
+    "feedBackErrorTextEmail": "Email is required",
+    "feedBackErrorTextMessage": "Message is required",
     "feedBackErrorEmail": "Invalid email format"
   },
   "news": {
