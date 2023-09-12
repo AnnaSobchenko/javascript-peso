@@ -2,7 +2,6 @@ export interface LanguageFCComponentsProps {
   lang: string;
 }
 export interface TextFCComponentsProps {
-  lng: string;
   textTr: {
     [key: string]: any;
   };
@@ -72,15 +71,13 @@ export interface MainBtn {
 
 export interface LanguageShipComponentsPropsId {
   lang: string;
-   textTr: {
+  textTr: {
     [key: string]: any;
   };
   id: string;
-  
 }
 
 export interface ShipData {
- 
   id: string;
   nameEn: string;
   nameUa: string;

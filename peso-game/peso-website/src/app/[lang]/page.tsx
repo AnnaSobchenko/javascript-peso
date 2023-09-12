@@ -2,7 +2,8 @@ import { CountdownTimer } from "@/components/Home/CountdownTimer/CountdownTimer"
 import { getDictionary } from "./dictionaries";
 import { Wiki } from "@/components/Home/Wiki/Wiki";
 import { MessageForm } from "@/components/Home/MessageForm/MessageForm";
-import  HomeHeroContent  from "@/components/Hero/Hero";
+import HomeHeroContent from "@/components/Home/Hero/Hero";
+
 export default async function Home({
   params: { lang },
 }: {

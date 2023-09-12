@@ -1,21 +1,21 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../../../public/assets/img/hero/logo-2x.png";
-import Sea from "../../../public/assets/icon/sea.png";
+import Logo from "../../../../public/assets/img/hero/logo-2x.png";
+import Sea from "../../../../public/assets/icon/sea.png";
 import SliderSwiper from "./SliderSwiper";
 import { FC } from "react";
 import localFont from "next/font/local";
 import { LngTextFCComponentsProps } from "@/interfaces/Props.interface";
 
 const myFont = localFont({
-  src: "../../../public/MyFont-Regular.otf",
+  src: "../../../../public/MyFont-Regular.otf",
   display: "swap",
 });
 
-const HomeHeroContent: FC<LngTextFCComponentsProps> = ({textTr}) => {
+const HomeHeroContent: FC<LngTextFCComponentsProps> = ({ textTr }) => {
   return (
     <div className="relative w-screen">
-      <div className="relative shadow-inner-shadow h-[714px] pt-[150px] md:h-[1067px] md:pt-[200px] lg:h-[1097px] lg:pt-[269px] bg-cover bg-center bg-no-repeat bg-mobile-hero-bg-top md:bg-tablet-hero-bg-top lg:bg-desktop-hero-bg-top"> 
+      <div className="relative shadow-inner-shadow h-[714px] pt-[150px] md:h-[1067px] md:pt-[200px] lg:h-[1097px] lg:pt-[269px] bg-cover bg-center bg-no-repeat bg-mobile-hero-bg-top md:bg-tablet-hero-bg-top lg:bg-desktop-hero-bg-top">
         <div className="flex flex-col items-center justify-center text-center m-auto w-60 md:w-96">
           <Image
             src={Logo}
@@ -38,9 +38,9 @@ const HomeHeroContent: FC<LngTextFCComponentsProps> = ({textTr}) => {
             {textTr.heroVideoDescription}
           </p>
         </div>
-         <SliderSwiper/>    
+        <SliderSwiper />
       </div>
-      <div className="relative shadow-inner-shadow-hero bg-cover bg-center bg-no-repeat inset-0 h-[705px] pt-28 bg-mobile-hero-bg-bottom md:h-[876.33px] md:pt-[300px] md:bg-tablet-hero-bg-bottom lg:h-[876px] lg:pt-[441.33px] lg:bg-desktop-hero-bg-bottom"> 
+      <div className="relative shadow-inner-shadow-hero bg-cover bg-center bg-no-repeat inset-0 h-[705px] pt-28 bg-mobile-hero-bg-bottom md:h-[876.33px] md:pt-[300px] md:bg-tablet-hero-bg-bottom lg:h-[876px] lg:pt-[441.33px] lg:bg-desktop-hero-bg-bottom">
         <div>
           <ul className="w-[280px] text-center justify-center mx-auto mb-20 md:w-[500px] md:mb-24 lg:flex lg:w-[1080px] lg:mb-36">
             <li className="w-[280px] mb-9 last:mb-0 md:w-[500px] md:mb-11 md:last:mb-0 lg:w-80 lg:mb-0 lg:mr-16 lg:last:mr-0">
@@ -74,7 +74,7 @@ const HomeHeroContent: FC<LngTextFCComponentsProps> = ({textTr}) => {
                 {textTr.heroTitle}
               </h2>
               <p className="font-normal text-xs leading-[1.4rem] md:text-base md:leading-[1.35rem]">
-                {textTr.heroText} 
+                {textTr.heroText}
               </p>
             </li>
             <li className="w-[280px] mb-9 last:mb-0 md:w-[500px] md:mb-11 md:last:mb-0 lg:w-80 lg:mb-0 lg:mr-16 lg:last:mr-0">
