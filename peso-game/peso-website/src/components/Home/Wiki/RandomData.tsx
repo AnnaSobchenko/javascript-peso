@@ -37,7 +37,7 @@ export const RandomElement = ({ data, lang, textTr }: RandomElementProps) => {
   return (
     <>
       {randomItem ? (
-        <div className="layout mx-5 sm:w-[278px] md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
+        <div className="layout mx-5 md:w-[658px] md:mx-[55px] lg:w-[998px] lg:mx-[75px]">
           <div className="ml-auto mr-auto lg:flex flex-row-reverse mt-12">
             <div>
               <div className="h-[171px] md:h-[402px] bg-main-background mb-6 md:mb-12 lg:w-[500px] lg:h-[400px] relative">

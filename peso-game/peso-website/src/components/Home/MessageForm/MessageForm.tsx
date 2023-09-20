@@ -134,13 +134,15 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                 <ReCAPTCHA
                   sitekey="6Lcc1WknAAAAAHxRlLXuD8WhkOXTlR31zYR1XU7m"
                   onChange={(value: any) => console.log("recaptcha", value)}
+                  className="mb-6 md:mb-0 "
                 />
+
                 <ErrorMessage
                   name="recaptcha"
                   component="div"
                   className="error"
                 />
-                <div className="mr-6">
+                <div className="md:mr-6">
                   <ButtonMain text={textTr.feedBackBtn} onClick={() => {}} />
                 </div>
               </div>
