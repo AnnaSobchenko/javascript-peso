@@ -27,7 +27,7 @@ const News: FC<LanguageFCComponentsProps> = async ({ lang }) => {
                 alt="logo-news"
                 width={450}
                 height={250}
-                className="md:w-[450px] md:h-[250px] sm:mb-4"
+                className="w-full h-full md:w-[450px] md:h-[250px] sm:mb-4"
               />
               <p className="text-sm text-opacity-font-2 text-sans text-justify mb-6 lg:text-lg">
                 {lang === "en" ? textEn : textUa}

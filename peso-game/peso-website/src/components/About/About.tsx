@@ -25,7 +25,7 @@ export const AboutComponent: FC<LanguageFCComponentsProps> = async ({
                   alt="avatar"
                   width={300}
                   height={330}
-                  className="md:w-[300px] h-[330px] mb-4 hover:rotate-y-180 "
+                  className="w-full h-full md:w-[300px] md:h-[330px] mb-4 hover:rotate-y-180 "
                 />
                 <div className="bg-shadow-background-about group-hover:bg-shadow-background-hero z-10 w-full h-full absolute top-0 left-0"></div>
               </div>
