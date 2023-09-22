@@ -17,7 +17,7 @@ const NavSection: FC<NavBarFCComponentsProps> = ({
 
   return (
     <ul
-      className={`${myFont.className} flex flex-col lg:flex-row w-full lg:w-auto`}
+      className={`${myFont.className} flex sm:flex-col lg:flex-row w-full lg:w-auto`}
     >
       <NavItem
         text={textTr.headerNavHome}
@@ -51,14 +51,6 @@ const NavSection: FC<NavBarFCComponentsProps> = ({
         href={`/${lang}/about`}
         pathName={pathName}
       />
-      <li className="flex md:hidden">
-        <NavItem
-          text={textTr.headerLogIn}
-          setIsOpen={setIsOpen}
-          href={`/${lang}/signin`}
-          pathName={pathName}
-        />
-      </li>
     </ul>
   );
 };
