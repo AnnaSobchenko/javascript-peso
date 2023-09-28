@@ -6,6 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `@import "./globals.scss"`,
+      },
+    },
+  },
   theme: {
     animation: {
       "pulse-slow1": "pulse 1.2s linear infinite",

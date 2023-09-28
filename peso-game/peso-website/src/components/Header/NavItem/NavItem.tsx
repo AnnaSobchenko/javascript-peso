@@ -1,7 +1,13 @@
 import Link from "next/link";
+import localFont from "next/font/local";
 import ThreeHorizDots from "../../UI/ThreeHorizDots/ThreeHorizDots";
 import { FC } from "react";
 import { NavItemFCComponentsProps } from "@/interfaces/Props.interface";
+
+const myFont = localFont({
+  src: "../../../../public/MyFont-Regular.otf",
+  display: "swap",
+});
 
 const NavItem: FC<NavItemFCComponentsProps> = ({
   text,
@@ -25,8 +31,8 @@ const NavItem: FC<NavItemFCComponentsProps> = ({
         <span
           className={
             pathName == href
-              ? "active text-accent-color group-hover:text-accent-color group-hover:scale-110 mb-1  transition-all duration-300"
-              : " group-hover:text-accent-color group-hover:scale-110 mb-1  transition-all duration-300"
+              ? `${myFont.className} active text-accent-color group-hover:text-accent-color group-hover:scale-110 mb-1  transition-all duration-300`
+              : `${myFont.className} group-hover:text-accent-color group-hover:scale-110 mb-1  transition-all duration-300`
           }
         >
           {text}
