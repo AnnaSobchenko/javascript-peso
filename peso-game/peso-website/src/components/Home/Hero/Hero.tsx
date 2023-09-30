@@ -6,6 +6,7 @@ import SliderSwiper from "./SliderSwiper";
 import { FC } from "react";
 import localFont from "next/font/local";
 import { LngTextFCComponentsProps } from "@/interfaces/Props.interface";
+import PhotoSlider from "./PhotoSlider";
 
 const myFont = localFont({
   src: "../../../../public/MyFont-Regular.otf",
@@ -38,7 +39,7 @@ const HomeHeroContent: FC<LngTextFCComponentsProps> = ({ textTr }) => {
             {textTr.heroVideoDescription}
           </p>
         </div>
-        <SliderSwiper />
+        <SliderSwiper/> 
       </div>
       <div className="relative shadow-inner-shadow-hero bg-cover bg-center bg-no-repeat inset-0 h-[705px] pt-28 bg-mobile-hero-bg-bottom md:h-[876.33px] md:pt-[300px] md:bg-tablet-hero-bg-bottom lg:h-[876px] lg:pt-[441.33px] lg:bg-desktop-hero-bg-bottom">
         <div>
