@@ -11,7 +11,7 @@ import PhotoSlider from "./PhotoSlider";
 
 
 
-const YOUTUBE_GET_DATA = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=10&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY_TEST}`;
+const YOUTUBE_GET_DATA = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&maxResults=10&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`;
 
 interface Item {
    id: {
