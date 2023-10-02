@@ -11,6 +11,7 @@
     "heroVideoDescription": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
     "heroTitle": "One Pirate Peso",
     "heroText": "The name peso was given to the 8-real silver coin introduced in 1497, minted at 83⁄8 pesos to a Castilian mark. It was minted in large quantities after the discovery of silver in Mexico.",
+    
     "headerNavHome": "Home",
     "headerNavFAQ": "FAQ",
     "headerNavNew": "New",
@@ -49,9 +50,7 @@
     "feedBackFormEmail": "Your email...",
     "feedBackFormMessage": "Your message & question...",
     "feedBackBtn": "Send Message",
-    "feedBackErrorTextNickname": "Nickname is required",
-    "feedBackErrorTextEmail": "Email is required",
-    "feedBackErrorTextMessage": "Message is required",
+    "feedBackError": "Required",
     "feedBackErrorEmail": "Invalid email format"
   },
   "news": {
@@ -80,8 +79,7 @@
     "gameFAQ": "Game FAQ",
     "faqDiscussions": "- Discussions:",
     "faqMessages": "- Messages:",
-    "faqLastUpdate": "- Last Update:",
-    "faqTopicsForDiscussion": "- Topics for Discussion:"
+    "faqLastUpdate": "- Last Update:"
   },
   "privacy": {
     "privacyFirst": "@ The headsail can be masthead-rigged or fractional-rigged.",
@@ -98,31 +96,5 @@
     "licenseFourth": "@ On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.",
     "licenseText": "@ The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried)attaches at the top of the mast. On a fractional-rigged sloop, the forestay attaches to the mast at a point below the top. A sloop may use a bowsprit , a spar that projects forward from the bow. The headsail can be masthead-rigged or fractional-rigged. On a masthead-rigged sloop, the forestay (on which the headsail is carried) attaches at the top of the mast.",
     "licenseTitleLicence": "License"
-  },
-  "signIn": {
-    "signInTitle": "Sign in",
-    "signInEmail": "Your email..",
-    "signInPassword": "Your password..",
-    "signInSubmitBtn": "Sign in to My Account",
-    "signInTransition": "Doesn't have an account?",
-    "signInLink": "Sign Up",
-    "signInOr": "Or, register using your account:",
-    "signInGoogle": "Continue with Google",
-    "signInSteam": "Continue with Steam"
-  },
-  "signUp": {
-    "signUpTitle": "Sign up",
-    "signUpName": "Your public name..",
-    "signUpEmail": "Your email..",
-    "signUpPassword": "Your password..",
-    "repeatPassword": "Repeat your password..",
-    "signUpShowPassword": "Show password",
-    "signUpPassText": "Create a strong password using a combination of letters, numbers and symbols",
-    "signUpSubmitBtn": "Create My Account",
-    "signUpTransition": "Already have an account?",
-    "signUpLink": "Sign Up",
-    "signInOr": "Or, register using your account:",
-    "signInGoogle": "Continue with Google",
-    "signInSteam": "Continue with Steam"
   }
 }
