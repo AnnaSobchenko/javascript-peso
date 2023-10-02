@@ -66,7 +66,7 @@ const config: Config = {
         "tablet-hero-bg-top":
           "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-tab-1-2x.jpg);",
         "desktop-hero-bg-top":
-          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-desk.jpg);",
+          "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-desk.jpeg);",
         "mobile-hero-bg-bottom":
           "linear-gradient(var(--shadow-background-hero), var(--shadow-background-hero)),url(public/assets/img/hero/hero-bg-mob-2x.jpg)",
         "tablet-hero-bg-bottom":

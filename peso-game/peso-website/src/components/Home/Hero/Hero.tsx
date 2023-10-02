@@ -15,7 +15,7 @@ const myFont = localFont({
 const HomeHeroContent: FC<LngTextFCComponentsProps> = ({ textTr }) => {
   return (
     <div className="relative w-screen">
-      <div className="relative shadow-inner-shadow h-[714px] pt-[150px] md:h-[1067px] md:pt-[200px] lg:h-[1097px] lg:pt-[269px] bg-cover bg-center bg-no-repeat bg-mobile-hero-bg-top md:bg-tablet-hero-bg-top lg:bg-desktop-hero-bg-top">
+      <div className="relative shadow-inner-shadow h-[714px] pt-[150px] md:h-[1067px] md:pt-[200px] lg:h-[1037px] lg:pt-52 bg-cover bg-center bg-no-repeat bg-mobile-hero-bg-top md:bg-tablet-hero-bg-top lg:bg-desktop-hero-bg-top">
         <div className="flex flex-col items-center justify-center text-center m-auto w-60 md:w-96">
           <Image
             src={Logo}
