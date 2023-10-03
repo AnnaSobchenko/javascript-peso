@@ -28,29 +28,6 @@ interface Item {
   };
 }
 
-// const SliderSwiper: FC = () => {
-//   const { data, error } = useSWR<{ items: Item[] }>(YOUTUBE_GET_DATA, async () => {
-//   try {
-//     const response = await fetch(YOUTUBE_GET_DATA);
-//     if (!response.ok) {
-//       throw new Error("Network response was not ok");
-//     }
-//     const jsonData = await response.json();
-//     return jsonData;
-//   } catch (err) {
-//     throw new Error("Failed to fetch data");
-//   }
-// });
-
-// if (error) {
-//   return <div>Error loading data</div>;
-// }
-
-const data = [
-  { id: "1", src: "/assets/img/hero/hero-bg-tab-2x.jpg" },
-  { id: "2", src: "/assets/img/hero/hero-bg-tab-2x.jpg" },
-  { id: "3", src: "/assets/img/hero/hero-bg-tab-2x.jpg" },
-];
 const SliderSwiper: FC = () => {
   const [had403Error, setHad403Error] = useState(false);
 
@@ -64,7 +41,7 @@ const SliderSwiper: FC = () => {
 
         const response = await fetch(YOUTUBE_GET_DATA);
         if (!response.ok) {
-          if (response.status === 403) {
+          if (response.status == 403) {
             setHad403Error(true);
             throw new Error("Forbidden");
           }

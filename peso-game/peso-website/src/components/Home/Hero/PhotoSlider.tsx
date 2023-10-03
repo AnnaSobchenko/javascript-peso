@@ -1,13 +1,24 @@
 "use client";
 import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Keyboard, EffectCoverflow, Autoplay } from "swiper";
+import SwiperCore, {
+  Pagination,
+  Keyboard,
+  EffectCoverflow,
+  Autoplay,
+} from "swiper";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/effect-coverflow";
-SwiperCore.use([Pagination, Keyboard, EffectCoverflow, Autoplay, SwiperCore.Loop]);
+SwiperCore.use([
+  Pagination,
+  Keyboard,
+  EffectCoverflow,
+  Autoplay,
+  SwiperCore.Loop,
+]);
 import dataShip from "../../../../public/data/dataShip.json";
-
+import React from "react";
 
 const PhotoSlider: FC = () => {
   return (
@@ -31,7 +42,7 @@ const PhotoSlider: FC = () => {
           depth: 100,
           modifier: 1,
           slideShadows: true,
-          centeredSlides: true, 
+          centeredSlides: true,
         }}
         grabCursor={true}
         breakpoints={{
@@ -57,16 +68,23 @@ const PhotoSlider: FC = () => {
         keyboard={true}
         mousewheel={true}
         autoplay={{
-          delay: 7000 
-        }}>
-      {dataShip.map(({ id, img }) => (
-      <SwiperSlide key={id} className="relative z-10 shadow-[0_12px_22px_5px_rgba(14,14,14,1)] md:shadow-[0_25px_30px_10px_rgba(14,14,14,1)] lg:md:shadow-[0_25px_30px_10px_rgba(14,14,14,1)]"
-      style={{ backgroundImage: `url(${img})`, backgroundSize: "cover",  objectFit: "contain"}}>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-      </div>  
-    );
-  }
+          delay: 7000,
+        }}
+      >
+        {dataShip.map(({ id, img }) => (
+          <SwiperSlide
+            key={id}
+            className="relative z-10 shadow-[0_12px_22px_5px_rgba(14,14,14,1)] md:shadow-[0_25px_30px_10px_rgba(14,14,14,1)] lg:md:shadow-[0_25px_30px_10px_rgba(14,14,14,1)]"
+            style={{
+              backgroundImage: `url(${img})`,
+              backgroundSize: "cover",
+              objectFit: "contain",
+            }}
+          ></SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
 
 export default PhotoSlider;
