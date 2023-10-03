@@ -1,17 +1,17 @@
 "use client";
 import { FC } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Pagination,
   Keyboard,
   EffectCoverflow,
   Autoplay,
 } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/effect-coverflow";
 SwiperCore.use([
-  Pagination,
+  [Pagination],
   Keyboard,
   EffectCoverflow,
   Autoplay,
@@ -27,14 +27,16 @@ const PhotoSlider: FC = () => {
         className="relative mx-auto !pb-10 w-80 h-44 md:!pb-14 md:px-0 md:w-screen md:h-[40vw] lg:!pb-14 lg:h-[32vw]"
         loop={true}
         pagination={{ clickable: true }}
-        style={{
-          "--swiper-pagination-color": "#FFFFFF",
-          "--swiper-pagination-bullet-inactive-color": "#999999",
-          "--swiper-pagination-bullet-inactive-opacity": "1",
-          "--swiper-pagination-bullet-size": "8px",
-          "--swiper-pagination-bullet-horizontal-gap": "6px",
-          "--swiper-pagination-progressbar-size": "4px",
-        }}
+        style={
+          {
+            // "--swiper-pagination-color": "#FFFFFF",
+            // "--swiper-pagination-bullet-inactive-color": "#999999",
+            // "--swiper-pagination-bullet-inactive-opacity": "1",
+            // "--swiper-pagination-bullet-size": "8px",
+            // "--swiper-pagination-bullet-horizontal-gap": "6px",
+            // "--swiper-pagination-progressbar-size": "4px",
+          }
+        }
         effect="coverflow"
         coverflowEffect={{
           rotate: 50,
@@ -42,8 +44,8 @@ const PhotoSlider: FC = () => {
           depth: 100,
           modifier: 1,
           slideShadows: true,
-          centeredSlides: true,
         }}
+        centeredSlides={true}
         grabCursor={true}
         breakpoints={{
           320: {
@@ -64,7 +66,7 @@ const PhotoSlider: FC = () => {
         }}
         slidesPerView={2.1}
         modules={[EffectCoverflow, Pagination]}
-        centeredSlides
+        // centeredSlides
         keyboard={true}
         mousewheel={true}
         autoplay={{
