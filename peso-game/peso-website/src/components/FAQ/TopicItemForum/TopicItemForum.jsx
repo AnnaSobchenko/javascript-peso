@@ -2,12 +2,14 @@ import MessageItemForum from "../MessageItemForum/MessageItemForum";
 import s from "./TopicItemForum.module.scss";
 const uuid = require("uuid");
 
-const TopicItemForum = ({ array }) => {
+const TopicItemForum = ({ array, textTr }) => {
   const isOpen = false;
 
   return (
     <div className={s.forum__topic}>
-      <p className={s.forum__topic_text_fordics}>- Topics for Discussion:</p>
+      <p className={s.forum__topic_text_fordics}>
+        {textTr.faqTopicsForDiscussion}
+      </p>
       <ul>
         {array.map((el) => (
           <li

@@ -6,11 +6,6 @@ export interface TextFCComponentsProps {
     [key: string]: any;
   };
 }
-export interface HeroTextFCComponentsProps {
-  textTr: {
-    [key: string]: any;
-  };
-}
 export interface NewsTextFCComponentsProps {
   textTr: {
     id: {
@@ -97,4 +92,77 @@ export interface ShipData {
     sight: string;
     ability: string;
   };
+}
+
+export interface FAQArrayProps {
+  _id: string;
+  titleEn: string;
+  titleUa: string;
+  topicTheme: [
+    {
+      _id: string;
+      subTitleEn: string;
+      subTitleUa: string;
+      date: string;
+      lastDate: string;
+      topicDiscussions: [
+        {
+          _id: string;
+          number: number;
+          user: string;
+          nameUser: string;
+          topicTitle: string;
+          topicText: string;
+          date: string;
+          lastDate: string;
+          topicAnswer: [
+            {
+              _id: string;
+              user: string;
+              nameUser: string;
+              date: string;
+              text: string;
+              topicReply: [
+                {
+                  _id: string;
+                  user: string;
+                  nameUser: string;
+                  date: string;
+                  text: string;
+                }
+              ];
+            }
+          ];
+        }
+      ];
+    }
+  ];
+}
+
+export interface FAQtopicDiscussionsProps {
+  _id: string;
+  number: number;
+  user: string;
+  nameUser: string;
+  topicTitle: string;
+  topicText: string;
+  date: string;
+  lastDate: string;
+  topicAnswer:
+    | {
+        _id: string;
+        user: string;
+        nameUser: string;
+        date: string;
+        text: string;
+        topicReply:
+          | {
+              _id: string;
+              user: string;
+              nameUser: string;
+              date: string;
+              text: string;
+            }[]
+          | [];
+      }[];
 }

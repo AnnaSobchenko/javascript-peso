@@ -20,7 +20,7 @@ const ReplyItemForum = ({ array }) => {
                 width={45}
                 height={45}
                 alt="user"
-                className={s.forum__replyitem_svg}
+                className=" replyitem_svg p-1"
               />
             </div>
             <MessageInfo
