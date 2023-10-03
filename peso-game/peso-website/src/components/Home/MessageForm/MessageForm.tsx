@@ -29,17 +29,17 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
     const errors: Partial<FormData> = {};
 
     if (!values.name) {
-      errors.name = textTr.feedBackError;
+      errors.name = textTr.feedBackErrorTextNickname;
     }
 
     if (!values.email) {
-      errors.email = textTr.feedBackError;
+      errors.email = textTr.feedBackErrorTextEmail;
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
       errors.email = textTr.feedBackErrorEmail;
     }
 
     if (!values.message) {
-      errors.message = textTr.feedBackError;
+      errors.message = textTr.feedBackErrorTextMessage;
     }
 
     return errors;
@@ -70,7 +70,7 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
           onSubmit={handleSubmit}
           validate={validate}
         >
-          {() => (
+          {({ errors, touched }) => (
             <Form>
               <div className="relative">
                 <Field
@@ -78,13 +78,17 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="name"
                   type="text"
                   placeholder={textTr.feedBackFormName}
-                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
+                  className={`border-b-2 mt-8 md:mt-10 ${
+                    errors.name && touched.name
+                      ? "border-error-color"
+                      : "border-main-font-color"
+                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
                 />
-                <div className="h-px bg-main-font-color w-full"></div>
+
                 <ErrorMessage
                   name="name"
                   component="div"
-                  className="error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
 
@@ -94,13 +98,17 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="email"
                   type="email"
                   placeholder={textTr.feedBackFormEmail}
-                  className="outline-none w-full pb-1.5 mt-12 font-normal text-base text-opacity-font-2 bg-accent-background"
+                  className={`border-b-2 mt-8 md:mt-10${
+                    errors.email && touched.email
+                      ? "border-error-color"
+                      : "border-main-font-color"
+                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
                 />
-                <div className="h-px bg-main-font-color w-full"></div>
+
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
 
@@ -110,26 +118,31 @@ export const MessageForm: FC<TextFCComponentsProps> = ({ textTr }) => {
                   id="message"
                   type="message"
                   placeholder={textTr.feedBackFormMessage}
-                  className="outline-none w-full pb-1.5 mt-12 text-base text-opacity-font-2 bg-accent-background"
+                  className={`border-b-2 mt-8 md:mt-10 ${
+                    errors.message && touched.message
+                      ? "border-error-color"
+                      : "border-main-font-color"
+                  } appearance-none bg-transparent py-2 px-2 w-full text-gray-700 mr-3 leading-tight focus:outline-none`}
                 />
-                <div className="h-px bg-main-font-color w-full"></div>
                 <ErrorMessage
                   name="message"
                   component="div"
-                  className="error absolute text-error-color"
+                  className="ml-2 mt-2 error absolute text-error-color"
                 />
               </div>
-              <div className="mt-24 flex justify-center items-center flex-col md:flex-row-reverse md:m-auto md:mt-16 lg:mt-20">
+              <div className=" mt-16 flex justify-center items-center flex-col md:flex-row-reverse md:m-auto lg:mt-20">
                 <ReCAPTCHA
                   sitekey="6Lcc1WknAAAAAHxRlLXuD8WhkOXTlR31zYR1XU7m"
                   onChange={(value: any) => console.log("recaptcha", value)}
+                  className="mb-6 md:mb-0 "
                 />
+
                 <ErrorMessage
                   name="recaptcha"
                   component="div"
                   className="error"
                 />
-                <div className="mr-6">
+                <div className="md:mr-6">
                   <ButtonMain text={textTr.feedBackBtn} onClick={() => {}} />
                 </div>
               </div>

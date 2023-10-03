@@ -33,12 +33,12 @@ export const WikiComponent: FC<LanguageShipComponentsProps> = ({
   //   fetchData();
   // }, []);
   return (
-    <div className="pt-20">
-      <ul className="md:flex md:flex-wrap  gap-4 justify-center">
+    <div className="pt-20 layout">
+      <ul className="md:flex md:flex-wrap gap-4 justify-center">
         {dataShip.map(({ id, img, nameEn, nameUa }) => (
           <li
             key={id}
-            className="text-center pb-8 last:pb-14 hover:scale-110 duration-1000"
+            className="text-center pb-12 last:pb-14 hover:scale-110 duration-1000"
           >
             <Link href={`/${lang}/wiki/${id}`}>
               <h2 className={`mb-2.5 text-xl md:text-2xl ${textAccentFont}`}>
@@ -47,9 +47,9 @@ export const WikiComponent: FC<LanguageShipComponentsProps> = ({
               <Image
                 src={img}
                 alt={lang === "en" ? nameEn : nameUa}
-                width={280}
-                height={171}
-                className="w-[280px] h-[171px] md:w-[350px] md:h-[200px] md:m-2.5 lg:w-[500px] lg:h-[300px] m-auto"
+                width={640}
+                height={640}
+                className="w-full h-full md:w-[330px] md:h-[330px] md:m-2.5 lg:w-[500px] lg:h-[500px] m-auto"
               />
             </Link>
           </li>

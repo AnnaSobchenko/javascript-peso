@@ -1,8 +1,8 @@
+import Header from "@/components/Header/Header";
 import "../../../globals.scss";
 import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
 import { getDictionary } from "./dictionaries";
-import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 const robotoCondensed = Roboto_Condensed({
