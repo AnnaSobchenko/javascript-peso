@@ -46,6 +46,7 @@
     "feedBackText": "The video shows one guild attacking another guild. Enjoy the gameplay right now.",
     "feedBackFormHeader": "Drop Us a Line",
     "feedBackFormName": "Your name & nickname...",
+    "feedBackError": "Required",
     "feedBackFormEmail": "Your email...",
     "feedBackFormMessage": "Your message & question...",
     "feedBackBtn": "Send Message",
