@@ -24,7 +24,7 @@ const PhotoSlider: FC = () => {
   return (
     <div className="relative mx-auto">
       <Swiper
-        className="relative mx-auto !pb-10 w-80 h-44 md:!pb-14 md:px-0 md:w-screen md:h-[40vw] lg:!pb-14 lg:h-[32vw]"
+        className="relative mx-auto !pb-10 w-80 h-44 md:!pb-14 md:px-0 md:w-screen md:h-[40vw] lg:!pb-14 lg:h-[32vw] xl:h-[24vw]"
         loop={true}
         pagination={{ clickable: true }}
         style={
@@ -59,6 +59,15 @@ const PhotoSlider: FC = () => {
           },
           1200: {
             slidesPerView: 2.01,
+            pagination: {
+              enabled: false,
+            },
+          },
+          1440: {
+            slidesPerView: 2.01,
+            coverflowEffect: {
+              modifier: 1.2,
+            },
             pagination: {
               enabled: false,
             },

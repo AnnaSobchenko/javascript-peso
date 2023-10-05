@@ -58,7 +58,7 @@ const SliderSwiper: FC = () => {
     { revalidateOnFocus: false }
   );
 
-  if (error && had403Error) {
+  if (error || had403Error) {
     console.error("Error loading data:", error);
     return <PhotoSlider />;
   }
