@@ -30,7 +30,7 @@ const myFont = localFont({
 
 const SignInForm: FC<SignInProps> = ({ textTr, lang }) => {
   return (
-    <div className="layout">
+    <div className="layout pb-10 ">
       <div className="bg-accent-background">
         <Formik
           initialValues={initialValues}

@@ -12,8 +12,8 @@ const myFont = localFont({
 const News: FC<LanguageFCComponentsProps> = async ({ lang }) => {
   const textAccentFont = myFont.className;
   return (
-    <div className="layout pt-20">
-      <ul>
+    <div className="layout  pb-10 ">
+      <ul className=" p-5 pt-10 bg bg-accent-background">
         {dataNews.map(({ id, nameEn, nameUa, textEn, textUa, img }) => (
           <li key={id} className="pb-8 last:pb-14">
             <h2

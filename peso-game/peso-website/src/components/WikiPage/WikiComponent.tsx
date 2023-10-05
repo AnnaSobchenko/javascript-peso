@@ -33,8 +33,8 @@ export const WikiComponent: FC<LanguageShipComponentsProps> = ({
   //   fetchData();
   // }, []);
   return (
-    <div className="pt-20 layout">
-      <ul className="md:flex md:flex-wrap gap-4 justify-center">
+    <div className=" layout pb-10">
+      <ul className="md:flex md:flex-wrap gap-4 justify-center bg-accent-background pt-5">
         {dataShip.map(({ id, img, nameEn, nameUa }) => (
           <li
             key={id}

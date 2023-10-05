@@ -14,8 +14,8 @@ export const AboutComponent: FC<LanguageFCComponentsProps> = async ({
 }) => {
   const textAccentFont = myFont.className;
   return (
-    <div className="layout pt-20">
-      <ul className="md:flex md:flex-wrap gap-4 justify-center">
+    <div className="layout pb-10">
+      <ul className="md:flex md:flex-wrap gap-4 justify-center pt-10 bg-accent-background">
         {dataTeam.map(({ id, nameEn, nameUa, avatar, linkedin, github }) => (
           <li key={id} className="pb-8 last:pb-14">
             <div className="relative group">

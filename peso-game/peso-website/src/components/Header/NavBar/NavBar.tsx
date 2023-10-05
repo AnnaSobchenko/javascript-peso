@@ -62,12 +62,14 @@ const NavBar: FC<LngTextFCComponentsProps> = ({ textTr, lang }) => {
         <div className=" hidden lg:flex h-full">
           <NavSection lang={lang} setIsOpen={setIsOpen} textTr={textTr} />
           <div className=" flex items-center">
-            <NavItem
-              text={textTr.headerLogIn}
-              setIsOpen={setIsOpen}
-              href={`/${lang}/signin`}
-              pathName={pathName}
-            />
+            <div className=" mr-5 h-full">
+              <NavItem
+                text={textTr.headerLogIn}
+                setIsOpen={setIsOpen}
+                href={`/${lang}/signin`}
+                pathName={pathName}
+              />
+            </div>
             <ButtonMain text={textTr.headerPlayNow} onClick={() => {}} />
           </div>
         </div>

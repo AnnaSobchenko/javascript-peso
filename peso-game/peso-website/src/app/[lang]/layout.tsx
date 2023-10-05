@@ -4,6 +4,7 @@ import { Roboto_Condensed } from "next/font/google";
 import { getDictionary } from "./dictionaries";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import BorderScreen from "@/components/UI/BorderScreen/BorderScreen";
 
 const robotoCondensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -29,10 +30,13 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <head />
-      <body className={robotoCondensed.className}>
+      <body className={`${robotoCondensed.className} relative  `}>
         <Header lang={lang} textTr={dict.main} />
         {children}
         <Footer lang={lang} />
+        <div className=" fixed top-0 left-0 w-screen h-screen pointer-events-none z-50">
+          <BorderScreen />
+        </div>
       </body>
     </html>
   );
