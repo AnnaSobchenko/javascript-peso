@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --main-background: #1a1a1a;
@@ -8,7 +8,7 @@
   --second-background: #191919;
   --shadow-second-background: rgba(25, 25, 25, 0.9);
   --shadow-background: rgba(26, 26, 26, 0.45);
-
+  --shadow-background-hero: rgba(26, 26, 26, 0.55);
   --main-font-color: #fff;
   --second-font-color: #0e0e0e;
   --opacity-font-1: rgba(255, 255, 255, 0.7);
@@ -22,7 +22,7 @@
 
   --main-element-color: #060606;
   --accent-element-color: #fff;
-
+  --inner-shadow-hero: inset 0px 200px 250px var(--main-background);
   --inner-shadow: inset 0px -200px 250px var(--main-background);
   --filter-shadow: drop-shadow(0px 25px 40px var(--accent-background));
   --form-control-color: #ff0000;

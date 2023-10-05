@@ -6,6 +6,13 @@ export interface TextFCComponentsProps {
     [key: string]: any;
   };
 }
+
+export interface HeroTextFCComponentsProps {
+  textTr: {
+    [key: string]: any;
+  };
+}
+
 export interface NewsTextFCComponentsProps {
   textTr: {
     id: {

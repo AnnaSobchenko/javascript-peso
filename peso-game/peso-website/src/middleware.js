@@ -22,7 +22,7 @@ export function middleware(request) {
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
-  console.log("pathnameIsMissingLocale", pathnameIsMissingLocale);
+  // console.log("pathnameIsMissingLocale", pathnameIsMissingLocale);
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);

@@ -49,10 +49,11 @@
     "feedBackFormName": "Ваше ім'я та нікнейм...",
     "feedBackFormEmail": "Ваша електронна адреса...",
     "feedBackFormMessage": "Ваше повідомлення та запитання...",
-    "feedBackBtn": "Відправити повідомлення",   
+    "feedBackBtn": "Відправити повідомлення",
     "feedBackErrorTextNickname": "Введіть нікнейм",
     "feedBackErrorTextEmail": "Ведіть електронну пошту",
     "feedBackErrorTextMessage": "Введіть пвідомлення",
+    "feedBackError": "Обов'язкове поле",
     "feedBackErrorEmail": "Невірний формат електронної пошти"
   },
   "news": {
