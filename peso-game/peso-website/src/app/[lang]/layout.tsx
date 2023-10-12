@@ -34,7 +34,7 @@ export default async function RootLayout({
         <Header lang={lang} textTr={dict.main} />
         {children}
         <Footer lang={lang} />
-        <div className=" fixed top-0 left-0 w-screen h-screen pointer-events-none z-50">
+        <div className="hidden lg:inline-block  fixed top-0 left-0 w-screen h-screen pointer-events-none z-50">
           <BorderScreen />
         </div>
       </body>
