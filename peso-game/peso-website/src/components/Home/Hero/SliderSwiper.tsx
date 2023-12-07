@@ -64,8 +64,9 @@ const SliderSwiper: FC = () => {
   }
 
   return (
-    <div className="relative mx-auto">
-      <Swiper
+    <PhotoSlider />
+    // <div className="relative mx-auto">
+    /* <Swiper
         className="relative mx-auto !pb-10 w-80 h-44 md:!pb-14 md:px-0 md:w-screen md:h-[40vw] lg:!pb-14 lg:h-[32vw] xl:h-[24vw]"
         loop={true}
         pagination={{ clickable: true }}
@@ -136,8 +137,8 @@ const SliderSwiper: FC = () => {
               />
             </SwiperSlide>
           ))}
-      </Swiper>
-    </div>
+      </Swiper> */
+    // </div>
   );
 };
 
