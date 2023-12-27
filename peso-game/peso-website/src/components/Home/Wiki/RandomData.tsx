@@ -1,7 +1,8 @@
 "use client";
+import dynamic from "next/dynamic";
 import { ShipData } from "@/interfaces/Props.interface";
 import { Canvas } from "@react-three/fiber";
-import ShipImg from "./ShipImg";
+const ShipImg = dynamic(() => import("./ShipImg"));
 import { OrbitControls } from "@react-three/drei";
 import Image from "next/image";
 import localFont from "next/font/local";
